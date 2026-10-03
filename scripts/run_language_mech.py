@@ -7,6 +7,10 @@ Four measurements, all scored by the six-way language label:
 2. Patch the residual at the name from one language into another.
 3. Separate the attention write from the MLP write.
 4. Compare token position and character n-gram baselines.
+
+The layer in this script is the one with the highest held-out accuracy.
+`run_publish.py` and `run_paper_strength.py` choose the layer on the training
+split instead. Those two choices are not interchangeable.
 """
 
 from __future__ import annotations
@@ -24,12 +28,18 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.preprocessing import StandardScaler
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-import run_subspace as base
+import common as base
 
 OUT = base.RESULTS / "language_mech"
 
 
 class Probe:
+    """Multinomial logistic regression on a residual site.
+
+    `raw` is the coefficient matrix mapped back out of the standardized
+    features, so its rows are directions in the original residual.
+    """
+
     def fit(self, train_x, train_y):
         self.scaler = StandardScaler()
         train_s = self.scaler.fit_transform(train_x)
@@ -79,6 +89,11 @@ def row_basis(raw: np.ndarray) -> tuple[np.ndarray, int]:
 
 
 def name_hits(offset_rows, starts, ends) -> list[list[int]]:
+    """Token indices whose character span overlaps the name.
+
+    Special tokens have an empty span (start == end) and are skipped. A token
+    that straddles the edge of the name still counts.
+    """
     hits_all = []
     for offsets, start, end in zip(offset_rows, starts, ends):
         hits = []
@@ -106,18 +121,29 @@ def prepare_batch(tokenizer, rows, device):
         [row["name_char_start"] for row in rows],
         [row["name_char_end"] for row in rows],
     )
-    encoded = {key: value.to(device) for key, value in encoded.items() if torch.is_tensor(value)}
+    encoded = {
+        key: value.to(device)
+        for key, value in encoded.items()
+        if torch.is_tensor(value)
+    }
     return encoded, hits
 
 
 def first_tensor(output):
+    """Residual from a block or attention hook.
+
+    Attention modules return `(hidden, weights)`. The hidden state is the
+    first 3D tensor. GPT-2 and Qwen both follow that pattern.
+    """
     if torch.is_tensor(output):
         return output
     if isinstance(output, tuple):
         for item in output:
             if torch.is_tensor(item) and item.ndim == 3:
                 return item
-    raise RuntimeError(f"no (batch, sequence, hidden) tensor in {type(output).__name__}")
+    raise RuntimeError(
+        f"no (batch, sequence, hidden) tensor in {type(output).__name__}"
+    )
 
 
 def replace_tensor(output, updated):
@@ -136,7 +162,9 @@ def component_modules(layer):
     if attention is None:
         attention = getattr(layer, "attn", None)
     if attention is None or not hasattr(layer, "mlp"):
-        raise RuntimeError(f"cannot split {type(layer).__name__} into attention and MLP")
+        raise RuntimeError(
+            f"cannot split {type(layer).__name__} into attention and MLP"
+        )
     return attention, layer.mlp
 
 
@@ -167,7 +195,9 @@ def load_model(model_name, token, device):
         tokenizer.pad_token = tokenizer.eos_token
     tokenizer.padding_side = "right"
     try:
-        model = base.AutoModelForCausalLM.from_pretrained(model_name, dtype=torch.float32, **hub)
+        model = base.AutoModelForCausalLM.from_pretrained(
+            model_name, dtype=torch.float32, **hub
+        )
     except TypeError:
         model = base.AutoModelForCausalLM.from_pretrained(
             model_name, torch_dtype=torch.float32, **hub
@@ -180,6 +210,13 @@ def load_model(model_name, token, device):
 
 
 def collect_clean(model, tokenizer, rows, device, batch_size: int):
+    """Residual, attention write, and MLP write at every name piece.
+
+    Hooks sit on the block output, not on `hidden_states[-1]`, which Hugging
+    Face replaces with the post-layer-norm state. The first batch checks that
+    the block input plus the attention write plus the MLP write equals the
+    block output. Later batches skip that clone.
+    """
     layers = base.layer_modules(model)
     n_layers = len(layers)
     last_parts = [[] for _ in range(n_layers)]
@@ -213,8 +250,14 @@ def collect_clean(model, tokenizer, rows, device, batch_size: int):
             first_parts[layer_index].append(first.detach().to("cpu", torch.float32))
             mean_parts[layer_index].append(mean.detach().to("cpu", torch.float32))
             block_parts[layer_index].append(last_parts[layer_index][-1])
-            if stash["check"] and layer_index in stash["attn"] and layer_index in stash["mlp"]:
-                total = inputs[0] + stash["attn"][layer_index] + stash["mlp"][layer_index]
+            if (
+                stash["check"]
+                and layer_index in stash["attn"]
+                and layer_index in stash["mlp"]
+            ):
+                total = (
+                    inputs[0] + stash["attn"][layer_index] + stash["mlp"][layer_index]
+                )
                 stash["errors"].append((total - tensor).abs().max().item())
 
         return hook
@@ -236,21 +279,29 @@ def collect_clean(model, tokenizer, rows, device, batch_size: int):
                 output = model(**encoded, output_hidden_states=True, use_cache=False)
             hidden = output.hidden_states
             if len(hidden) != n_layers + 1:
-                raise RuntimeError(f"expected {n_layers + 1} hidden states, got {len(hidden)}")
+                raise RuntimeError(
+                    f"expected {n_layers + 1} hidden states, got {len(hidden)}"
+                )
             if stash["check"]:
                 if len(stash["errors"]) != n_layers:
                     raise RuntimeError(
                         f"decomposition check saw {len(stash['errors'])} layers, expected {n_layers}"
                     )
                 decomp_error = float(max(stash["errors"]))
-                print(f"  residual = input + attention + MLP, max error {decomp_error:.3e}", flush=True)
+                print(
+                    f"  residual = input + attention + MLP, max error {decomp_error:.3e}",
+                    flush=True,
+                )
                 if decomp_error > 1e-2:
                     raise RuntimeError(
                         f"attention/MLP outputs do not add up to the residual ({decomp_error:.3e})"
                     )
                 stash["check"] = False
             counts.extend(len(item) for item in hits)
-            print(f"  collected {min(start + batch_size, len(rows))}/{len(rows)}", flush=True)
+            print(
+                f"  collected {min(start + batch_size, len(rows))}/{len(rows)}",
+                flush=True,
+            )
     finally:
         for handle in handles:
             handle.remove()
@@ -264,7 +315,9 @@ def collect_clean(model, tokenizer, rows, device, batch_size: int):
         "n_tokens": np.asarray(counts, dtype=np.int32),
         "decomp_error": decomp_error,
     }
-    if packed["last"][0].shape[0] != len(rows) or packed["attn"][0].shape[0] != len(rows):
+    if packed["last"][0].shape[0] != len(rows) or packed["attn"][0].shape[0] != len(
+        rows
+    ):
         raise RuntimeError(
             "activation rows "
             f"{packed['last'][0].shape[0]}/{packed['attn'][0].shape[0]} "
@@ -277,16 +330,22 @@ def project_hook(basis, stash):
     def hook(module, inputs, output):
         tensor = first_tensor(output)
         updated = tensor.clone()
-        positions = torch.tensor([item[-1] for item in stash["hits"]], device=updated.device)
+        positions = torch.tensor(
+            [item[-1] for item in stash["hits"]], device=updated.device
+        )
         batch = torch.arange(updated.size(0), device=updated.device)
         vector = updated[batch, positions].to(basis.dtype)
-        updated[batch, positions] = (vector - vector @ basis @ basis.T).to(updated.dtype)
+        updated[batch, positions] = (vector - vector @ basis @ basis.T).to(
+            updated.dtype
+        )
         return replace_tensor(output, updated)
 
     return hook
 
 
-def forward_last(model, tokenizer, rows, device, batch_size, layer_index, basis, site, source=None):
+def forward_last(
+    model, tokenizer, rows, device, batch_size, layer_index, basis, site, source=None
+):
     """Residual at the last name piece. Optionally project out `basis` or patch `source`."""
     layers = base.layer_modules(model)
     stash = {"hits": None}
@@ -301,19 +360,27 @@ def forward_last(model, tokenizer, rows, device, batch_size, layer_index, basis,
             target = component_modules(module)[1]
         else:
             raise RuntimeError(site)
-        basis_t = torch.tensor(np.ascontiguousarray(basis), dtype=torch.float32, device=device)
+        basis_t = torch.tensor(
+            np.ascontiguousarray(basis), dtype=torch.float32, device=device
+        )
         handles.append(target.register_forward_hook(project_hook(basis_t, stash)))
     if source is not None:
-        source_t = torch.tensor(np.ascontiguousarray(source), dtype=torch.float32, device=device)
+        source_t = torch.tensor(
+            np.ascontiguousarray(source), dtype=torch.float32, device=device
+        )
         cursor = {"start": 0}
 
         def patch(module, inputs, output):
             tensor = first_tensor(output)
             updated = tensor.clone()
-            positions = torch.tensor([item[-1] for item in stash["hits"]], device=updated.device)
+            positions = torch.tensor(
+                [item[-1] for item in stash["hits"]], device=updated.device
+            )
             batch = torch.arange(updated.size(0), device=updated.device)
             stop = cursor["start"] + updated.size(0)
-            updated[batch, positions] = source_t[cursor["start"] : stop].to(updated.dtype)
+            updated[batch, positions] = source_t[cursor["start"] : stop].to(
+                updated.dtype
+            )
             cursor["start"] = stop
             return replace_tensor(output, updated)
 
@@ -323,7 +390,9 @@ def forward_last(model, tokenizer, rows, device, batch_size, layer_index, basis,
     def make_record(index):
         def hook(module, inputs, output):
             tensor = first_tensor(output)
-            parts[index].append(gather_last(tensor, stash["hits"]).detach().to("cpu", torch.float32))
+            parts[index].append(
+                gather_last(tensor, stash["hits"]).detach().to("cpu", torch.float32)
+            )
 
         return hook
 
@@ -411,7 +480,18 @@ def layer_curve(bank, labels, train, test):
     return curve, probes, best_layer
 
 
-def intervention_scores(features, residual_probe, labels, train, test, languages, binary, binary_probe, binary_train, binary_test):
+def intervention_scores(
+    features,
+    residual_probe,
+    labels,
+    train,
+    test,
+    languages,
+    binary,
+    binary_probe,
+    binary_train,
+    binary_test,
+):
     language = scored(residual_probe, features, labels, test, languages)
     refit = refit_score(features, labels, train, test, languages)
     binary_original = binary_probe.accuracy(features[binary_test], binary[binary_test])
@@ -433,6 +513,19 @@ def mean_rows(rows: list[dict]) -> dict:
     return summary
 
 
+def token_accuracy(train_n, train_y, test_n, test_y) -> float:
+    clf = LogisticRegression(max_iter=1000)
+    clf.fit(train_n.reshape(-1, 1), train_y)
+    return float(clf.score(test_n.reshape(-1, 1), test_y))
+
+
+def random_basis(width: int, k: int, draw: int) -> np.ndarray:
+    rng = np.random.default_rng(base.SEED + draw)
+    matrix = rng.normal(size=(width, k))
+    q, _ = np.linalg.qr(matrix)
+    return q[:, :k]
+
+
 def make_pairs(language, n_tokens, pool):
     rng = np.random.default_rng(base.SEED)
     pairs = []
@@ -452,9 +545,13 @@ def make_pairs(language, n_tokens, pool):
     return pairs, matched
 
 
-def run_model(model_name, rows, device, batch_size, token, experiments: set[str]) -> dict:
+def run_model(
+    model_name, rows, device, batch_size, token, experiments: set[str]
+) -> dict:
     print(f"\n=== {model_name} ===", flush=True)
-    languages = sorted({row["language_code"] for row in rows if row["include_in_language_probe"] == 1})
+    languages = sorted(
+        {row["language_code"] for row in rows if row["include_in_language_probe"] == 1}
+    )
     language_id = {code: index for index, code in enumerate(languages)}
     language = np.asarray([language_id.get(row["language_code"], -1) for row in rows])
     binary = np.asarray([row["is_east_african"] for row in rows])
@@ -472,8 +569,11 @@ def run_model(model_name, rows, device, batch_size, token, experiments: set[str]
     n_tokens = clean["n_tokens"]
     majority = int(np.bincount(language[lang_train]).argmax())
     majority_accuracy = float(np.mean(language[lang_test] == majority))
-    token_baseline = base.token_accuracy(
-        n_tokens[lang_train], language[lang_train], n_tokens[lang_test], language[lang_test]
+    token_baseline = token_accuracy(
+        n_tokens[lang_train],
+        language[lang_train],
+        n_tokens[lang_test],
+        language[lang_test],
     )
     names = [row["name"] for row in rows]
     orthography = {
@@ -482,7 +582,9 @@ def run_model(model_name, rows, device, batch_size, token, experiments: set[str]
     }
     print(
         "  char n-gram "
-        + " ".join(f"{clip} {orthography[clip]['accuracy']:.3f}" for clip in orthography),
+        + " ".join(
+            f"{clip} {orthography[clip]['accuracy']:.3f}" for clip in orthography
+        ),
         flush=True,
     )
 
@@ -491,7 +593,9 @@ def run_model(model_name, rows, device, batch_size, token, experiments: set[str]
     position_probes = {}
     position_best = {}
     for site in ("last", "first", "mean"):
-        curve, probes, best_layer = layer_curve(clean[site], language, lang_train, lang_test)
+        curve, probes, best_layer = layer_curve(
+            clean[site], language, lang_train, lang_test
+        )
         position_curves[site] = curve
         position_probes[site] = probes
         position_best[site] = best_layer
@@ -508,7 +612,9 @@ def run_model(model_name, rows, device, batch_size, token, experiments: set[str]
     component_probes = {}
     component_best = {}
     for site in ("attn", "mlp"):
-        curve, probes, layer_index = layer_curve(clean[site], language, lang_train, lang_test)
+        curve, probes, layer_index = layer_curve(
+            clean[site], language, lang_train, lang_test
+        )
         component_curves[site] = curve
         component_probes[site] = probes
         component_best[site] = layer_index
@@ -571,8 +677,12 @@ def run_model(model_name, rows, device, batch_size, token, experiments: set[str]
             train,
             test,
         ) | {
-            "final_language_original": final_probe.accuracy(bank[final_layer][lang_test], language[lang_test]),
-            "final_language_refit": refit_score(bank[final_layer], language, lang_train, lang_test)["accuracy"],
+            "final_language_original": final_probe.accuracy(
+                bank[final_layer][lang_test], language[lang_test]
+            ),
+            "final_language_refit": refit_score(
+                bank[final_layer], language, lang_train, lang_test
+            )["accuracy"],
         }
 
     if "ablation" in experiments:
@@ -582,17 +692,33 @@ def run_model(model_name, rows, device, batch_size, token, experiments: set[str]
         )
         language_removed = score_bank(ablated)
         binary_basis, binary_k = row_basis(binary_probe.raw)
-        print(f" ablating binary direction at layer {best_layer} k={binary_k}", flush=True)
+        print(
+            f" ablating binary direction at layer {best_layer} k={binary_k}", flush=True
+        )
         binary_ablated = forward_last(
-            model, tokenizer, rows, device, batch_size, best_layer, binary_basis, "residual"
+            model,
+            tokenizer,
+            rows,
+            device,
+            batch_size,
+            best_layer,
+            binary_basis,
+            "residual",
         )
         binary_removed = score_bank(binary_ablated)
         random_scores = []
         for draw in range(5):
             print(f" ablating random subspace draw {draw + 1}/5", flush=True)
-            guess = base.random_basis(basis.shape[0], basis.shape[1], draw)
+            guess = random_basis(basis.shape[0], basis.shape[1], draw)
             random_bank = forward_last(
-                model, tokenizer, rows, device, batch_size, best_layer, guess, "residual"
+                model,
+                tokenizer,
+                rows,
+                device,
+                batch_size,
+                best_layer,
+                guess,
+                "residual",
             )
             random_scores.append(score_bank(random_bank))
         result["ablation"] = {
@@ -613,23 +739,43 @@ def run_model(model_name, rows, device, batch_size, token, experiments: set[str]
 
     if "components" in experiments:
         causal = {}
-        layers_to_test = sorted({best_layer, component_best["attn"], component_best["mlp"]})
+        layers_to_test = sorted(
+            {best_layer, component_best["attn"], component_best["mlp"]}
+        )
         for layer_index in layers_to_test:
             causal[str(layer_index)] = {}
             layer_probe = position_probes["last"][layer_index]
             layer_binary = fit_on(clean["last"][layer_index], binary, train, test)
             for site in ("attn", "mlp"):
-                print(f" removing {site} language write at layer {layer_index}", flush=True)
+                print(
+                    f" removing {site} language write at layer {layer_index}",
+                    flush=True,
+                )
                 site_basis, site_k = row_basis(component_probes[site][layer_index].raw)
                 bank = forward_last(
-                    model, tokenizer, rows, device, batch_size, layer_index, site_basis, site
+                    model,
+                    tokenizer,
+                    rows,
+                    device,
+                    batch_size,
+                    layer_index,
+                    site_basis,
+                    site,
                 )
                 causal[str(layer_index)][site] = {
                     "k": site_k,
-                    "language_original": layer_probe.accuracy(bank[layer_index][lang_test], language[lang_test]),
-                    "language_refit": refit_score(bank[layer_index], language, lang_train, lang_test)["accuracy"],
-                    "final_language_refit": refit_score(bank[final_layer], language, lang_train, lang_test)["accuracy"],
-                    "binary_original": layer_binary.accuracy(bank[layer_index][test], binary[test]),
+                    "language_original": layer_probe.accuracy(
+                        bank[layer_index][lang_test], language[lang_test]
+                    ),
+                    "language_refit": refit_score(
+                        bank[layer_index], language, lang_train, lang_test
+                    )["accuracy"],
+                    "final_language_refit": refit_score(
+                        bank[final_layer], language, lang_train, lang_test
+                    )["accuracy"],
+                    "binary_original": layer_binary.accuracy(
+                        bank[layer_index][test], binary[test]
+                    ),
                 }
         result["component_ablation"] = causal
 
@@ -639,10 +785,7 @@ def run_model(model_name, rows, device, batch_size, token, experiments: set[str]
         dest_rows = [rows[dest] for _, dest in pairs]
         print(f" patching {len(pairs)} pairs ({matched} length-matched)", flush=True)
         readouts = sorted({best_layer, final_layer})
-        by_readout = {
-            str(readout): []
-            for readout in readouts
-        }
+        by_readout = {str(readout): [] for readout in readouts}
         ceilings = {}
         for readout in readouts:
             probe = position_probes["last"][readout]
@@ -687,7 +830,11 @@ def run_model(model_name, rows, device, batch_size, token, experiments: set[str]
                 flush=True,
             )
         for readout, curve in by_readout.items():
-            transferable = [row for row in curve if not row["direct_copy"] and row["layer"] <= int(readout)]
+            transferable = [
+                row
+                for row in curve
+                if not row["direct_copy"] and row["layer"] <= int(readout)
+            ]
             if transferable:
                 peak = max(transferable, key=lambda row: row["source_match"])
                 ceilings[readout]["best_transfer_layer"] = peak["layer"]

@@ -12,7 +12,9 @@ pieces:
 
 The English offset is the distance from the English training centroid to the
 span of the six training language centroids, divided by the average gap between
-those centroids. A bootstrap redraws names within each language.
+those centroids. A bootstrap redraws names within each language. Control
+labels are -1. The layer is the training-accuracy choice from
+`run_paper_strength.layer_choice`.
 """
 
 from __future__ import annotations
@@ -35,7 +37,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 import run_english_subspace as english
 import run_language_mech as mech
 import run_paper_strength as paper
-import run_subspace as base
+import common as base
 
 OUT = base.RESULTS / "publish"
 ALT_TEMPLATE = "The person {name} is called"
@@ -51,7 +53,11 @@ SMALL_MODELS = [
 
 
 def collect_sites(model, tokenizer, rows, device, batch_size):
-    """Block outputs at the last name piece and at the mean of the name's pieces."""
+    """Block outputs at the last name piece and at the mean of the name's pieces.
+
+    Attention and MLP writes are not stored. This pass is the one the paper
+    reruns, and it only needs the two readouts.
+    """
     layers = base.layer_modules(model)
     n_layers = len(layers)
     last_parts = [[] for _ in range(n_layers)]
@@ -77,7 +83,10 @@ def collect_sites(model, tokenizer, rows, device, batch_size):
             stash["hits"] = hits
             with torch.no_grad():
                 model(**encoded, use_cache=False)
-            print(f"  collected {min(start + batch_size, len(rows))}/{len(rows)}", flush=True)
+            print(
+                f"  collected {min(start + batch_size, len(rows))}/{len(rows)}",
+                flush=True,
+            )
     finally:
         for handle in handles:
             handle.remove()
@@ -123,12 +132,23 @@ def shuffled_rows(rows, seed):
 
 
 def prepared(raw):
-    rows = [row for row in raw if row["include_in_language_probe"] == 1 or row["is_east_african"] == 0]
-    languages = sorted({row["language_code"] for row in rows if row["include_in_language_probe"] == 1})
+    """Language-probe rows plus the controls. Double-listed names are excluded."""
+    rows = [
+        row
+        for row in raw
+        if row["include_in_language_probe"] == 1 or row["is_east_african"] == 0
+    ]
+    languages = sorted(
+        {row["language_code"] for row in rows if row["include_in_language_probe"] == 1}
+    )
     language_id = {code: index for index, code in enumerate(languages)}
     labels = np.asarray(
         [
-            language_id[row["language_code"]] if row["include_in_language_probe"] == 1 else -1
+            (
+                language_id[row["language_code"]]
+                if row["include_in_language_probe"] == 1
+                else -1
+            )
             for row in rows
         ]
     )
@@ -141,20 +161,32 @@ def compact(report, layer):
     kept = {
         "layer": layer,
         "dimension": report["dimension"],
-        "english_orthogonal_over_language_gap": report["english_orthogonal_over_language_gap"],
-        "english_inplane_over_language_gap": report["english_inplane_over_language_gap"],
-        "english_test_orthogonal_over_language_test": report["english_test_orthogonal_over_language_test"],
-        "nearest_language_to_english_centroid": report["nearest_language_to_english_centroid"],
+        "english_orthogonal_over_language_gap": report[
+            "english_orthogonal_over_language_gap"
+        ],
+        "english_inplane_over_language_gap": report[
+            "english_inplane_over_language_gap"
+        ],
+        "english_test_orthogonal_over_language_test": report[
+            "english_test_orthogonal_over_language_test"
+        ],
+        "nearest_language_to_english_centroid": report[
+            "nearest_language_to_english_centroid"
+        ],
     }
     if "binary_direction_in_language_subspace" in report:
-        kept["binary_direction_in_language_subspace"] = report["binary_direction_in_language_subspace"]
+        kept["binary_direction_in_language_subspace"] = report[
+            "binary_direction_in_language_subspace"
+        ]
     return kept
 
 
 def curve_of(bank, labels, train, test, languages):
     curve = []
     for index, features in enumerate(bank):
-        report = english.geometry(features, labels, train, test, languages, binary_probe=False)
+        report = english.geometry(
+            features, labels, train, test, languages, binary_probe=False
+        )
         curve.append(compact(report, index))
     return curve
 
@@ -172,8 +204,15 @@ def six_way(features, labels, train, test, languages, names, ngram_range):
     lang_train = train[language]
     lang_test = test[language]
     lang_names = [name for name, flag in zip(names, language) if flag]
-    pred = paper.fit_predict(lang_features[lang_train], lang_labels[lang_train], lang_features[lang_test], base.SEED)
-    ngram = paper.char_predict(lang_names, lang_labels, lang_train, lang_test, ngram_range, base.SEED)
+    pred = paper.fit_predict(
+        lang_features[lang_train],
+        lang_labels[lang_train],
+        lang_features[lang_test],
+        base.SEED,
+    )
+    ngram = paper.char_predict(
+        lang_names, lang_labels, lang_train, lang_test, ngram_range, base.SEED
+    )
     truth = lang_labels[lang_test]
     matrix = confusion_matrix(truth, pred, labels=list(range(len(languages))))
     compared = paper.paired_tests(pred, ngram, truth)
@@ -193,6 +232,13 @@ def gram_matrix(names, train, ngram_range):
 
 
 def project_out(features, gram, train):
+    """Remove a ridge fit of character n-grams from the residual.
+
+    The design matrix is names by n-gram features, which is wider than it is
+    tall, so the fit is solved in the dual: n-gram similarities among the
+    training names, plus `RIDGE` on the diagonal. The same weights are then
+    applied to every row, including the test names and the controls.
+    """
     gram_train = gram[train]
     system = gram_train @ gram_train.T
     system.flat[:: system.shape[0] + 1] += RIDGE
@@ -220,6 +266,12 @@ def pairwise(means):
 
 
 def correlation(left, right):
+    """Spearman and Pearson of the 15 pairwise language-centroid gaps.
+
+    `left` is distances in the residual. `right` is distances in a spelling
+    vector (letter counts, or character 2–3 grams). Fifteen pairs is the
+    whole comparison; nothing is selected after the fact.
+    """
     spearman = spearmanr(left, right)
     pearson = pearsonr(left, right)
     return {
@@ -232,6 +284,13 @@ def correlation(left, right):
 
 
 def ci(draws, point):
+    """95% interval for `point`, recentered on the full-sample estimate.
+
+    Resampling class means rotates the subspace and inflates the language
+    gaps, so the raw percentile interval sits below the observed offset and
+    can miss it. Subtracting the bootstrap mean and adding `point` puts the
+    observed offset back in the middle. `percentile_ci95` keeps the raw one.
+    """
     draws = np.asarray(draws, dtype=np.float64)
     raw_low, raw_high = np.percentile(draws, [2.5, 97.5])
     centered = draws - np.mean(draws) + point
@@ -259,7 +318,9 @@ def ratio_from_means(means, english_mean):
 def bootstrap_residual_ratio(features, gram, labels, train, test, languages):
     """Redraw training names and refit the spelling projection before measuring."""
     rng = np.random.default_rng(base.SEED + 2)
-    pools = [np.flatnonzero(train & (labels == index)) for index in range(len(languages))]
+    pools = [
+        np.flatnonzero(train & (labels == index)) for index in range(len(languages))
+    ]
     english_pool = np.flatnonzero(train & (labels < 0))
     language_test = np.flatnonzero(test & (labels >= 0))
     english_test = np.flatnonzero(test & (labels < 0))
@@ -300,7 +361,9 @@ def bootstrap_residual_ratio(features, gram, labels, train, test, languages):
 
 def bootstrap_ratio(features, labels, train, test, languages):
     rng = np.random.default_rng(base.SEED)
-    pools = [np.flatnonzero(train & (labels == index)) for index in range(len(languages))]
+    pools = [
+        np.flatnonzero(train & (labels == index)) for index in range(len(languages))
+    ]
     english_pool = np.flatnonzero(train & (labels < 0))
     language_test = np.flatnonzero(test & (labels >= 0))
     english_test = np.flatnonzero(test & (labels < 0))
@@ -308,9 +371,14 @@ def bootstrap_ratio(features, labels, train, test, languages):
     cloud_draws = []
     for _ in range(N_BOOTSTRAP):
         means = np.stack(
-            [features[rng.choice(pool, size=len(pool), replace=True)].mean(axis=0) for pool in pools]
+            [
+                features[rng.choice(pool, size=len(pool), replace=True)].mean(axis=0)
+                for pool in pools
+            ]
         )
-        english_mean = features[rng.choice(english_pool, size=len(english_pool), replace=True)].mean(axis=0)
+        english_mean = features[
+            rng.choice(english_pool, size=len(english_pool), replace=True)
+        ].mean(axis=0)
         basis, _ = english.centroid_basis(means)
         origin = means.mean(axis=0)
         offset = english_mean - origin
@@ -325,7 +393,9 @@ def bootstrap_ratio(features, labels, train, test, languages):
             return np.linalg.norm(residual, axis=1).mean()
 
         cloud_draws.append(float(ortho_mean(english_test) / ortho_mean(language_test)))
-    centroid_point, cloud_point = observed_ratios(features, labels, train, test, languages)
+    centroid_point, cloud_point = observed_ratios(
+        features, labels, train, test, languages
+    )
     return {
         "centroid_ratio": ci(centroid_draws, centroid_point),
         "cloud_ratio": ci(cloud_draws, cloud_point),
@@ -335,7 +405,9 @@ def bootstrap_ratio(features, labels, train, test, languages):
 def bootstrap_minimum(bank, labels, train, languages):
     """Smallest English centroid ratio across layers, redrawing training names."""
     rng = np.random.default_rng(base.SEED + 1)
-    pools = [np.flatnonzero(train & (labels == index)) for index in range(len(languages))]
+    pools = [
+        np.flatnonzero(train & (labels == index)) for index in range(len(languages))
+    ]
     english_pool = np.flatnonzero(train & (labels < 0))
     draws = []
     layers = []
@@ -361,7 +433,10 @@ def bootstrap_minimum(bank, labels, train, languages):
     observed = []
     for features in bank:
         means = np.stack(
-            [features[train & (labels == index)].mean(axis=0) for index in range(len(languages))]
+            [
+                features[train & (labels == index)].mean(axis=0)
+                for index in range(len(languages))
+            ]
         )
         english_mean = features[train & (labels < 0)].mean(axis=0)
         point, _, _ = ratio_from_means(means, english_mean)
@@ -373,7 +448,10 @@ def bootstrap_minimum(bank, labels, train, languages):
 
 def observed_ratios(features, labels, train, test, languages):
     means = np.stack(
-        [features[train & (labels == index)].mean(axis=0) for index in range(len(languages))]
+        [
+            features[train & (labels == index)].mean(axis=0)
+            for index in range(len(languages))
+        ]
     )
     english_mean = features[train & (labels < 0)].mean(axis=0)
     centroid, basis, origin = ratio_from_means(means, english_mean)
@@ -389,10 +467,14 @@ def observed_ratios(features, labels, train, test, languages):
 
 def spelling_match(features, gram, labels, train, languages):
     language = labels >= 0
-    activation = class_means(features[language], labels[language], train[language], len(languages))
+    activation = class_means(
+        features[language], labels[language], train[language], len(languages)
+    )
     # class_means indexes labels == index, but features were already sliced to language rows,
     # whose labels are 0..5. train must be sliced the same way.
-    spelling = class_means(gram[language], labels[language], train[language], len(languages))
+    spelling = class_means(
+        gram[language], labels[language], train[language], len(languages)
+    )
     activation_d, pairs = pairwise(activation)
     spelling_d, _ = pairwise(spelling)
     compared = correlation(activation_d, spelling_d)
@@ -419,12 +501,24 @@ def band(curves):
     layers = [item["layer"] for item in curves[0]]
     return {
         "layer": layers,
-        "centroid_mean": stacked["english_orthogonal_over_language_gap"].mean(axis=0).tolist(),
-        "centroid_min": stacked["english_orthogonal_over_language_gap"].min(axis=0).tolist(),
-        "centroid_max": stacked["english_orthogonal_over_language_gap"].max(axis=0).tolist(),
-        "cloud_mean": stacked["english_test_orthogonal_over_language_test"].mean(axis=0).tolist(),
-        "cloud_min": stacked["english_test_orthogonal_over_language_test"].min(axis=0).tolist(),
-        "cloud_max": stacked["english_test_orthogonal_over_language_test"].max(axis=0).tolist(),
+        "centroid_mean": stacked["english_orthogonal_over_language_gap"]
+        .mean(axis=0)
+        .tolist(),
+        "centroid_min": stacked["english_orthogonal_over_language_gap"]
+        .min(axis=0)
+        .tolist(),
+        "centroid_max": stacked["english_orthogonal_over_language_gap"]
+        .max(axis=0)
+        .tolist(),
+        "cloud_mean": stacked["english_test_orthogonal_over_language_test"]
+        .mean(axis=0)
+        .tolist(),
+        "cloud_min": stacked["english_test_orthogonal_over_language_test"]
+        .min(axis=0)
+        .tolist(),
+        "cloud_max": stacked["english_test_orthogonal_over_language_test"]
+        .max(axis=0)
+        .tolist(),
     }
 
 
@@ -432,7 +526,9 @@ def site_bundle(bank, labels, train, test, languages, names, clean_layer=None):
     chosen, train_scores, test_scores = choose_layer(bank, labels, train, test)
     layer = clean_layer if clean_layer is not None else chosen
     print(f"    layer {layer} (train-chosen {chosen})", flush=True)
-    detailed = english.geometry(bank[layer], labels, train, test, languages, binary_probe=True)
+    detailed = english.geometry(
+        bank[layer], labels, train, test, languages, binary_probe=True
+    )
     summary = compact(detailed, layer)
     summary["train_chosen_layer"] = chosen
     summary["train_accuracy"] = train_scores[chosen]
@@ -449,7 +545,9 @@ def residual_curve(bank, gram, labels, train, test, languages):
     curve = []
     for index, features in enumerate(bank):
         residual = project_out(features, gram, train)
-        report = english.geometry(residual, labels, train, test, languages, binary_probe=False)
+        report = english.geometry(
+            residual, labels, train, test, languages, binary_probe=False
+        )
         curve.append(compact(report, index))
     return curve
 
@@ -488,10 +586,17 @@ def run_model(model_name, raw_rows, device, batch_size, token, dtype) -> dict:
         chosen, _, _ = choose_layer(bank, labels, train, test)
         summary = site_bundle(bank, labels, train, test, languages, names)
         summary["by_layer"] = curve_of(bank, labels, train, test, languages)
-        summary["minimum_across_layers"] = bootstrap_minimum(bank, labels, train, languages)
-        observed_min = min(summary["by_layer"], key=lambda item: item["english_orthogonal_over_language_gap"])
+        summary["minimum_across_layers"] = bootstrap_minimum(
+            bank, labels, train, languages
+        )
+        observed_min = min(
+            summary["by_layer"],
+            key=lambda item: item["english_orthogonal_over_language_gap"],
+        )
         summary["observed_minimum_layer"] = observed_min["layer"]
-        summary["observed_minimum_ratio"] = observed_min["english_orthogonal_over_language_gap"]
+        summary["observed_minimum_ratio"] = observed_min[
+            "english_orthogonal_over_language_gap"
+        ]
         summary["spelling_distance"] = {
             name: spelling_match(bank[chosen], gram, labels, train, languages)
             for name, gram in grams.items()
@@ -504,13 +609,17 @@ def run_model(model_name, raw_rows, device, batch_size, token, dtype) -> dict:
                 residual_features, labels, train, test, languages, binary_probe=True
             )
             residual_summary = compact(detailed, chosen)
-            before = english.geometry(bank[chosen], labels, train, test, languages, binary_probe=False)
+            before = english.geometry(
+                bank[chosen], labels, train, test, languages, binary_probe=False
+            )
             after_norm = detailed["english_orthogonal_distance"]
             before_norm = before["english_orthogonal_distance"]
             residual_summary["orthogonal_distance_remaining"] = (
                 after_norm / before_norm if before_norm else None
             )
-            residual_summary["by_layer"] = residual_curve(bank, gram, labels, train, test, languages)
+            residual_summary["by_layer"] = residual_curve(
+                bank, gram, labels, train, test, languages
+            )
             residual_summary["bootstrap"] = bootstrap_residual_ratio(
                 bank[chosen], gram, labels, train, test, languages
             )
@@ -540,13 +649,24 @@ def run_model(model_name, raw_rows, device, batch_size, token, dtype) -> dict:
                 bank_all[site][layer], labels, train, test, languages, binary_probe=True
             )
             item = compact(detailed, layer)
-            item["bootstrap"] = bootstrap_ratio(bank_all[site][layer], labels, train, test, languages)
+            item["bootstrap"] = bootstrap_ratio(
+                bank_all[site][layer], labels, train, test, languages
+            )
             item["six_way_vs_char_2_3gram"] = six_way(
-                bank_all[site][layer], labels, train, test, languages, shuffled_names, (2, 3)
+                bank_all[site][layer],
+                labels,
+                train,
+                test,
+                languages,
+                shuffled_names,
+                (2, 3),
             )
             if repetition == 0:
                 item["examples"] = [
-                    {"original": rows[index]["name"], "shuffled": shuffled[index]["name"]}
+                    {
+                        "original": rows[index]["name"],
+                        "shuffled": shuffled[index]["name"],
+                    }
                     for index in range(6)
                 ]
             shuffle_at_clean[site].append(item)
@@ -573,7 +693,12 @@ def run_model(model_name, raw_rows, device, batch_size, token, dtype) -> dict:
         same_layer = result["sites"][site]["clean_layer"]
         if summary["layer"] != same_layer:
             detailed = english.geometry(
-                alternate[site][same_layer], labels, train, test, languages, binary_probe=True
+                alternate[site][same_layer],
+                labels,
+                train,
+                test,
+                languages,
+                binary_probe=True,
             )
             summary["at_clean_layer"] = compact(detailed, same_layer)
             summary["at_clean_layer"]["bootstrap"] = bootstrap_ratio(
@@ -607,7 +732,9 @@ def main():
     for model_name in args.models:
         path = OUT / f"{base.slug(model_name)}.json"
         try:
-            summary = run_model(model_name, raw_rows, device, args.batch_size, token, args.dtype)
+            summary = run_model(
+                model_name, raw_rows, device, args.batch_size, token, args.dtype
+            )
         except Exception as exc:
             message = base.redact(str(exc))
             print(f"FAILED {model_name}: {message}", flush=True)

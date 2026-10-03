@@ -3,7 +3,11 @@
 
 Confusion matrices, a paired test of the residual probe against character
 n-grams, and a within-name character shuffle. The layer is chosen on the
-training split.
+training split, then scored once on the test split.
+
+Logistic regression with this solver is convex, so ten probe seeds return
+the same accuracy. The stability number is a bootstrap of the training rows,
+not a sweep of random initializations.
 """
 
 from __future__ import annotations
@@ -25,7 +29,7 @@ from sklearn.preprocessing import StandardScaler
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import run_language_mech as mech
-import run_subspace as base
+import common as base
 
 OUT = base.RESULTS / "paper_strength"
 N_SEEDS = 10
@@ -63,6 +67,11 @@ def recalls(confusion, languages):
 
 
 def paired_tests(model_pred, ngram_pred, truth):
+    """McNemar test plus a paired bootstrap of (probe correct minus n-gram correct).
+
+    Only names where the two predictors disagree enter the binomial test.
+    The interval is on the accuracy difference, resampled over test names.
+    """
     model_correct = model_pred == truth
     ngram_correct = ngram_pred == truth
     model_only = int(np.sum(model_correct & ~ngram_correct))
@@ -71,7 +80,9 @@ def paired_tests(model_pred, ngram_pred, truth):
     if compared == 0:
         p_value = 1.0
     else:
-        p_value = float(binomtest(model_only, compared, 0.5, alternative="two-sided").pvalue)
+        p_value = float(
+            binomtest(model_only, compared, 0.5, alternative="two-sided").pvalue
+        )
     difference = model_correct.astype(np.float64) - ngram_correct.astype(np.float64)
     rng = np.random.default_rng(base.SEED)
     draws = rng.integers(0, len(difference), size=(N_TEST_RESAMPLES, len(difference)))
@@ -90,6 +101,7 @@ def paired_tests(model_pred, ngram_pred, truth):
 
 
 def layer_choice(bank, labels, train, test):
+    """Layer with the highest training accuracy. Test scores are recorded only."""
     train_scores = []
     test_scores = []
     for features in bank:
@@ -151,6 +163,11 @@ def site_report(features, labels, train, test, languages, names, ngram_pred):
 
 
 def shuffled_copy(rows):
+    """Reorder letters inside each name and rebuild the prompt around the new string.
+
+    The language label stays with the original name. A probe that still
+    separates the languages is using something other than letter order.
+    """
     template = base.CONFIG["prompt_template"]
     start = template.index("{name}")
     copied = []
@@ -176,9 +193,13 @@ def load_model(model_name, token, device, dtype):
     tokenizer.padding_side = "right"
     torch_dtype = {"float32": torch.float32, "float16": torch.float16}[dtype]
     try:
-        model = base.AutoModelForCausalLM.from_pretrained(model_name, dtype=torch_dtype, **hub)
+        model = base.AutoModelForCausalLM.from_pretrained(
+            model_name, dtype=torch_dtype, **hub
+        )
     except TypeError:
-        model = base.AutoModelForCausalLM.from_pretrained(model_name, torch_dtype=torch_dtype, **hub)
+        model = base.AutoModelForCausalLM.from_pretrained(
+            model_name, torch_dtype=torch_dtype, **hub
+        )
     model.to(device)
     model.eval()
     if hasattr(model, "gradient_checkpointing_disable"):
@@ -209,11 +230,12 @@ def run_model(model_name, rows, device, batch_size, token, dtype) -> dict:
     def analyze(bank, title):
         chosen, train_scores, test_scores = layer_choice(bank, labels, train, test)
         print(
-            f"  {title} train-chosen layer {chosen} "
-            f"test {test_scores[chosen]:.3f}",
+            f"  {title} train-chosen layer {chosen} " f"test {test_scores[chosen]:.3f}",
             flush=True,
         )
-        report = site_report(bank[chosen], labels, train, test, languages, names, ngram_pred)
+        report = site_report(
+            bank[chosen], labels, train, test, languages, names, ngram_pred
+        )
         report["layer"] = chosen
         report["train_accuracy_at_layer"] = train_scores[chosen]
         report["by_layer_test"] = test_scores
@@ -228,13 +250,19 @@ def run_model(model_name, rows, device, batch_size, token, dtype) -> dict:
     shuffled_rows = shuffled_copy(rows)
     shuffled = mech.collect_clean(model, tokenizer, shuffled_rows, device, batch_size)
     shuffled_names = [row["name"] for row in shuffled_rows]
-    shuffled_ngram = char_predict(shuffled_names, labels, train, test, (2, 3), base.SEED)
-    shuffled_unigram = char_predict(shuffled_names, labels, train, test, (1, 1), base.SEED)
+    shuffled_ngram = char_predict(
+        shuffled_names, labels, train, test, (2, 3), base.SEED
+    )
+    shuffled_unigram = char_predict(
+        shuffled_names, labels, train, test, (1, 1), base.SEED
+    )
 
     def shuffled_site(bank, layer):
         _, train_scores, test_scores = layer_choice(bank, labels, train, test)
         chosen = int(np.argmax(train_scores))
-        pred = fit_predict(bank[layer][train], labels[train], bank[layer][test], base.SEED)
+        pred = fit_predict(
+            bank[layer][train], labels[train], bank[layer][test], base.SEED
+        )
         truth = labels[test]
         matrix = confusion_matrix(truth, pred, labels=list(range(len(languages))))
         return {
@@ -275,7 +303,10 @@ def run_model(model_name, rows, device, batch_size, token, dtype) -> dict:
         "mean": mean,
         "shuffled": {
             "examples": [
-                {"original": rows[index]["name"], "shuffled": shuffled_rows[index]["name"]}
+                {
+                    "original": rows[index]["name"],
+                    "shuffled": shuffled_rows[index]["name"],
+                }
                 for index in range(8)
             ],
             "char_2_3gram": float(np.mean(shuffled_ngram == labels[test])),
@@ -300,7 +331,9 @@ def main():
     for model_name in args.models:
         path = OUT / f"{base.slug(model_name)}.json"
         try:
-            summary = run_model(model_name, rows, device, args.batch_size, token, args.dtype)
+            summary = run_model(
+                model_name, rows, device, args.batch_size, token, args.dtype
+            )
         except Exception as exc:
             message = base.redact(str(exc))
             print(f"FAILED {model_name}: {message}", flush=True)

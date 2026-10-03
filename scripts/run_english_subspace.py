@@ -2,8 +2,14 @@
 """Where the English control names sit relative to the six-language subspace.
 
 The subspace is the span of the six training language centroids. English is
-the control given names. A small orthogonal distance means those names lie
-in the same subspace as the six languages.
+the pooled Latin-script controls, frequent and uncommon together. Labels use
+-1 for those controls. A small orthogonal distance means the control centroid
+lies in the same subspace as the six languages. The ratio reported in the
+paper divides that distance by the average gap between language centroids, so
+1 means "as far off the plane as the languages are from each other."
+
+The 2D scatter is the in-plane view. The separation the paper reports is the
+component that scatter leaves out.
 """
 
 from __future__ import annotations
@@ -22,14 +28,17 @@ from sklearn.preprocessing import StandardScaler
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import run_language_mech as mech
 import run_paper_strength as paper
-import run_subspace as base
+import common as base
 
 OUT = base.RESULTS / "english_subspace"
-GROUPS = ["gisu", "kinyarwanda", "luganda", "lusoga", "runyankore", "swahili", "english"]
 
 
 def centroid_basis(means):
-    """Orthonormal basis of the centered class means. Means lie in this subspace."""
+    """Orthonormal basis of the centered class means.
+
+    Six points in a high-dimensional residual span at most five dimensions
+    after centering. Singular values below 1e-4 of the largest are dropped.
+    """
     centered = means - means.mean(axis=0, keepdims=True)
     _, singular, vt = np.linalg.svd(centered, full_matrices=False)
     if singular.size == 0 or singular[0] <= 0:
@@ -49,6 +58,7 @@ def unit(vector):
 
 
 def direction_in_subspace(direction, basis):
+    """Fraction of a unit vector that lies inside `basis`. Zero means a new axis."""
     vector = unit(direction)
     return float(np.linalg.norm(basis.T @ vector))
 
@@ -78,11 +88,18 @@ def language_frame(features, labels, train, languages):
 
 
 def geometry(features, labels, train, test, languages, binary_probe=True):
-    """How far English sits from the span of the six training language centroids."""
+    """How far English sits from the span of the six training language centroids.
+
+    `english_orthogonal_over_language_gap` is the paper's offset. The in-plane
+    ratio is the part a 2D plot can show. The cloud ratio compares mean
+    orthogonal distance of English test points with language test points.
+    """
     lang_test = test & (labels >= 0)
     eng_train = train & (labels < 0)
     eng_test = test & (labels < 0)
-    train_means, basis, dimension, origin = language_frame(features, labels, train, languages)
+    train_means, basis, dimension, origin = language_frame(
+        features, labels, train, languages
+    )
 
     def ortho_norm(rows):
         centered = rows - origin
@@ -100,8 +117,12 @@ def geometry(features, labels, train, test, languages, binary_probe=True):
     english_ortho = float(np.linalg.norm(english_offset - inplane))
     english_inplane = float(np.linalg.norm(inplane))
     nearest = int(np.argmin(np.linalg.norm(centered_means - inplane, axis=1)))
-    language_point = float(ortho_norm(features[lang_test]).mean()) if np.any(lang_test) else None
-    english_point = float(ortho_norm(features[eng_test]).mean()) if np.any(eng_test) else None
+    language_point = (
+        float(ortho_norm(features[lang_test]).mean()) if np.any(lang_test) else None
+    )
+    english_point = (
+        float(ortho_norm(features[eng_test]).mean()) if np.any(eng_test) else None
+    )
 
     report = {
         "dimension": dimension,
@@ -142,14 +163,25 @@ def analyze_site(features, labels, groups, train, test, languages):
     language_mask = ~english_mask
     assigned = six_pred[english_mask]
     assignment = {
-        languages[index]: int(np.sum(assigned == index)) for index in range(len(languages))
+        languages[index]: int(np.sum(assigned == index))
+        for index in range(len(languages))
     }
-    english_confidence = float(six_proba[english_mask].max(axis=1).mean()) if np.any(english_mask) else None
-    language_confidence = float(six_proba[language_mask].max(axis=1).mean()) if np.any(language_mask) else None
+    english_confidence = (
+        float(six_proba[english_mask].max(axis=1).mean())
+        if np.any(english_mask)
+        else None
+    )
+    language_confidence = (
+        float(six_proba[language_mask].max(axis=1).mean())
+        if np.any(language_mask)
+        else None
+    )
 
     seven = labels.copy()
     seven[labels < 0] = len(languages)
-    seven_pred, _, seven_raw = fit_predict(features[train], seven[train], features[test])
+    seven_pred, _, seven_raw = fit_predict(
+        features[train], seven[train], features[test]
+    )
     seven_labels = [name for name in languages] + ["english"]
     seven_recall = {}
     truth = seven[test]
@@ -163,36 +195,49 @@ def analyze_site(features, labels, groups, train, test, languages):
     seven_q, _ = np.linalg.qr(seven_basis)
     seven_basis = seven_q[:, :seven_keep]
     overlap = seven_basis.T @ basis
-    captured = float(np.sum(overlap ** 2) / seven_basis.shape[1])
+    captured = float(np.sum(overlap**2) / seven_basis.shape[1])
 
-    # 2D view: strongest two directions of the language-centroid subspace.
+    # The scatter uses the first two centroid directions. Off-plane distance
+    # is invisible in these coordinates.
     plane = basis[:, : min(2, basis.shape[1])]
     plotted = test
     coords = (features[plotted] - origin) @ plane
-    report.update({
-        "seven_way_accuracy": float(np.mean(seven_pred == truth)),
-        "seven_way_recall": seven_recall,
-        "seven_way_dimension": int(seven_basis.shape[1]),
-        "seven_way_energy_inside_language_subspace": captured,
-        "english_assigned_by_six_way_probe": assignment,
-        "english_mean_confidence": english_confidence,
-        "language_mean_confidence": language_confidence,
-        "projection": {
-            "x": coords[:, 0].astype(float).tolist(),
-            "y": coords[:, 1].astype(float).tolist() if coords.shape[1] > 1 else [0.0] * len(coords),
-            "group": groups[plotted].tolist(),
-        },
-    })
+    report.update(
+        {
+            "seven_way_accuracy": float(np.mean(seven_pred == truth)),
+            "seven_way_recall": seven_recall,
+            "seven_way_dimension": int(seven_basis.shape[1]),
+            "seven_way_energy_inside_language_subspace": captured,
+            "english_assigned_by_six_way_probe": assignment,
+            "english_mean_confidence": english_confidence,
+            "language_mean_confidence": language_confidence,
+            "projection": {
+                "x": coords[:, 0].astype(float).tolist(),
+                "y": (
+                    coords[:, 1].astype(float).tolist()
+                    if coords.shape[1] > 1
+                    else [0.0] * len(coords)
+                ),
+                "group": groups[plotted].tolist(),
+            },
+        }
+    )
     return report
 
 
 def run_model(model_name, rows, device, batch_size, token) -> dict:
     print(f"\n=== {model_name} ===", flush=True)
-    languages = sorted({row["language_code"] for row in rows if row["include_in_language_probe"] == 1})
+    languages = sorted(
+        {row["language_code"] for row in rows if row["include_in_language_probe"] == 1}
+    )
     language_id = {code: index for index, code in enumerate(languages)}
     labels = np.asarray(
         [
-            language_id[row["language_code"]] if row["include_in_language_probe"] == 1 else -1
+            (
+                language_id[row["language_code"]]
+                if row["include_in_language_probe"] == 1
+                else -1
+            )
             for row in rows
         ]
     )
@@ -204,7 +249,10 @@ def run_model(model_name, rows, device, batch_size, token) -> dict:
     )
     # Drop the four double-listed names that are in neither probe.
     keep = np.asarray(
-        [row["include_in_language_probe"] == 1 or row["is_east_african"] == 0 for row in rows]
+        [
+            row["include_in_language_probe"] == 1 or row["is_east_african"] == 0
+            for row in rows
+        ]
     )
     rows = [row for row, flag in zip(rows, keep) if flag]
     labels = labels[keep]
@@ -229,7 +277,12 @@ def run_model(model_name, rows, device, batch_size, token) -> dict:
         lang_train = train & (labels >= 0)
         by_layer = []
         for index, features in enumerate(bank):
-            pred, _, _ = fit_predict(features[lang_train], labels[lang_train], features[lang_train])
+            # Choose the layer on training accuracy. Test accuracy is stored
+            # but does not pick the layer, so the reported offset is not tuned
+            # on the names it is scored on.
+            pred, _, _ = fit_predict(
+                features[lang_train], labels[lang_train], features[lang_train]
+            )
             score = float(np.mean(pred == labels[lang_train]))
             if score > best_score:
                 best_layer, best_score = index, score
@@ -266,7 +319,12 @@ def main():
     parser.add_argument(
         "--models",
         nargs="*",
-        default=["distilgpt2", "HuggingFaceTB/SmolLM2-360M", "Qwen/Qwen3-0.6B", "Qwen/Qwen2.5-0.5B"],
+        default=[
+            "distilgpt2",
+            "HuggingFaceTB/SmolLM2-360M",
+            "Qwen/Qwen3-0.6B",
+            "Qwen/Qwen2.5-0.5B",
+        ],
     )
     args = parser.parse_args()
     token = base.load_project_env()
