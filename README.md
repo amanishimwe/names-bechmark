@@ -1,6 +1,6 @@
 # Language geometry of personal names
 
-A six-language probe of open-weight language models, and the spelling checks that explain it. The write-up is in [PAPER.md](PAPER.md). The plots are in [notebooks/language_visualizations.ipynb](notebooks/language_visualizations.ipynb).
+Where given names sit in the residual stream of distilgpt2, SmolLM2-360M, Qwen3-0.6B, Qwen2.5-0.5B, and Qwen2.5-1.5B. The write-up is in [PAPER.md](PAPER.md). The plots are in [notebooks/language_visualizations.ipynb](notebooks/language_visualizations.ipynb).
 
 The names are in `data/names.csv`. There are 1,200 prompts. Six hundred are given names in Gisu, Kinyarwanda, Luganda, Lusoga, Runyankore, and Swahili, 100 each. The other 600 are Latin-script controls matched on character length: 299 frequent European given names and 301 uncommon ones. The paper treats those controls as the comparison set.
 

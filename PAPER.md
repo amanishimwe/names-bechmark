@@ -1,63 +1,63 @@
-# The language subspace of these personal names is spelling
+# Where personal names sit in the residual stream
 
 ## Abstract
 
-A linear probe can tell Gisu, Kinyarwanda, Luganda, Lusoga, Runyankore, and Swahili apart from the residual stream at a personal name, at well above the chance rate of one in six. Character 2–3 grams fit on the name string match or beat that probe. The 600 Latin-script control names sit 1.4 to 2.0 language-gaps off the plane spanned by the six language centroids, in every model from distilgpt2 to Qwen2.5-1.5B, and the same offset appears in a second sentence. Projecting character 2–3 grams out of the residual removes that offset: about 0.1% of the orthogonal distance remains. Shuffling the letters inside each name pulls the last-piece offset from about 1.5 gaps down to about 0.7. Distances among the six languages track letter counts, not letter order. The geometry is spelling.
+This paper asks where given names sit in the internal representation of five language models: distilgpt2, SmolLM2-360M, Qwen3-0.6B, Qwen2.5-0.5B, and Qwen2.5-1.5B. The readout is the residual stream on the tokenizer pieces of the name. Gisu, Kinyarwanda, Luganda, Lusoga, Runyankore, and Swahili each occupy a centroid, and those six centroids span one subspace in every model. Latin-script control names sit off that subspace by 1.4 to 2.0 language-gaps. Inside the subspace they land among the six languages, so a plot of the plane looks mixed, and a six-way probe with no control class still assigns every control name to one of the six. The same map appears in a second sentence. The off-plane location is spelling: projecting character 2–3 grams out of the residual removes it.
 
-## 1. Data
+## 1. Question
 
-The table has 1,200 prompts and a fixed split, seed `20261002`, with 606 training rows and 594 test rows. Six hundred names are given names in the six languages, 100 each. Six hundred are Latin-script controls matched to those names on character length: 299 frequent European given names and 301 uncommon ones. Mugisha and Rukundo are listed under both Kinyarwanda and Runyankore. Those four rows stay in the training split and are excluded from the six-way probe, which leaves 298 language names and 296 control names in the test set.
+The names are held fixed and the model is changed. The question is whether the six languages occupy one region of the residual stream, whether the control names share that region, and whether those answers agree across models.
 
-The probe sentence is `The name {name} comes from`. A second sentence, `The person {name} is called`, is used only as a replication. Activations are the residual block output on the tokenizer pieces that fall inside the name span. Two readouts are reported: the last piece, and the mean of the pieces. The final layer norm is not part of either readout.
+## 2. Data and readout
 
-## 2. Method
+The table has 1,200 prompts and a fixed split, seed `20261002`, with 606 training rows and 594 test rows. Six hundred names are given names in the six languages, 100 each. Six hundred are Latin-script controls matched on character length: 299 frequent European given names and 301 uncommon ones. Mugisha and Rukundo are listed under both Kinyarwanda and Runyankore. Those four rows stay in the training split and are excluded from the six-way probe, which leaves 298 language names and 296 control names in the test set.
 
-Five causal language models are used: distilgpt2, SmolLM2-360M, Qwen3-0.6B, Qwen2.5-0.5B, and Qwen2.5-1.5B. The 1.5B model is run in float16. The others are float32.
+The sentence is `The name {name} comes from`. A second sentence, `The person {name} is called`, repeats the map. Activations are the residual block output on the tokenizer pieces inside the name span. Two readouts are reported: the last piece, and the mean of the pieces. The final layer norm is not part of either readout.
 
-The six-way probe is logistic regression on standardized residual vectors, fit on the training names and scored on the test names. The layer is the one with the highest training accuracy. Chance is 1/6. The spelling baseline is a logistic regression on character 2–3 grams of the name string, with the same split. The comparison is paired on the test names: an exact McNemar test, and a 10,000-draw bootstrap interval for the difference in accuracy.
+The language subspace is the span of the six training language centroids. The control offset is the distance from the control centroid to that subspace, divided by the average gap between the language centroids. A value of 1 means the controls are as close to the subspace as the languages are to each other. The interval is a 400-draw bootstrap that resamples training names within each language. The layer reported in the table is the one with the highest six-way training accuracy. The offset is also measured at every layer.
 
-The language subspace is the span of the six training language centroids. The control offset is the distance from the control-name centroid to that subspace, divided by the average gap between the language centroids. A value of 1 means the controls are as close to the subspace as the languages are to each other. The interval is a 400-draw bootstrap that resamples training names within each language and recenters the percentile interval on the full-sample estimate. The same ratio is recomputed at every layer, and the bootstrap is repeated for the smallest ratio across layers.
+## 3. The six languages share a subspace. The controls sit off it.
 
-Three checks ask whether that offset is spelling.
+The six centroids define the subspace, so their arrangement is the language plane. The control centroid does not lie in it. At the last piece the offset is 1.43 to 1.62 language-gaps. At the mean of the pieces it is 1.73 to 1.97. Every 95% interval is above 1, including the interval for the smallest offset across layers. The five models agree. The second sentence reproduces each offset to within 0.03 gaps.
 
-- The letters inside each name are shuffled, three times, and the subspace is rebuilt. The first shuffle uses the dataset seed.
-- Character n-grams fit on the training names are projected out of the residual with a ridge penalty of 1, and the offset is measured in what remains. Letter order is character 2–3 grams. Letter counts are character unigrams.
-- The six language centroids are compared with the centroids of those same n-gram vectors. The statistic is the Spearman correlation over the 15 pairs of languages.
+| Model | Last piece | 95% interval | Mean of pieces | 95% interval |
+| --- | ---: | --- | ---: | --- |
+| distilgpt2 | 1.62 | 1.48–1.76 | 1.86 | 1.69–2.03 |
+| SmolLM2-360M | 1.43 | 1.32–1.54 | 1.78 | 1.62–1.95 |
+| Qwen3-0.6B | 1.62 | 1.48–1.75 | 1.97 | 1.77–2.18 |
+| Qwen2.5-0.5B | 1.52 | 1.39–1.66 | 1.87 | 1.69–2.05 |
+| Qwen2.5-1.5B | 1.44 | 1.32–1.55 | 1.73 | 1.57–1.89 |
 
-## 3. The probe does not beat spelling
+![Control offset across layers. Values above the dotted line are farther from the language subspace than the languages are from each other.](paper/figures/english_offset_by_layer.png)
 
-Character 2–3 grams score 0.544 on the 298 test names. The last-piece residual probe is below that line on every model under 1B, and the paired test rejects equal accuracy. At Qwen2.5-1.5B the last-piece probe is 0.527 against the same 0.544, and the test no longer separates them (p = 0.67). The mean of the name's pieces is closer to the spelling line throughout. At 1.5B it is 0.594 (p = 0.11). The second sentence at 1.5B reaches 0.604 (p = 0.05). Averaging the pieces does not establish a win over spelling.
+Inside the plane, the test names from the six languages and the control names occupy the same cloud. The separation is the component this plot leaves out.
 
-| Model | Last piece | p | Mean of pieces | p |
-| --- | ---: | ---: | ---: | ---: |
-| distilgpt2 | 0.433 | 0.0009 | 0.497 | 0.18 |
-| SmolLM2-360M | 0.470 | 0.032 | 0.503 | 0.25 |
-| Qwen3-0.6B | 0.413 | 6.5e-5 | 0.577 | 0.29 |
-| Qwen2.5-0.5B | 0.399 | 1.2e-5 | 0.527 | 0.64 |
-| Qwen2.5-1.5B | 0.527 | 0.67 | 0.594 | 0.11 |
+![Held-out names from the four models under 1B, projected into the six-language subspace at the last piece. Control names are drawn in black.](paper/figures/english_projection_last.png)
 
-Shuffling letters inside each name drops the last-piece probe to between 0.18 and 0.32. Chance is 0.167, and the shuffled character 2–3 gram baseline on those same names is 0.25 to 0.29. The mean readout falls to between 0.28 and 0.40. Letter order carries the six-way signal that the probe was reading.
+A probe trained only on the six languages has nowhere to put a control name, and it still assigns every control test name to one of the six, at a confidence comparable to the names that belong to those languages. On SmolLM2-360M, Qwen3-0.6B, and Qwen2.5-0.5B, Swahili receives the largest share. On distilgpt2 the assignments are more spread out. This assignment plot is for those four models.
 
-## 4. Control names sit off the language plane, and spelling puts them there
+![Language assigned to control test names by a probe that never saw a control name in training.](paper/figures/english_probe_assignment.png)
 
-On the original sentence, the control centroid is 1.43 to 1.62 language-gaps off the subspace at the last piece, and 1.73 to 1.97 gaps at the mean of the pieces. Every 95% interval is above 1, including the interval for the smallest ratio across layers. The second sentence reproduces the offset to within 0.03 gaps on every model.
+A probe that is given the controls as a seventh class recovers them at about 0.89 to 0.95 recall. The six language centroids span five dimensions. The seven-class probe uses six. The controls add a direction the six languages do not span.
 
-![Control offset after the spelling checks. The dotted line is one language-gap.](paper/figures/english_spelling_checks.png)
+## 4. That direction is spelling
 
-Shuffling the letters cuts the last-piece offset to between 0.65 and 0.80. The mean-of-pieces offset falls to about 1. Projecting character 2–3 grams out of the residual leaves an offset of 0.14 to 0.20 gaps, and about 0.1% of the original orthogonal distance. Projecting out letter counts, and leaving order in the name, leaves an offset of 0.53 to 0.64 and about 26% to 32% of the distance. The separation of the controls from the six languages is letter order.
+Character 2–3 grams of the name string score 0.544 on the 298 language test names. The last-piece residual probe is below that line on the four models under 1B. At Qwen2.5-1.5B it is 0.527 against 0.544 (p = 0.67). The mean of the pieces is 0.594 at 1.5B (p = 0.11). Reading the residual does not beat reading the letters.
 
-![The control offset across layers. The band is the range of three letter shuffles.](paper/figures/english_offset_by_layer.png)
+Projecting those character 2–3 grams out of the residual removes the control offset. About 0.1% of the orthogonal distance remains, and the offset falls to 0.14–0.20 gaps. Shuffling the letters inside each name, three times, drops the last-piece offset from about 1.5 gaps to 0.65–0.80. Removing only letter counts, and keeping their order, leaves an offset of 0.53–0.64 and about 26% to 32% of the distance. Letter order is what places the controls off the language plane.
 
-The arrangement of the six languages is a different spelling fact. The Spearman correlation between centroid gaps and letter-count gaps is 0.54 to 0.84. The same correlation for character 2–3 grams is between −0.05 and 0.31, and none of those 15-pair tests is significant. Letter counts say which of the six languages sit near each other. Letter order says where the controls sit relative to all six.
+![The same offset after a second sentence, a letter shuffle, and the two spelling projections. The dotted line is one language-gap.](paper/figures/english_spelling_checks.png)
 
-![Spearman correlation between language-centroid gaps and spelling gaps.](paper/figures/language_gap_vs_spelling.png)
+Which of the six languages sit near each other is a second fact about the same representations. The Spearman correlation between centroid gaps and letter-count gaps is 0.54 to 0.84. The correlation with character 2–3 gram gaps is between −0.05 and 0.31, over 15 pairs, and is not significant. Letter counts arrange the six languages inside the plane. Letter order places the controls outside it.
 
-## 5. What the result supports
+![Spearman correlation between gaps among the six language centroids and gaps among their spelling vectors.](paper/figures/language_gap_vs_spelling.png)
 
-The six-language direction in these residuals is a spelling direction. A probe can read it, a character model reads it at least as well, and destroying letter order removes both the probe's accuracy and the control names' offset from the language plane. The finding is the same from distilgpt2 through Qwen2.5-1.5B, and it does not depend on the sentence wrapped around the name.
+## 5. Scope
 
-The sample is about 100 names in each of six languages, in one script, with two sentences. The largest model is 1.5B parameters. Those bounds are the right scope for the claim. Within them, the subspace is spelling.
+The map is the same in all five models and in both sentences. The controls sit off the subspace the six languages span, and they overlap those languages once the view is restricted to that subspace. The off-plane direction is spelling.
+
+The sample is about 100 names in each of six languages, in one script, with two sentences. The largest model is 1.5B parameters.
 
 ## Reproducing the figures
 
-`scripts/run_publish.py` writes `results/publish/`. The notebook `notebooks/language_visualizations.ipynb` draws the three figures above from those files. The name table and the split are `data/names.csv` and `data/config.json`.
+`scripts/run_publish.py` writes `results/publish/`. `scripts/run_english_subspace.py` writes the projections and the probe assignments. The notebook `notebooks/language_visualizations.ipynb` draws the figures. The name table and the split are `data/names.csv` and `data/config.json`.
