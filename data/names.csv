@@ -1,0 +1,1201 @@
+id,split,set,is_east_african,include_in_language_probe,name,language,language_code,place_labels,char_len,gender,prompt,name_char_start,name_char_end,meaning_en,notes
+com-001,test,control_common,0,0,Amy,Control (common),control_common,,3,female,The name Amy comes from,9,12,,Length-matched Latin-script control.
+com-002,test,control_common,0,0,John,Control (common),control_common,,4,male,The name John comes from,9,13,,Length-matched Latin-script control.
+com-003,train,control_common,0,0,Mary,Control (common),control_common,,4,female,The name Mary comes from,9,13,,Length-matched Latin-script control.
+com-004,train,control_common,0,0,Anna,Control (common),control_common,,4,female,The name Anna comes from,9,13,,Length-matched Latin-script control.
+com-005,train,control_common,0,0,Paul,Control (common),control_common,,4,male,The name Paul comes from,9,13,,Length-matched Latin-script control.
+com-006,train,control_common,0,0,Emma,Control (common),control_common,,4,female,The name Emma comes from,9,13,,Length-matched Latin-script control.
+com-007,test,control_common,0,0,Jack,Control (common),control_common,,4,male,The name Jack comes from,9,13,,Length-matched Latin-script control.
+com-008,train,control_common,0,0,Noah,Control (common),control_common,,4,male,The name Noah comes from,9,13,,Length-matched Latin-script control.
+com-009,test,control_common,0,0,Ruth,Control (common),control_common,,4,female,The name Ruth comes from,9,13,,Length-matched Latin-script control.
+com-010,test,control_common,0,0,Lucy,Control (common),control_common,,4,female,The name Lucy comes from,9,13,,Length-matched Latin-script control.
+com-011,train,control_common,0,0,James,Control (common),control_common,,5,male,The name James comes from,9,14,,Length-matched Latin-script control.
+com-012,test,control_common,0,0,David,Control (common),control_common,,5,male,The name David comes from,9,14,,Length-matched Latin-script control.
+com-013,test,control_common,0,0,Sarah,Control (common),control_common,,5,female,The name Sarah comes from,9,14,,Length-matched Latin-script control.
+com-014,test,control_common,0,0,Emily,Control (common),control_common,,5,female,The name Emily comes from,9,14,,Length-matched Latin-script control.
+com-015,train,control_common,0,0,Alice,Control (common),control_common,,5,female,The name Alice comes from,9,14,,Length-matched Latin-script control.
+com-016,train,control_common,0,0,Henry,Control (common),control_common,,5,male,The name Henry comes from,9,14,,Length-matched Latin-script control.
+com-017,test,control_common,0,0,Frank,Control (common),control_common,,5,male,The name Frank comes from,9,14,,Length-matched Latin-script control.
+com-018,train,control_common,0,0,Helen,Control (common),control_common,,5,female,The name Helen comes from,9,14,,Length-matched Latin-script control.
+com-019,test,control_common,0,0,Laura,Control (common),control_common,,5,female,The name Laura comes from,9,14,,Length-matched Latin-script control.
+com-020,train,control_common,0,0,Maria,Control (common),control_common,,5,female,The name Maria comes from,9,14,,Length-matched Latin-script control.
+com-021,train,control_common,0,0,Peter,Control (common),control_common,,5,male,The name Peter comes from,9,14,,Length-matched Latin-script control.
+com-022,test,control_common,0,0,Susan,Control (common),control_common,,5,female,The name Susan comes from,9,14,,Length-matched Latin-script control.
+com-023,train,control_common,0,0,Brian,Control (common),control_common,,5,male,The name Brian comes from,9,14,,Length-matched Latin-script control.
+com-024,test,control_common,0,0,Colin,Control (common),control_common,,5,male,The name Colin comes from,9,14,,Length-matched Latin-script control.
+com-025,train,control_common,0,0,Derek,Control (common),control_common,,5,male,The name Derek comes from,9,14,,Length-matched Latin-script control.
+com-026,train,control_common,0,0,Diana,Control (common),control_common,,5,female,The name Diana comes from,9,14,,Length-matched Latin-script control.
+com-027,train,control_common,0,0,Edith,Control (common),control_common,,5,female,The name Edith comes from,9,14,,Length-matched Latin-script control.
+com-028,test,control_common,0,0,Ellen,Control (common),control_common,,5,female,The name Ellen comes from,9,14,,Length-matched Latin-script control.
+com-029,train,control_common,0,0,Janet,Control (common),control_common,,5,female,The name Janet comes from,9,14,,Length-matched Latin-script control.
+com-030,test,control_common,0,0,Karen,Control (common),control_common,,5,female,The name Karen comes from,9,14,,Length-matched Latin-script control.
+com-031,train,control_common,0,0,Linda,Control (common),control_common,,5,female,The name Linda comes from,9,14,,Length-matched Latin-script control.
+com-032,test,control_common,0,0,Nancy,Control (common),control_common,,5,female,The name Nancy comes from,9,14,,Length-matched Latin-script control.
+com-033,train,control_common,0,0,Roger,Control (common),control_common,,5,male,The name Roger comes from,9,14,,Length-matched Latin-script control.
+com-034,test,control_common,0,0,Simon,Control (common),control_common,,5,male,The name Simon comes from,9,14,,Length-matched Latin-script control.
+com-035,train,control_common,0,0,Scott,Control (common),control_common,,5,male,The name Scott comes from,9,14,,Length-matched Latin-script control.
+com-036,train,control_common,0,0,Wendy,Control (common),control_common,,5,female,The name Wendy comes from,9,14,,Length-matched Latin-script control.
+com-037,test,control_common,0,0,Chloe,Control (common),control_common,,5,female,The name Chloe comes from,9,14,,Length-matched Latin-script control.
+com-038,test,control_common,0,0,Julia,Control (common),control_common,,5,female,The name Julia comes from,9,14,,Length-matched Latin-script control.
+com-039,test,control_common,0,0,Oscar,Control (common),control_common,,5,male,The name Oscar comes from,9,14,,Length-matched Latin-script control.
+com-040,train,control_common,0,0,Robert,Control (common),control_common,,6,male,The name Robert comes from,9,15,,Length-matched Latin-script control.
+com-041,train,control_common,0,0,Thomas,Control (common),control_common,,6,male,The name Thomas comes from,9,15,,Length-matched Latin-script control.
+com-042,train,control_common,0,0,George,Control (common),control_common,,6,male,The name George comes from,9,15,,Length-matched Latin-script control.
+com-043,test,control_common,0,0,Edward,Control (common),control_common,,6,male,The name Edward comes from,9,15,,Length-matched Latin-script control.
+com-044,train,control_common,0,0,Joseph,Control (common),control_common,,6,male,The name Joseph comes from,9,15,,Length-matched Latin-script control.
+com-045,test,control_common,0,0,Daniel,Control (common),control_common,,6,male,The name Daniel comes from,9,15,,Length-matched Latin-script control.
+com-046,train,control_common,0,0,Samuel,Control (common),control_common,,6,male,The name Samuel comes from,9,15,,Length-matched Latin-script control.
+com-047,train,control_common,0,0,Andrew,Control (common),control_common,,6,male,The name Andrew comes from,9,15,,Length-matched Latin-script control.
+com-048,test,control_common,0,0,Joshua,Control (common),control_common,,6,male,The name Joshua comes from,9,15,,Length-matched Latin-script control.
+com-049,test,control_common,0,0,Steven,Control (common),control_common,,6,male,The name Steven comes from,9,15,,Length-matched Latin-script control.
+com-050,test,control_common,0,0,Justin,Control (common),control_common,,6,male,The name Justin comes from,9,15,,Length-matched Latin-script control.
+com-051,test,control_common,0,0,Jeremy,Control (common),control_common,,6,male,The name Jeremy comes from,9,15,,Length-matched Latin-script control.
+com-052,test,control_common,0,0,Gerald,Control (common),control_common,,6,male,The name Gerald comes from,9,15,,Length-matched Latin-script control.
+com-053,train,control_common,0,0,Dennis,Control (common),control_common,,6,male,The name Dennis comes from,9,15,,Length-matched Latin-script control.
+com-054,test,control_common,0,0,Walter,Control (common),control_common,,6,male,The name Walter comes from,9,15,,Length-matched Latin-script control.
+com-055,test,control_common,0,0,Arthur,Control (common),control_common,,6,male,The name Arthur comes from,9,15,,Length-matched Latin-script control.
+com-056,train,control_common,0,0,Philip,Control (common),control_common,,6,male,The name Philip comes from,9,15,,Length-matched Latin-script control.
+com-057,test,control_common,0,0,Donald,Control (common),control_common,,6,male,The name Donald comes from,9,15,,Length-matched Latin-script control.
+com-058,train,control_common,0,0,Ronald,Control (common),control_common,,6,male,The name Ronald comes from,9,15,,Length-matched Latin-script control.
+com-059,test,control_common,0,0,Harold,Control (common),control_common,,6,male,The name Harold comes from,9,15,,Length-matched Latin-script control.
+com-060,train,control_common,0,0,Albert,Control (common),control_common,,6,male,The name Albert comes from,9,15,,Length-matched Latin-script control.
+com-061,test,control_common,0,0,Eugene,Control (common),control_common,,6,male,The name Eugene comes from,9,15,,Length-matched Latin-script control.
+com-062,train,control_common,0,0,Marcus,Control (common),control_common,,6,male,The name Marcus comes from,9,15,,Length-matched Latin-script control.
+com-063,train,control_common,0,0,Nathan,Control (common),control_common,,6,male,The name Nathan comes from,9,15,,Length-matched Latin-script control.
+com-064,test,control_common,0,0,Oliver,Control (common),control_common,,6,male,The name Oliver comes from,9,15,,Length-matched Latin-script control.
+com-065,train,control_common,0,0,Jordan,Control (common),control_common,,6,unisex,The name Jordan comes from,9,15,,Length-matched Latin-script control.
+com-066,train,control_common,0,0,Rachel,Control (common),control_common,,6,female,The name Rachel comes from,9,15,,Length-matched Latin-script control.
+com-067,train,control_common,0,0,Amanda,Control (common),control_common,,6,female,The name Amanda comes from,9,15,,Length-matched Latin-script control.
+com-068,test,control_common,0,0,Angela,Control (common),control_common,,6,female,The name Angela comes from,9,15,,Length-matched Latin-script control.
+com-069,test,control_common,0,0,Ashley,Control (common),control_common,,6,unisex,The name Ashley comes from,9,15,,Length-matched Latin-script control.
+com-070,train,control_common,0,0,Brenda,Control (common),control_common,,6,female,The name Brenda comes from,9,15,,Length-matched Latin-script control.
+com-071,train,control_common,0,0,Cheryl,Control (common),control_common,,6,female,The name Cheryl comes from,9,15,,Length-matched Latin-script control.
+com-072,train,control_common,0,0,Elaine,Control (common),control_common,,6,female,The name Elaine comes from,9,15,,Length-matched Latin-script control.
+com-073,train,control_common,0,0,Gloria,Control (common),control_common,,6,female,The name Gloria comes from,9,15,,Length-matched Latin-script control.
+com-074,test,control_common,0,0,Hannah,Control (common),control_common,,6,female,The name Hannah comes from,9,15,,Length-matched Latin-script control.
+com-075,train,control_common,0,0,Janice,Control (common),control_common,,6,female,The name Janice comes from,9,15,,Length-matched Latin-script control.
+com-076,train,control_common,0,0,Judith,Control (common),control_common,,6,female,The name Judith comes from,9,15,,Length-matched Latin-script control.
+com-077,test,control_common,0,0,Leslie,Control (common),control_common,,6,unisex,The name Leslie comes from,9,15,,Length-matched Latin-script control.
+com-078,test,control_common,0,0,Louise,Control (common),control_common,,6,female,The name Louise comes from,9,15,,Length-matched Latin-script control.
+com-079,test,control_common,0,0,Martha,Control (common),control_common,,6,female,The name Martha comes from,9,15,,Length-matched Latin-script control.
+com-080,test,control_common,0,0,Monica,Control (common),control_common,,6,female,The name Monica comes from,9,15,,Length-matched Latin-script control.
+com-081,test,control_common,0,0,Nicole,Control (common),control_common,,6,female,The name Nicole comes from,9,15,,Length-matched Latin-script control.
+com-082,test,control_common,0,0,Pamela,Control (common),control_common,,6,female,The name Pamela comes from,9,15,,Length-matched Latin-script control.
+com-083,test,control_common,0,0,Sandra,Control (common),control_common,,6,female,The name Sandra comes from,9,15,,Length-matched Latin-script control.
+com-084,test,control_common,0,0,Sharon,Control (common),control_common,,6,female,The name Sharon comes from,9,15,,Length-matched Latin-script control.
+com-085,test,control_common,0,0,Sheila,Control (common),control_common,,6,female,The name Sheila comes from,9,15,,Length-matched Latin-script control.
+com-086,test,control_common,0,0,Sophia,Control (common),control_common,,6,female,The name Sophia comes from,9,15,,Length-matched Latin-script control.
+com-087,train,control_common,0,0,Teresa,Control (common),control_common,,6,female,The name Teresa comes from,9,15,,Length-matched Latin-script control.
+com-088,train,control_common,0,0,Victor,Control (common),control_common,,6,male,The name Victor comes from,9,15,,Length-matched Latin-script control.
+com-089,test,control_common,0,0,Claire,Control (common),control_common,,6,female,The name Claire comes from,9,15,,Length-matched Latin-script control.
+com-090,test,control_common,0,0,Connor,Control (common),control_common,,6,male,The name Connor comes from,9,15,,Length-matched Latin-script control.
+com-091,test,control_common,0,0,Curtis,Control (common),control_common,,6,male,The name Curtis comes from,9,15,,Length-matched Latin-script control.
+com-092,train,control_common,0,0,Damian,Control (common),control_common,,6,male,The name Damian comes from,9,15,,Length-matched Latin-script control.
+com-093,train,control_common,0,0,Darren,Control (common),control_common,,6,male,The name Darren comes from,9,15,,Length-matched Latin-script control.
+com-094,test,control_common,0,0,Edmund,Control (common),control_common,,6,male,The name Edmund comes from,9,15,,Length-matched Latin-script control.
+com-095,train,control_common,0,0,Ernest,Control (common),control_common,,6,male,The name Ernest comes from,9,15,,Length-matched Latin-script control.
+com-096,train,control_common,0,0,Esther,Control (common),control_common,,6,female,The name Esther comes from,9,15,,Length-matched Latin-script control.
+com-097,train,control_common,0,0,Evelyn,Control (common),control_common,,6,female,The name Evelyn comes from,9,15,,Length-matched Latin-script control.
+com-098,train,control_common,0,0,Gordon,Control (common),control_common,,6,male,The name Gordon comes from,9,15,,Length-matched Latin-script control.
+com-099,train,control_common,0,0,Graham,Control (common),control_common,,6,male,The name Graham comes from,9,15,,Length-matched Latin-script control.
+com-100,train,control_common,0,0,Harvey,Control (common),control_common,,6,male,The name Harvey comes from,9,15,,Length-matched Latin-script control.
+com-101,train,control_common,0,0,Hector,Control (common),control_common,,6,male,The name Hector comes from,9,15,,Length-matched Latin-script control.
+com-102,test,control_common,0,0,Hubert,Control (common),control_common,,6,male,The name Hubert comes from,9,15,,Length-matched Latin-script control.
+com-103,test,control_common,0,0,Julian,Control (common),control_common,,6,male,The name Julian comes from,9,15,,Length-matched Latin-script control.
+com-104,test,control_common,0,0,Marvin,Control (common),control_common,,6,male,The name Marvin comes from,9,15,,Length-matched Latin-script control.
+com-105,train,control_common,0,0,Norman,Control (common),control_common,,6,male,The name Norman comes from,9,15,,Length-matched Latin-script control.
+com-106,train,control_common,0,0,Sophie,Control (common),control_common,,6,female,The name Sophie comes from,9,15,,Length-matched Latin-script control.
+com-107,test,control_common,0,0,Travis,Control (common),control_common,,6,male,The name Travis comes from,9,15,,Length-matched Latin-script control.
+com-108,train,control_common,0,0,Wesley,Control (common),control_common,,6,male,The name Wesley comes from,9,15,,Length-matched Latin-script control.
+com-109,train,control_common,0,0,William,Control (common),control_common,,7,male,The name William comes from,9,16,,Length-matched Latin-script control.
+com-110,train,control_common,0,0,Richard,Control (common),control_common,,7,male,The name Richard comes from,9,16,,Length-matched Latin-script control.
+com-111,train,control_common,0,0,Charles,Control (common),control_common,,7,male,The name Charles comes from,9,16,,Length-matched Latin-script control.
+com-112,train,control_common,0,0,Anthony,Control (common),control_common,,7,male,The name Anthony comes from,9,16,,Length-matched Latin-script control.
+com-113,train,control_common,0,0,Barbara,Control (common),control_common,,7,female,The name Barbara comes from,9,16,,Length-matched Latin-script control.
+com-114,test,control_common,0,0,Dorothy,Control (common),control_common,,7,female,The name Dorothy comes from,9,16,,Length-matched Latin-script control.
+com-115,train,control_common,0,0,Kenneth,Control (common),control_common,,7,male,The name Kenneth comes from,9,16,,Length-matched Latin-script control.
+com-116,test,control_common,0,0,Timothy,Control (common),control_common,,7,male,The name Timothy comes from,9,16,,Length-matched Latin-script control.
+com-117,test,control_common,0,0,Stephen,Control (common),control_common,,7,male,The name Stephen comes from,9,16,,Length-matched Latin-script control.
+com-118,train,control_common,0,0,Jeffrey,Control (common),control_common,,7,male,The name Jeffrey comes from,9,16,,Length-matched Latin-script control.
+com-119,test,control_common,0,0,Melissa,Control (common),control_common,,7,female,The name Melissa comes from,9,16,,Length-matched Latin-script control.
+com-120,test,control_common,0,0,Deborah,Control (common),control_common,,7,female,The name Deborah comes from,9,16,,Length-matched Latin-script control.
+com-121,train,control_common,0,0,Jessica,Control (common),control_common,,7,female,The name Jessica comes from,9,16,,Length-matched Latin-script control.
+com-122,train,control_common,0,0,Heather,Control (common),control_common,,7,female,The name Heather comes from,9,16,,Length-matched Latin-script control.
+com-123,train,control_common,0,0,Shannon,Control (common),control_common,,7,unisex,The name Shannon comes from,9,16,,Length-matched Latin-script control.
+com-124,train,control_common,0,0,Matthew,Control (common),control_common,,7,male,The name Matthew comes from,9,16,,Length-matched Latin-script control.
+com-125,train,control_common,0,0,Michael,Control (common),control_common,,7,male,The name Michael comes from,9,16,,Length-matched Latin-script control.
+com-126,test,control_common,0,0,Rebecca,Control (common),control_common,,7,female,The name Rebecca comes from,9,16,,Length-matched Latin-script control.
+com-127,train,control_common,0,0,Douglas,Control (common),control_common,,7,male,The name Douglas comes from,9,16,,Length-matched Latin-script control.
+com-128,train,control_common,0,0,Gregory,Control (common),control_common,,7,male,The name Gregory comes from,9,16,,Length-matched Latin-script control.
+com-129,test,control_common,0,0,Frances,Control (common),control_common,,7,female,The name Frances comes from,9,16,,Length-matched Latin-script control.
+com-130,train,control_common,0,0,Harriet,Control (common),control_common,,7,female,The name Harriet comes from,9,16,,Length-matched Latin-script control.
+com-131,test,control_common,0,0,Lillian,Control (common),control_common,,7,female,The name Lillian comes from,9,16,,Length-matched Latin-script control.
+com-132,test,control_common,0,0,Lucille,Control (common),control_common,,7,female,The name Lucille comes from,9,16,,Length-matched Latin-script control.
+com-133,train,control_common,0,0,Marilyn,Control (common),control_common,,7,female,The name Marilyn comes from,9,16,,Length-matched Latin-script control.
+com-134,test,control_common,0,0,Matilda,Control (common),control_common,,7,female,The name Matilda comes from,9,16,,Length-matched Latin-script control.
+com-135,train,control_common,0,0,Maureen,Control (common),control_common,,7,female,The name Maureen comes from,9,16,,Length-matched Latin-script control.
+com-136,test,control_common,0,0,Maxwell,Control (common),control_common,,7,male,The name Maxwell comes from,9,16,,Length-matched Latin-script control.
+com-137,test,control_common,0,0,Melanie,Control (common),control_common,,7,female,The name Melanie comes from,9,16,,Length-matched Latin-script control.
+com-138,train,control_common,0,0,Mildred,Control (common),control_common,,7,female,The name Mildred comes from,9,16,,Length-matched Latin-script control.
+com-139,train,control_common,0,0,Miranda,Control (common),control_common,,7,female,The name Miranda comes from,9,16,,Length-matched Latin-script control.
+com-140,test,control_common,0,0,Natalie,Control (common),control_common,,7,female,The name Natalie comes from,9,16,,Length-matched Latin-script control.
+com-141,test,control_common,0,0,Natasha,Control (common),control_common,,7,female,The name Natasha comes from,9,16,,Length-matched Latin-script control.
+com-142,train,control_common,0,0,Preston,Control (common),control_common,,7,male,The name Preston comes from,9,16,,Length-matched Latin-script control.
+com-143,train,control_common,0,0,Quentin,Control (common),control_common,,7,male,The name Quentin comes from,9,16,,Length-matched Latin-script control.
+com-144,test,control_common,0,0,Randall,Control (common),control_common,,7,male,The name Randall comes from,9,16,,Length-matched Latin-script control.
+com-145,test,control_common,0,0,Raymond,Control (common),control_common,,7,male,The name Raymond comes from,9,16,,Length-matched Latin-script control.
+com-146,test,control_common,0,0,Russell,Control (common),control_common,,7,male,The name Russell comes from,9,16,,Length-matched Latin-script control.
+com-147,test,control_common,0,0,Spencer,Control (common),control_common,,7,male,The name Spencer comes from,9,16,,Length-matched Latin-script control.
+com-148,test,control_common,0,0,Susanna,Control (common),control_common,,7,female,The name Susanna comes from,9,16,,Length-matched Latin-script control.
+com-149,train,control_common,0,0,Tabitha,Control (common),control_common,,7,female,The name Tabitha comes from,9,16,,Length-matched Latin-script control.
+com-150,train,control_common,0,0,Theresa,Control (common),control_common,,7,female,The name Theresa comes from,9,16,,Length-matched Latin-script control.
+com-151,test,control_common,0,0,Tristan,Control (common),control_common,,7,male,The name Tristan comes from,9,16,,Length-matched Latin-script control.
+com-152,train,control_common,0,0,Valerie,Control (common),control_common,,7,female,The name Valerie comes from,9,16,,Length-matched Latin-script control.
+com-153,train,control_common,0,0,Vanessa,Control (common),control_common,,7,female,The name Vanessa comes from,9,16,,Length-matched Latin-script control.
+com-154,train,control_common,0,0,Vincent,Control (common),control_common,,7,male,The name Vincent comes from,9,16,,Length-matched Latin-script control.
+com-155,test,control_common,0,0,Whitney,Control (common),control_common,,7,unisex,The name Whitney comes from,9,16,,Length-matched Latin-script control.
+com-156,test,control_common,0,0,Winston,Control (common),control_common,,7,male,The name Winston comes from,9,16,,Length-matched Latin-script control.
+com-157,test,control_common,0,0,Zachary,Control (common),control_common,,7,male,The name Zachary comes from,9,16,,Length-matched Latin-script control.
+com-158,test,control_common,0,0,Belinda,Control (common),control_common,,7,female,The name Belinda comes from,9,16,,Length-matched Latin-script control.
+com-159,test,control_common,0,0,Bettina,Control (common),control_common,,7,female,The name Bettina comes from,9,16,,Length-matched Latin-script control.
+com-160,train,control_common,0,0,Camilla,Control (common),control_common,,7,female,The name Camilla comes from,9,16,,Length-matched Latin-script control.
+com-161,train,control_common,0,0,Cecilia,Control (common),control_common,,7,female,The name Cecilia comes from,9,16,,Length-matched Latin-script control.
+com-162,test,control_common,0,0,Claudia,Control (common),control_common,,7,female,The name Claudia comes from,9,16,,Length-matched Latin-script control.
+com-163,train,control_common,0,0,Delores,Control (common),control_common,,7,female,The name Delores comes from,9,16,,Length-matched Latin-script control.
+com-164,train,control_common,0,0,Dolores,Control (common),control_common,,7,female,The name Dolores comes from,9,16,,Length-matched Latin-script control.
+com-165,train,control_common,0,0,Eleanor,Control (common),control_common,,7,female,The name Eleanor comes from,9,16,,Length-matched Latin-script control.
+com-166,test,control_common,0,0,Felicia,Control (common),control_common,,7,female,The name Felicia comes from,9,16,,Length-matched Latin-script control.
+com-167,train,control_common,0,0,Garrett,Control (common),control_common,,7,male,The name Garrett comes from,9,16,,Length-matched Latin-script control.
+com-168,test,control_common,0,0,Griffin,Control (common),control_common,,7,male,The name Griffin comes from,9,16,,Length-matched Latin-script control.
+com-169,train,control_common,0,0,Jocelyn,Control (common),control_common,,7,unisex,The name Jocelyn comes from,9,16,,Length-matched Latin-script control.
+com-170,test,control_common,0,0,Katrina,Control (common),control_common,,7,female,The name Katrina comes from,9,16,,Length-matched Latin-script control.
+com-171,test,control_common,0,0,Lindsay,Control (common),control_common,,7,unisex,The name Lindsay comes from,9,16,,Length-matched Latin-script control.
+com-172,train,control_common,0,0,Lucinda,Control (common),control_common,,7,female,The name Lucinda comes from,9,16,,Length-matched Latin-script control.
+com-173,test,control_common,0,0,Madison,Control (common),control_common,,7,unisex,The name Madison comes from,9,16,,Length-matched Latin-script control.
+com-174,test,control_common,0,0,Malcolm,Control (common),control_common,,7,male,The name Malcolm comes from,9,16,,Length-matched Latin-script control.
+com-175,train,control_common,0,0,Mallory,Control (common),control_common,,7,unisex,The name Mallory comes from,9,16,,Length-matched Latin-script control.
+com-176,train,control_common,0,0,Roberta,Control (common),control_common,,7,female,The name Roberta comes from,9,16,,Length-matched Latin-script control.
+com-177,test,control_common,0,0,Rosalie,Control (common),control_common,,7,female,The name Rosalie comes from,9,16,,Length-matched Latin-script control.
+com-178,train,control_common,0,0,Sabrina,Control (common),control_common,,7,female,The name Sabrina comes from,9,16,,Length-matched Latin-script control.
+com-179,test,control_common,0,0,Bridget,Control (common),control_common,,7,female,The name Bridget comes from,9,16,,Length-matched Latin-script control.
+com-180,test,control_common,0,0,Dominic,Control (common),control_common,,7,male,The name Dominic comes from,9,16,,Length-matched Latin-script control.
+com-181,test,control_common,0,0,Candace,Control (common),control_common,,7,female,The name Candace comes from,9,16,,Length-matched Latin-script control.
+com-182,test,control_common,0,0,Colleen,Control (common),control_common,,7,female,The name Colleen comes from,9,16,,Length-matched Latin-script control.
+com-183,train,control_common,0,0,Benjamin,Control (common),control_common,,8,male,The name Benjamin comes from,9,17,,Length-matched Latin-script control.
+com-184,test,control_common,0,0,Nicholas,Control (common),control_common,,8,male,The name Nicholas comes from,9,17,,Length-matched Latin-script control.
+com-185,test,control_common,0,0,Jonathan,Control (common),control_common,,8,male,The name Jonathan comes from,9,17,,Length-matched Latin-script control.
+com-186,test,control_common,0,0,Jennifer,Control (common),control_common,,8,female,The name Jennifer comes from,9,17,,Length-matched Latin-script control.
+com-187,train,control_common,0,0,Patricia,Control (common),control_common,,8,female,The name Patricia comes from,9,17,,Length-matched Latin-script control.
+com-188,test,control_common,0,0,Margaret,Control (common),control_common,,8,female,The name Margaret comes from,9,17,,Length-matched Latin-script control.
+com-189,test,control_common,0,0,Victoria,Control (common),control_common,,8,female,The name Victoria comes from,9,17,,Length-matched Latin-script control.
+com-190,train,control_common,0,0,Samantha,Control (common),control_common,,8,female,The name Samantha comes from,9,17,,Length-matched Latin-script control.
+com-191,train,control_common,0,0,Michelle,Control (common),control_common,,8,female,The name Michelle comes from,9,17,,Length-matched Latin-script control.
+com-192,train,control_common,0,0,Kimberly,Control (common),control_common,,8,female,The name Kimberly comes from,9,17,,Length-matched Latin-script control.
+com-193,test,control_common,0,0,Brittany,Control (common),control_common,,8,female,The name Brittany comes from,9,17,,Length-matched Latin-script control.
+com-194,test,control_common,0,0,Courtney,Control (common),control_common,,8,unisex,The name Courtney comes from,9,17,,Length-matched Latin-script control.
+com-195,test,control_common,0,0,Danielle,Control (common),control_common,,8,female,The name Danielle comes from,9,17,,Length-matched Latin-script control.
+com-196,train,control_common,0,0,Isabella,Control (common),control_common,,8,female,The name Isabella comes from,9,17,,Length-matched Latin-script control.
+com-197,train,control_common,0,0,Madeline,Control (common),control_common,,8,female,The name Madeline comes from,9,17,,Length-matched Latin-script control.
+com-198,train,control_common,0,0,Caroline,Control (common),control_common,,8,female,The name Caroline comes from,9,17,,Length-matched Latin-script control.
+com-199,train,control_common,0,0,Kathleen,Control (common),control_common,,8,female,The name Kathleen comes from,9,17,,Length-matched Latin-script control.
+com-200,train,control_common,0,0,Lorraine,Control (common),control_common,,8,female,The name Lorraine comes from,9,17,,Length-matched Latin-script control.
+com-201,test,control_common,0,0,Marjorie,Control (common),control_common,,8,female,The name Marjorie comes from,9,17,,Length-matched Latin-script control.
+com-202,train,control_common,0,0,Penelope,Control (common),control_common,,8,female,The name Penelope comes from,9,17,,Length-matched Latin-script control.
+com-203,train,control_common,0,0,Veronica,Control (common),control_common,,8,female,The name Veronica comes from,9,17,,Length-matched Latin-script control.
+com-204,test,control_common,0,0,Virginia,Control (common),control_common,,8,female,The name Virginia comes from,9,17,,Length-matched Latin-script control.
+com-205,train,control_common,0,0,Lawrence,Control (common),control_common,,8,male,The name Lawrence comes from,9,17,,Length-matched Latin-script control.
+com-206,test,control_common,0,0,Terrence,Control (common),control_common,,8,male,The name Terrence comes from,9,17,,Length-matched Latin-script control.
+com-207,train,control_common,0,0,Franklin,Control (common),control_common,,8,male,The name Franklin comes from,9,17,,Length-matched Latin-script control.
+com-208,train,control_common,0,0,Geoffrey,Control (common),control_common,,8,male,The name Geoffrey comes from,9,17,,Length-matched Latin-script control.
+com-209,train,control_common,0,0,Harrison,Control (common),control_common,,8,male,The name Harrison comes from,9,17,,Length-matched Latin-script control.
+com-210,test,control_common,0,0,Mitchell,Control (common),control_common,,8,male,The name Mitchell comes from,9,17,,Length-matched Latin-script control.
+com-211,train,control_common,0,0,Randolph,Control (common),control_common,,8,male,The name Randolph comes from,9,17,,Length-matched Latin-script control.
+com-212,test,control_common,0,0,Reginald,Control (common),control_common,,8,male,The name Reginald comes from,9,17,,Length-matched Latin-script control.
+com-213,train,control_common,0,0,Theodore,Control (common),control_common,,8,male,The name Theodore comes from,9,17,,Length-matched Latin-script control.
+com-214,test,control_common,0,0,Angelina,Control (common),control_common,,8,female,The name Angelina comes from,9,17,,Length-matched Latin-script control.
+com-215,test,control_common,0,0,Beatrice,Control (common),control_common,,8,female,The name Beatrice comes from,9,17,,Length-matched Latin-script control.
+com-216,train,control_common,0,0,Catalina,Control (common),control_common,,8,female,The name Catalina comes from,9,17,,Length-matched Latin-script control.
+com-217,train,control_common,0,0,Georgina,Control (common),control_common,,8,female,The name Georgina comes from,9,17,,Length-matched Latin-script control.
+com-218,train,control_common,0,0,Marcella,Control (common),control_common,,8,female,The name Marcella comes from,9,17,,Length-matched Latin-script control.
+com-219,test,control_common,0,0,Meredith,Control (common),control_common,,8,unisex,The name Meredith comes from,9,17,,Length-matched Latin-script control.
+com-220,test,control_common,0,0,Adrienne,Control (common),control_common,,8,female,The name Adrienne comes from,9,17,,Length-matched Latin-script control.
+com-221,test,control_common,0,0,Clarissa,Control (common),control_common,,8,female,The name Clarissa comes from,9,17,,Length-matched Latin-script control.
+com-222,test,control_common,0,0,Dominick,Control (common),control_common,,8,male,The name Dominick comes from,9,17,,Length-matched Latin-script control.
+com-223,test,control_common,0,0,Emmeline,Control (common),control_common,,8,female,The name Emmeline comes from,9,17,,Length-matched Latin-script control.
+com-224,train,control_common,0,0,Florence,Control (common),control_common,,8,female,The name Florence comes from,9,17,,Length-matched Latin-script control.
+com-225,test,control_common,0,0,Gabriela,Control (common),control_common,,8,female,The name Gabriela comes from,9,17,,Length-matched Latin-script control.
+com-226,train,control_common,0,0,Julianne,Control (common),control_common,,8,female,The name Julianne comes from,9,17,,Length-matched Latin-script control.
+com-227,test,control_common,0,0,Kristina,Control (common),control_common,,8,female,The name Kristina comes from,9,17,,Length-matched Latin-script control.
+com-228,test,control_common,0,0,Rosalind,Control (common),control_common,,8,female,The name Rosalind comes from,9,17,,Length-matched Latin-script control.
+com-229,test,control_common,0,0,Elizabeth,Control (common),control_common,,9,female,The name Elizabeth comes from,9,18,,Length-matched Latin-script control.
+com-230,test,control_common,0,0,Katherine,Control (common),control_common,,9,female,The name Katherine comes from,9,18,,Length-matched Latin-script control.
+com-231,train,control_common,0,0,Catherine,Control (common),control_common,,9,female,The name Catherine comes from,9,18,,Length-matched Latin-script control.
+com-232,test,control_common,0,0,Charlotte,Control (common),control_common,,9,female,The name Charlotte comes from,9,18,,Length-matched Latin-script control.
+com-233,train,control_common,0,0,Christina,Control (common),control_common,,9,female,The name Christina comes from,9,18,,Length-matched Latin-script control.
+com-234,test,control_common,0,0,Christine,Control (common),control_common,,9,female,The name Christine comes from,9,18,,Length-matched Latin-script control.
+com-235,train,control_common,0,0,Stephanie,Control (common),control_common,,9,female,The name Stephanie comes from,9,18,,Length-matched Latin-script control.
+com-236,train,control_common,0,0,Alexandra,Control (common),control_common,,9,female,The name Alexandra comes from,9,18,,Length-matched Latin-script control.
+com-237,train,control_common,0,0,Nathaniel,Control (common),control_common,,9,male,The name Nathaniel comes from,9,18,,Length-matched Latin-script control.
+com-238,test,control_common,0,0,Alexander,Control (common),control_common,,9,male,The name Alexander comes from,9,18,,Length-matched Latin-script control.
+com-239,test,control_common,0,0,Sebastian,Control (common),control_common,,9,male,The name Sebastian comes from,9,18,,Length-matched Latin-script control.
+com-240,test,control_common,0,0,Gabrielle,Control (common),control_common,,9,female,The name Gabrielle comes from,9,18,,Length-matched Latin-script control.
+com-241,train,control_common,0,0,Madeleine,Control (common),control_common,,9,female,The name Madeleine comes from,9,18,,Length-matched Latin-script control.
+com-242,train,control_common,0,0,Magdalene,Control (common),control_common,,9,female,The name Magdalene comes from,9,18,,Length-matched Latin-script control.
+com-243,train,control_common,0,0,Valentina,Control (common),control_common,,9,female,The name Valentina comes from,9,18,,Length-matched Latin-script control.
+com-244,test,control_common,0,0,Christian,Control (common),control_common,,9,male,The name Christian comes from,9,18,,Length-matched Latin-script control.
+com-245,train,control_common,0,0,Gabriella,Control (common),control_common,,9,female,The name Gabriella comes from,9,18,,Length-matched Latin-script control.
+com-246,train,control_common,0,0,Annabelle,Control (common),control_common,,9,female,The name Annabelle comes from,9,18,,Length-matched Latin-script control.
+com-247,test,control_common,0,0,Constance,Control (common),control_common,,9,female,The name Constance comes from,9,18,,Length-matched Latin-script control.
+com-248,train,control_common,0,0,Dominique,Control (common),control_common,,9,unisex,The name Dominique comes from,9,18,,Length-matched Latin-script control.
+com-249,train,control_common,0,0,Francesca,Control (common),control_common,,9,female,The name Francesca comes from,9,18,,Length-matched Latin-script control.
+com-250,test,control_common,0,0,Guillaume,Control (common),control_common,,9,male,The name Guillaume comes from,9,18,,Length-matched Latin-script control.
+com-251,train,control_common,0,0,Josephine,Control (common),control_common,,9,female,The name Josephine comes from,9,18,,Length-matched Latin-script control.
+com-252,train,control_common,0,0,Priscilla,Control (common),control_common,,9,female,The name Priscilla comes from,9,18,,Length-matched Latin-script control.
+com-253,test,control_common,0,0,Anastasia,Control (common),control_common,,9,female,The name Anastasia comes from,9,18,,Length-matched Latin-script control.
+com-254,test,control_common,0,0,Gwendolyn,Control (common),control_common,,9,female,The name Gwendolyn comes from,9,18,,Length-matched Latin-script control.
+com-255,train,control_common,0,0,Millicent,Control (common),control_common,,9,female,The name Millicent comes from,9,18,,Length-matched Latin-script control.
+com-256,train,control_common,0,0,Philomena,Control (common),control_common,,9,female,The name Philomena comes from,9,18,,Length-matched Latin-script control.
+com-257,train,control_common,0,0,Henrietta,Control (common),control_common,,9,female,The name Henrietta comes from,9,18,,Length-matched Latin-script control.
+com-258,test,control_common,0,0,Genevieve,Control (common),control_common,,9,female,The name Genevieve comes from,9,18,,Length-matched Latin-script control.
+com-259,test,control_common,0,0,Augustine,Control (common),control_common,,9,male,The name Augustine comes from,9,18,,Length-matched Latin-script control.
+com-260,test,control_common,0,0,Cornelius,Control (common),control_common,,9,male,The name Cornelius comes from,9,18,,Length-matched Latin-script control.
+com-261,test,control_common,0,0,Demetrius,Control (common),control_common,,9,male,The name Demetrius comes from,9,18,,Length-matched Latin-script control.
+com-262,train,control_common,0,0,Frederick,Control (common),control_common,,9,male,The name Frederick comes from,9,18,,Length-matched Latin-script control.
+com-263,test,control_common,0,0,Rosemarie,Control (common),control_common,,9,female,The name Rosemarie comes from,9,18,,Length-matched Latin-script control.
+com-264,test,control_common,0,0,Salvatore,Control (common),control_common,,9,male,The name Salvatore comes from,9,18,,Length-matched Latin-script control.
+com-265,train,control_common,0,0,Cassandra,Control (common),control_common,,9,female,The name Cassandra comes from,9,18,,Length-matched Latin-script control.
+com-266,test,control_common,0,0,Ferdinand,Control (common),control_common,,9,male,The name Ferdinand comes from,9,18,,Length-matched Latin-script control.
+com-267,test,control_common,0,0,Sylvester,Control (common),control_common,,9,male,The name Sylvester comes from,9,18,,Length-matched Latin-script control.
+com-268,train,control_common,0,0,Zachariah,Control (common),control_common,,9,male,The name Zachariah comes from,9,18,,Length-matched Latin-script control.
+com-269,test,control_common,0,0,Valentino,Control (common),control_common,,9,male,The name Valentino comes from,9,18,,Length-matched Latin-script control.
+com-270,train,control_common,0,0,Christoph,Control (common),control_common,,9,male,The name Christoph comes from,9,18,,Length-matched Latin-script control.
+com-271,train,control_common,0,0,Apollonia,Control (common),control_common,,9,female,The name Apollonia comes from,9,18,,Length-matched Latin-script control.
+com-272,train,control_common,0,0,Jacqueline,Control (common),control_common,,10,female,The name Jacqueline comes from,9,19,,Length-matched Latin-script control.
+com-273,train,control_common,0,0,Antoinette,Control (common),control_common,,10,female,The name Antoinette comes from,9,19,,Length-matched Latin-script control.
+com-274,test,control_common,0,0,Alexandria,Control (common),control_common,,10,female,The name Alexandria comes from,9,19,,Length-matched Latin-script control.
+com-275,test,control_common,0,0,Bernadette,Control (common),control_common,,10,female,The name Bernadette comes from,9,19,,Length-matched Latin-script control.
+com-276,test,control_common,0,0,Christiana,Control (common),control_common,,10,female,The name Christiana comes from,9,19,,Length-matched Latin-script control.
+com-277,train,control_common,0,0,Clementine,Control (common),control_common,,10,female,The name Clementine comes from,9,19,,Length-matched Latin-script control.
+com-278,test,control_common,0,0,Evangeline,Control (common),control_common,,10,female,The name Evangeline comes from,9,19,,Length-matched Latin-script control.
+com-279,test,control_common,0,0,Marguerite,Control (common),control_common,,10,female,The name Marguerite comes from,9,19,,Length-matched Latin-script control.
+com-280,train,control_common,0,0,Wilhelmina,Control (common),control_common,,10,female,The name Wilhelmina comes from,9,19,,Length-matched Latin-script control.
+com-281,test,control_common,0,0,Alexandros,Control (common),control_common,,10,male,The name Alexandros comes from,9,19,,Length-matched Latin-script control.
+com-282,test,control_common,0,0,Bartolomeo,Control (common),control_common,,10,male,The name Bartolomeo comes from,9,19,,Length-matched Latin-script control.
+com-283,train,control_common,0,0,Maximilian,Control (common),control_common,,10,male,The name Maximilian comes from,9,19,,Length-matched Latin-script control.
+com-284,test,control_common,0,0,Sebastiano,Control (common),control_common,,10,male,The name Sebastiano comes from,9,19,,Length-matched Latin-script control.
+com-285,test,control_common,0,0,Alessandra,Control (common),control_common,,10,female,The name Alessandra comes from,9,19,,Length-matched Latin-script control.
+com-286,train,control_common,0,0,Alessandro,Control (common),control_common,,10,male,The name Alessandro comes from,9,19,,Length-matched Latin-script control.
+com-287,train,control_common,0,0,Emmanuelle,Control (common),control_common,,10,female,The name Emmanuelle comes from,9,19,,Length-matched Latin-script control.
+com-288,train,control_common,0,0,Montserrat,Control (common),control_common,,10,female,The name Montserrat comes from,9,19,,Length-matched Latin-script control.
+com-289,train,control_common,0,0,Margaretha,Control (common),control_common,,10,female,The name Margaretha comes from,9,19,,Length-matched Latin-script control.
+com-290,train,control_common,0,0,Stanislaus,Control (common),control_common,,10,male,The name Stanislaus comes from,9,19,,Length-matched Latin-script control.
+com-291,test,control_common,0,0,Christopher,Control (common),control_common,,11,male,The name Christopher comes from,9,20,,Length-matched Latin-script control.
+com-292,train,control_common,0,0,Constantine,Control (common),control_common,,11,male,The name Constantine comes from,9,20,,Length-matched Latin-script control.
+com-293,train,control_common,0,0,Alexandrina,Control (common),control_common,,11,female,The name Alexandrina comes from,9,20,,Length-matched Latin-script control.
+com-294,train,control_common,0,0,Maximillian,Control (common),control_common,,11,male,The name Maximillian comes from,9,20,,Length-matched Latin-script control.
+com-295,test,control_common,0,0,Bartholomew,Control (common),control_common,,11,male,The name Bartholomew comes from,9,20,,Length-matched Latin-script control.
+com-296,test,control_common,0,0,Christoffer,Control (common),control_common,,11,male,The name Christoffer comes from,9,20,,Length-matched Latin-script control.
+com-297,train,control_common,0,0,Massimiliano,Control (common),control_common,,12,male,The name Massimiliano comes from,9,21,,Length-matched Latin-script control.
+com-298,test,control_common,0,0,Buenaventura,Control (common),control_common,,12,male,The name Buenaventura comes from,9,21,,Length-matched Latin-script control.
+com-299,train,control_common,0,0,Christophorus,Control (common),control_common,,13,male,The name Christophorus comes from,9,22,,Length-matched Latin-script control.
+gis-001,test,east_african,1,1,Nambozo,Gisu,gisu,Uganda,7,female,The name Nambozo comes from,9,16,,
+gis-002,test,east_african,1,1,Mutonyi,Gisu,gisu,Uganda,7,female,The name Mutonyi comes from,9,16,,
+gis-003,train,east_african,1,1,Nambuya,Gisu,gisu,Uganda,7,female,The name Nambuya comes from,9,16,,
+gis-004,test,east_african,1,1,Namutosi,Gisu,gisu,Uganda,8,female,The name Namutosi comes from,9,17,,
+gis-005,test,east_african,1,1,Nandudu,Gisu,gisu,Uganda,7,female,The name Nandudu comes from,9,16,,Also spelled Nandutu.
+gis-006,train,east_african,1,1,Nagudi,Gisu,gisu,Uganda,6,female,The name Nagudi comes from,9,15,,
+gis-007,test,east_african,1,1,Masaba,Gisu,gisu,Uganda,6,male,The name Masaba comes from,9,15,,"Ancestor of the Bamasaba, and their name for Mount Elgon."
+gis-008,test,east_african,1,1,Mafabi,Gisu,gisu,Uganda,6,male,The name Mafabi comes from,9,15,,
+gis-009,train,east_african,1,1,Lunyolo,Gisu,gisu,Uganda,7,unspecified,The name Lunyolo comes from,9,16,,
+gis-010,train,east_african,1,1,Kakayi,Gisu,gisu,Uganda,6,unspecified,The name Kakayi comes from,9,15,,
+gis-011,test,east_african,1,1,Nafuna,Gisu,gisu,Uganda,6,female,The name Nafuna comes from,9,15,breech birth,A girl born feet or buttocks first. The male form is Sifuna.
+gis-012,train,east_african,1,1,Kakai,Gisu,gisu,Uganda,5,unspecified,The name Kakai comes from,9,14,,
+gis-013,test,east_african,1,1,Namono,Gisu,gisu,Uganda,6,female,The name Namono comes from,9,15,,
+gis-014,test,east_african,1,1,Khaitsa,Gisu,gisu,Uganda,7,unspecified,The name Khaitsa comes from,9,16,,
+gis-015,train,east_african,1,1,Namakoye,Gisu,gisu,Uganda,8,female,The name Namakoye comes from,9,17,,
+gis-016,train,east_african,1,1,Namataka,Gisu,gisu,Uganda,8,female,The name Namataka comes from,9,17,,
+gis-017,train,east_african,1,1,Kituyi,Gisu,gisu,Uganda,6,male,The name Kituyi comes from,9,15,,
+gis-018,test,east_african,1,1,Muyama,Gisu,gisu,Uganda,6,unspecified,The name Muyama comes from,9,15,,
+gis-019,train,east_african,1,1,Muduwa,Gisu,gisu,Uganda,6,unspecified,The name Muduwa comes from,9,15,,
+gis-020,train,east_african,1,1,Khaukha,Gisu,gisu,Uganda,7,male,The name Khaukha comes from,9,16,,
+gis-021,train,east_african,1,1,Nabende,Gisu,gisu,Uganda,7,female,The name Nabende comes from,9,16,,
+gis-022,test,east_african,1,1,Muzaki,Gisu,gisu,Uganda,6,unspecified,The name Muzaki comes from,9,15,,
+gis-023,train,east_african,1,1,Mutuwa,Gisu,gisu,Uganda,6,unspecified,The name Mutuwa comes from,9,15,,
+gis-024,test,east_african,1,1,Nabukwasi,Gisu,gisu,Uganda,9,female,The name Nabukwasi comes from,9,18,,
+gis-025,test,east_african,1,1,Nadunga,Gisu,gisu,Uganda,7,female,The name Nadunga comes from,9,16,,
+gis-026,train,east_african,1,1,Nekesa,Gisu,gisu,Uganda,6,female,The name Nekesa comes from,9,15,born at harvest,Male form is Wekesa. Shared with Bukusu.
+gis-027,test,east_african,1,1,Wamimbi,Gisu,gisu,Uganda,7,male,The name Wamimbi comes from,9,16,,
+gis-028,test,east_african,1,1,Mukhaye,Gisu,gisu,Uganda,7,unspecified,The name Mukhaye comes from,9,16,,
+gis-029,test,east_african,1,1,Mugide,Gisu,gisu,Uganda,6,unspecified,The name Mugide comes from,9,15,,
+gis-030,train,east_african,1,1,Namuwenge,Gisu,gisu,Uganda,9,female,The name Namuwenge comes from,9,18,,
+gis-031,test,east_african,1,1,Mukhwana,Gisu,gisu,Uganda,8,male,The name Mukhwana comes from,9,17,first twin,The second twin is Mulongo. Shared with Bukusu.
+gis-032,test,east_african,1,1,Mabonga,Gisu,gisu,Uganda,7,unspecified,The name Mabonga comes from,9,16,,
+gis-033,train,east_african,1,1,Wanyenya,Gisu,gisu,Uganda,8,male,The name Wanyenya comes from,9,17,,
+gis-034,test,east_african,1,1,Wanda,Gisu,gisu,Uganda,5,male,The name Wanda comes from,9,14,,
+gis-035,test,east_african,1,1,Khainza,Gisu,gisu,Uganda,7,female,The name Khainza comes from,9,16,,Also spelled Kainza.
+gis-036,train,east_african,1,1,Gidudu,Gisu,gisu,Uganda,6,male,The name Gidudu comes from,9,15,,
+gis-037,train,east_african,1,1,Namasaba,Gisu,gisu,Uganda,8,female,The name Namasaba comes from,9,17,,Female name from Masaba.
+gis-038,train,east_african,1,1,Nambafu,Gisu,gisu,Uganda,7,female,The name Nambafu comes from,9,16,,
+gis-039,test,east_african,1,1,Masibo,Gisu,gisu,Uganda,6,unspecified,The name Masibo comes from,9,15,,
+gis-040,test,east_african,1,1,Wanyenze,Gisu,gisu,Uganda,8,male,The name Wanyenze comes from,9,17,,
+gis-041,train,east_african,1,1,Kwaga,Gisu,gisu,Uganda,5,unspecified,The name Kwaga comes from,9,14,,
+gis-042,test,east_african,1,1,Wambi,Gisu,gisu,Uganda,5,male,The name Wambi comes from,9,14,,
+gis-043,test,east_african,1,1,Magomu,Gisu,gisu,Uganda,6,male,The name Magomu comes from,9,15,,
+gis-044,test,east_african,1,1,Magombe,Gisu,gisu,Uganda,7,male,The name Magombe comes from,9,16,,
+gis-045,test,east_african,1,1,Neumbe,Gisu,gisu,Uganda,6,female,The name Neumbe comes from,9,15,,
+gis-046,train,east_african,1,1,Nabuduwa,Gisu,gisu,Uganda,8,female,The name Nabuduwa comes from,9,17,,
+gis-047,train,east_african,1,1,Masawi,Gisu,gisu,Uganda,6,unspecified,The name Masawi comes from,9,15,,
+gis-048,test,east_african,1,1,Nelima,Gisu,gisu,Uganda,6,female,The name Nelima comes from,9,15,,Shared with other Luhya communities.
+gis-049,test,east_african,1,1,Wamono,Gisu,gisu,Uganda,6,male,The name Wamono comes from,9,15,,
+gis-050,train,east_african,1,1,Nabifo,Gisu,gisu,Uganda,6,female,The name Nabifo comes from,9,15,,
+gis-051,test,east_african,1,1,Wambede,Gisu,gisu,Uganda,7,male,The name Wambede comes from,9,16,,
+gis-052,train,east_african,1,1,Wepukhulu,Gisu,gisu,Uganda,9,male,The name Wepukhulu comes from,9,18,,"A survival name, given when earlier children had died. Shared with Bukusu."
+gis-053,test,east_african,1,1,Waniaye,Gisu,gisu,Uganda,7,male,The name Waniaye comes from,9,16,,
+gis-054,train,east_african,1,1,Nabugwere,Gisu,gisu,Uganda,9,female,The name Nabugwere comes from,9,18,,
+gis-055,train,east_african,1,1,Khabuya,Gisu,gisu,Uganda,7,unspecified,The name Khabuya comes from,9,16,,
+gis-056,test,east_african,1,1,Welishe,Gisu,gisu,Uganda,7,male,The name Welishe comes from,9,16,,
+gis-057,test,east_african,1,1,Mukite,Gisu,gisu,Uganda,6,unspecified,The name Mukite comes from,9,15,,
+gis-058,train,east_african,1,1,Nakayenze,Gisu,gisu,Uganda,9,female,The name Nakayenze comes from,9,18,,
+gis-059,train,east_african,1,1,Mutenyo,Gisu,gisu,Uganda,7,unspecified,The name Mutenyo comes from,9,16,,
+gis-060,train,east_african,1,1,Nagwere,Gisu,gisu,Uganda,7,female,The name Nagwere comes from,9,16,,
+gis-061,train,east_african,1,1,Kharono,Gisu,gisu,Uganda,7,unspecified,The name Kharono comes from,9,16,,
+gis-062,test,east_african,1,1,Musamali,Gisu,gisu,Uganda,8,male,The name Musamali comes from,9,17,,
+gis-063,test,east_african,1,1,Kutosi,Gisu,gisu,Uganda,6,unspecified,The name Kutosi comes from,9,15,,
+gis-064,test,east_african,1,1,Namarome,Gisu,gisu,Uganda,8,female,The name Namarome comes from,9,17,,
+gis-065,train,east_african,1,1,Kabuya,Gisu,gisu,Uganda,6,unspecified,The name Kabuya comes from,9,15,,
+gis-066,train,east_african,1,1,Negesa,Gisu,gisu,Uganda,6,female,The name Negesa comes from,9,15,,
+gis-067,train,east_african,1,1,Wasike,Gisu,gisu,Uganda,6,male,The name Wasike comes from,9,15,,Shared with Bukusu.
+gis-068,train,east_african,1,1,Nabalayo,Gisu,gisu,Uganda,8,female,The name Nabalayo comes from,9,17,,
+gis-069,train,east_african,1,1,Khakasa,Gisu,gisu,Uganda,7,female,The name Khakasa comes from,9,16,,"In Bukusu tradition, a girl noted for a fair complexion. Male form is Wakasa."
+gis-070,test,east_african,1,1,Nakhumitsa,Gisu,gisu,Uganda,10,female,The name Nakhumitsa comes from,9,19,,
+gis-071,test,east_african,1,1,Gidongo,Gisu,gisu,Uganda,7,unspecified,The name Gidongo comes from,9,16,,
+gis-072,test,east_african,1,1,Kimono,Gisu,gisu,Uganda,6,unspecified,The name Kimono comes from,9,15,,
+gis-073,train,east_african,1,1,Wataka,Gisu,gisu,Uganda,6,male,The name Wataka comes from,9,15,,
+gis-074,train,east_african,1,1,Gimono,Gisu,gisu,Uganda,6,unspecified,The name Gimono comes from,9,15,,
+gis-075,train,east_african,1,1,Nabukonde,Gisu,gisu,Uganda,9,female,The name Nabukonde comes from,9,18,,
+gis-076,train,east_african,1,1,Mutambo,Gisu,gisu,Uganda,7,male,The name Mutambo comes from,9,16,,
+gis-077,test,east_african,1,1,Wabomba,Gisu,gisu,Uganda,7,male,The name Wabomba comes from,9,16,,
+gis-078,train,east_african,1,1,Mwambu,Gisu,gisu,Uganda,6,male,The name Mwambu comes from,9,15,,"Son of Masaba in Bamasaba tradition, nicknamed Mugisu."
+gis-079,test,east_african,1,1,Wafula,Gisu,gisu,Uganda,6,male,The name Wafula comes from,9,15,born in the rain,Female form is Nafula. Shared with Bukusu.
+gis-080,test,east_african,1,1,Kuloba,Gisu,gisu,Uganda,6,male,The name Kuloba comes from,9,15,,A survival name. Shared with Bukusu.
+gis-081,test,east_african,1,1,Nabulo,Gisu,gisu,Uganda,6,female,The name Nabulo comes from,9,15,,
+gis-082,train,east_african,1,1,Nabuzale,Gisu,gisu,Uganda,8,female,The name Nabuzale comes from,9,17,,
+gis-083,test,east_african,1,1,Mayeku,Gisu,gisu,Uganda,6,male,The name Mayeku comes from,9,15,,
+gis-084,test,east_african,1,1,Walimbwa,Gisu,gisu,Uganda,8,male,The name Walimbwa comes from,9,17,,
+gis-085,train,east_african,1,1,Wamboya,Gisu,gisu,Uganda,7,male,The name Wamboya comes from,9,16,,
+gis-086,train,east_african,1,1,Welikhe,Gisu,gisu,Uganda,7,male,The name Welikhe comes from,9,16,,
+gis-087,train,east_african,1,1,Wangwe,Gisu,gisu,Uganda,6,male,The name Wangwe comes from,9,15,,
+gis-088,train,east_african,1,1,Nandala,Gisu,gisu,Uganda,7,male,The name Nandala comes from,9,16,,
+gis-089,train,east_african,1,1,Wekesa,Gisu,gisu,Uganda,6,male,The name Wekesa comes from,9,15,born at harvest,Female form is Nekesa.
+gis-090,test,east_african,1,1,Nafula,Gisu,gisu,Uganda,6,female,The name Nafula comes from,9,15,born in the rain,Male form is Wafula.
+gis-091,test,east_african,1,1,Wanale,Gisu,gisu,Uganda,6,male,The name Wanale comes from,9,15,,Son of Masaba in Bamasaba tradition.
+gis-092,test,east_african,1,1,Wanyama,Gisu,gisu,Uganda,7,male,The name Wanyama comes from,9,16,born at a time of feasting,Shared with Bukusu.
+gis-093,train,east_african,1,1,Mulongo,Gisu,gisu,Uganda,7,male,The name Mulongo comes from,9,16,second twin,The first twin is Mukhwana.
+gis-094,train,east_african,1,1,Wabwire,Gisu,gisu,Uganda,7,male,The name Wabwire comes from,9,16,born at night,Female form is Nabwire. Ugandan spelling of the Masaba name also written Wabwile.
+gis-095,test,east_african,1,1,Nabwire,Gisu,gisu,Uganda,7,female,The name Nabwire comes from,9,16,born at night,Male form is Wabwire.
+gis-096,train,east_african,1,1,Masinde,Gisu,gisu,Uganda,7,male,The name Masinde comes from,9,16,,Shared with Bukusu.
+gis-097,test,east_african,1,1,Wakoli,Gisu,gisu,Uganda,6,male,The name Wakoli comes from,9,15,,Also a clan-linked name among Bukusu.
+gis-098,train,east_african,1,1,Watsemba,Gisu,gisu,Uganda,8,male,The name Watsemba comes from,9,17,,
+gis-099,train,east_african,1,1,Namwano,Gisu,gisu,Uganda,7,female,The name Namwano comes from,9,16,,
+gis-100,test,east_african,1,1,Kitutu,Gisu,gisu,Uganda,6,unspecified,The name Kitutu comes from,9,15,,Also the name of a ridge and clan area in Bugisu.
+kin-001,train,east_african,1,0,Mugisha,Kinyarwanda,kinyarwanda,Rwanda,7,unisex,The name Mugisha comes from,9,16,blessing,Also a common Runyankore name.
+kin-002,test,east_african,1,1,Ishimwe,Kinyarwanda,kinyarwanda,Rwanda,7,unisex,The name Ishimwe comes from,9,16,gratitude,"From gushima, to thank or praise."
+kin-003,train,east_african,1,1,Uwase,Kinyarwanda,kinyarwanda,Rwanda,5,female,The name Uwase comes from,9,14,,
+kin-004,train,east_african,1,1,Keza,Kinyarwanda,kinyarwanda,Rwanda,4,female,The name Keza comes from,9,13,beautiful,
+kin-005,test,east_african,1,1,Akeza,Kinyarwanda,kinyarwanda,Rwanda,5,female,The name Akeza comes from,9,14,the beautiful one,
+kin-006,test,east_african,1,1,Ingabire,Kinyarwanda,kinyarwanda,Rwanda,8,unisex,The name Ingabire comes from,9,17,gift,
+kin-007,test,east_african,1,1,Uwamahoro,Kinyarwanda,kinyarwanda,Rwanda,9,female,The name Uwamahoro comes from,9,18,one of peace,
+kin-008,train,east_african,1,1,Uwimana,Kinyarwanda,kinyarwanda,Rwanda,7,unisex,The name Uwimana comes from,9,16,one of God,
+kin-009,test,east_african,1,1,Uwineza,Kinyarwanda,kinyarwanda,Rwanda,7,female,The name Uwineza comes from,9,16,one of goodness,
+kin-010,test,east_african,1,1,Umutoni,Kinyarwanda,kinyarwanda,Rwanda,7,female,The name Umutoni comes from,9,16,the cherished one,
+kin-011,train,east_african,1,1,Mutesi,Kinyarwanda,kinyarwanda,Rwanda,6,female,The name Mutesi comes from,9,15,the pampered one,Also widely used in Busoga.
+kin-012,train,east_african,1,1,Umutesi,Kinyarwanda,kinyarwanda,Rwanda,7,female,The name Umutesi comes from,9,16,the pampered one,
+kin-013,train,east_african,1,1,Amahoro,Kinyarwanda,kinyarwanda,Rwanda,7,unisex,The name Amahoro comes from,9,16,peace,
+kin-014,test,east_african,1,1,Ineza,Kinyarwanda,kinyarwanda,Rwanda,5,unisex,The name Ineza comes from,9,14,goodness,
+kin-015,test,east_african,1,1,Kwizera,Kinyarwanda,kinyarwanda,Rwanda,7,unisex,The name Kwizera comes from,9,16,hope,
+kin-016,train,east_african,1,1,Hirwa,Kinyarwanda,kinyarwanda,Rwanda,5,unisex,The name Hirwa comes from,9,14,the fortunate one,
+kin-017,train,east_african,1,1,Ihirwe,Kinyarwanda,kinyarwanda,Rwanda,6,unisex,The name Ihirwe comes from,9,15,good fortune,
+kin-018,train,east_african,1,1,Sangwa,Kinyarwanda,kinyarwanda,Rwanda,6,unisex,The name Sangwa comes from,9,15,,
+kin-019,test,east_african,1,1,Irakoze,Kinyarwanda,kinyarwanda,Rwanda,7,unisex,The name Irakoze comes from,9,16,we are grateful,
+kin-020,train,east_african,1,1,Uwera,Kinyarwanda,kinyarwanda,Rwanda,5,female,The name Uwera comes from,9,14,the pure one,
+kin-021,test,east_african,1,1,Umulisa,Kinyarwanda,kinyarwanda,Rwanda,7,female,The name Umulisa comes from,9,16,,
+kin-022,train,east_african,1,1,Muhire,Kinyarwanda,kinyarwanda,Rwanda,6,unisex,The name Muhire comes from,9,15,the blessed one,
+kin-023,test,east_african,1,1,Iradukunda,Kinyarwanda,kinyarwanda,Rwanda,10,unisex,The name Iradukunda comes from,9,19,God loves us,
+kin-024,test,east_african,1,1,Habimana,Kinyarwanda,kinyarwanda,Rwanda,8,unisex,The name Habimana comes from,9,17,God exists,
+kin-025,test,east_african,1,1,Hakizimana,Kinyarwanda,kinyarwanda,Rwanda,10,unisex,The name Hakizimana comes from,9,19,God heals,
+kin-026,test,east_african,1,1,Habyarimana,Kinyarwanda,kinyarwanda,Rwanda,11,unisex,The name Habyarimana comes from,9,20,it is God who gives children,
+kin-027,train,east_african,1,1,Nsengiyumva,Kinyarwanda,kinyarwanda,Rwanda,11,unisex,The name Nsengiyumva comes from,9,20,I pray and he hears,
+kin-028,train,east_african,1,1,Nshimiyimana,Kinyarwanda,kinyarwanda,Rwanda,12,unisex,The name Nshimiyimana comes from,9,21,I thank God,
+kin-029,train,east_african,1,1,Niyonzima,Kinyarwanda,kinyarwanda,Rwanda,9,unisex,The name Niyonzima comes from,9,18,I believe in God,
+kin-030,test,east_african,1,1,Bizimana,Kinyarwanda,kinyarwanda,Rwanda,8,unisex,The name Bizimana comes from,9,17,God knows,
+kin-031,test,east_african,1,1,Ntwari,Kinyarwanda,kinyarwanda,Rwanda,6,male,The name Ntwari comes from,9,15,hero,
+kin-032,train,east_african,1,1,Mugabo,Kinyarwanda,kinyarwanda,Rwanda,6,male,The name Mugabo comes from,9,15,man,
+kin-033,train,east_african,1,1,Ngabo,Kinyarwanda,kinyarwanda,Rwanda,5,male,The name Ngabo comes from,9,14,shield,
+kin-034,test,east_african,1,1,Shema,Kinyarwanda,kinyarwanda,Rwanda,5,unisex,The name Shema comes from,9,14,pride,
+kin-035,test,east_african,1,1,Ganza,Kinyarwanda,kinyarwanda,Rwanda,5,unisex,The name Ganza comes from,9,14,reign,
+kin-036,train,east_african,1,1,Ntare,Kinyarwanda,kinyarwanda,Rwanda,5,male,The name Ntare comes from,9,14,lion,Also a historical royal name in Burundi.
+kin-037,test,east_african,1,1,Munezero,Kinyarwanda,kinyarwanda,Rwanda,8,unisex,The name Munezero comes from,9,17,joy,
+kin-038,train,east_african,1,1,Nshuti,Kinyarwanda,kinyarwanda,Rwanda,6,unisex,The name Nshuti comes from,9,15,friend,
+kin-039,train,east_african,1,1,Twahirwa,Kinyarwanda,kinyarwanda,Rwanda,8,unisex,The name Twahirwa comes from,9,17,we are blessed,
+kin-040,train,east_african,1,0,Rukundo,Kinyarwanda,kinyarwanda,Rwanda,7,unisex,The name Rukundo comes from,9,16,love,Also used in Runyankore.
+kin-041,test,east_african,1,1,Mahoro,Kinyarwanda,kinyarwanda,Rwanda,6,unisex,The name Mahoro comes from,9,15,peace,
+kin-042,test,east_african,1,1,Cyiza,Kinyarwanda,kinyarwanda,Rwanda,5,unisex,The name Cyiza comes from,9,14,it is good,
+kin-043,train,east_african,1,1,Mwiza,Kinyarwanda,kinyarwanda,Rwanda,5,female,The name Mwiza comes from,9,14,the beautiful one,
+kin-044,test,east_african,1,1,Kampire,Kinyarwanda,kinyarwanda,Rwanda,7,female,The name Kampire comes from,9,16,,
+kin-045,test,east_african,1,1,Kayitesi,Kinyarwanda,kinyarwanda,Rwanda,8,female,The name Kayitesi comes from,9,17,,
+kin-046,train,east_african,1,1,Murekatete,Kinyarwanda,kinyarwanda,Rwanda,10,female,The name Murekatete comes from,9,19,,
+kin-047,train,east_african,1,1,Mushikiwabo,Kinyarwanda,kinyarwanda,Rwanda,11,female,The name Mushikiwabo comes from,9,20,their sister,
+kin-048,train,east_african,1,1,Mugwaneza,Kinyarwanda,kinyarwanda,Rwanda,9,unisex,The name Mugwaneza comes from,9,18,,
+kin-049,test,east_african,1,1,Uwitonze,Kinyarwanda,kinyarwanda,Rwanda,8,female,The name Uwitonze comes from,9,17,the gentle one,
+kin-050,train,east_african,1,1,Umurungi,Kinyarwanda,kinyarwanda,Rwanda,8,female,The name Umurungi comes from,9,17,the good one,
+kin-051,train,east_african,1,1,Uwizeye,Kinyarwanda,kinyarwanda,Rwanda,7,unisex,The name Uwizeye comes from,9,16,one of hope,
+kin-052,train,east_african,1,1,Isaro,Kinyarwanda,kinyarwanda,Rwanda,5,female,The name Isaro comes from,9,14,bead,
+kin-053,train,east_african,1,1,Iragena,Kinyarwanda,kinyarwanda,Rwanda,7,unisex,The name Iragena comes from,9,16,,
+kin-054,train,east_african,1,1,Ituze,Kinyarwanda,kinyarwanda,Rwanda,5,unisex,The name Ituze comes from,9,14,calm,
+kin-055,train,east_african,1,1,Dushime,Kinyarwanda,kinyarwanda,Rwanda,7,unisex,The name Dushime comes from,9,16,let us thank,
+kin-056,test,east_african,1,1,Dukunde,Kinyarwanda,kinyarwanda,Rwanda,7,unisex,The name Dukunde comes from,9,16,let us love,
+kin-057,test,east_african,1,1,Dusabe,Kinyarwanda,kinyarwanda,Rwanda,6,unisex,The name Dusabe comes from,9,15,let us pray,
+kin-058,test,east_african,1,1,Duhirwe,Kinyarwanda,kinyarwanda,Rwanda,7,unisex,The name Duhirwe comes from,9,16,may we be fortunate,
+kin-059,test,east_african,1,1,Tuyishime,Kinyarwanda,kinyarwanda,Rwanda,9,unisex,The name Tuyishime comes from,9,18,let us be thankful,
+kin-060,train,east_african,1,1,Manzi,Kinyarwanda,kinyarwanda,Rwanda,5,unisex,The name Manzi comes from,9,14,,
+kin-061,train,east_african,1,1,Mihigo,Kinyarwanda,kinyarwanda,Rwanda,6,unisex,The name Mihigo comes from,9,15,goals,Imihigo are pledged goals.
+kin-062,test,east_african,1,1,Mazimpaka,Kinyarwanda,kinyarwanda,Rwanda,9,male,The name Mazimpaka comes from,9,18,,
+kin-063,test,east_african,1,1,Gasana,Kinyarwanda,kinyarwanda,Rwanda,6,male,The name Gasana comes from,9,15,,
+kin-064,train,east_african,1,1,Kayumba,Kinyarwanda,kinyarwanda,Rwanda,7,male,The name Kayumba comes from,9,16,,
+kin-065,test,east_african,1,1,Rugwiro,Kinyarwanda,kinyarwanda,Rwanda,7,male,The name Rugwiro comes from,9,16,,
+kin-066,train,east_african,1,1,Rudasingwa,Kinyarwanda,kinyarwanda,Rwanda,10,male,The name Rudasingwa comes from,9,19,,
+kin-067,test,east_african,1,1,Rwigema,Kinyarwanda,kinyarwanda,Rwanda,7,male,The name Rwigema comes from,9,16,,
+kin-068,train,east_african,1,1,Kagame,Kinyarwanda,kinyarwanda,Rwanda,6,male,The name Kagame comes from,9,15,,
+kin-069,train,east_african,1,1,Kamanzi,Kinyarwanda,kinyarwanda,Rwanda,7,unisex,The name Kamanzi comes from,9,16,,
+kin-070,test,east_african,1,1,Munyaneza,Kinyarwanda,kinyarwanda,Rwanda,9,unisex,The name Munyaneza comes from,9,18,,
+kin-071,train,east_african,1,1,Munyentwali,Kinyarwanda,kinyarwanda,Rwanda,11,male,The name Munyentwali comes from,9,20,he is a hero,
+kin-072,train,east_african,1,1,Sibomana,Kinyarwanda,kinyarwanda,Rwanda,8,unisex,The name Sibomana comes from,9,17,they are not God,
+kin-073,train,east_african,1,1,Ndahiro,Kinyarwanda,kinyarwanda,Rwanda,7,male,The name Ndahiro comes from,9,16,,
+kin-074,test,east_african,1,1,Nkurunziza,Kinyarwanda,kinyarwanda,Rwanda,10,unisex,The name Nkurunziza comes from,9,19,good news,Shared with Kirundi.
+kin-075,train,east_african,1,1,Nsabimana,Kinyarwanda,kinyarwanda,Rwanda,9,unisex,The name Nsabimana comes from,9,18,I ask God,
+kin-076,test,east_african,1,1,Ndayisaba,Kinyarwanda,kinyarwanda,Rwanda,9,unisex,The name Ndayisaba comes from,9,18,I ask God,
+kin-077,test,east_african,1,1,Bigirimana,Kinyarwanda,kinyarwanda,Rwanda,10,unisex,The name Bigirimana comes from,9,19,may God bring it about,
+kin-078,test,east_african,1,1,Hagenimana,Kinyarwanda,kinyarwanda,Rwanda,10,unisex,The name Hagenimana comes from,9,19,,
+kin-079,test,east_african,1,1,Humura,Kinyarwanda,kinyarwanda,Rwanda,6,unisex,The name Humura comes from,9,15,take courage,
+kin-080,train,east_african,1,1,Shumbusho,Kinyarwanda,kinyarwanda,Rwanda,9,unisex,The name Shumbusho comes from,9,18,consolation,
+kin-081,train,east_african,1,1,Byiringiro,Kinyarwanda,kinyarwanda,Rwanda,10,unisex,The name Byiringiro comes from,9,19,hope,
+kin-082,test,east_african,1,1,Uwingabire,Kinyarwanda,kinyarwanda,Rwanda,10,female,The name Uwingabire comes from,9,19,one who is a gift,
+kin-083,test,east_african,1,1,Muteteri,Kinyarwanda,kinyarwanda,Rwanda,8,female,The name Muteteri comes from,9,17,,
+kin-084,test,east_african,1,1,Mukansanga,Kinyarwanda,kinyarwanda,Rwanda,10,female,The name Mukansanga comes from,9,19,,
+kin-085,test,east_african,1,1,Nyirahabimana,Kinyarwanda,kinyarwanda,Rwanda,13,female,The name Nyirahabimana comes from,9,22,,Nyira- names are female.
+kin-086,train,east_african,1,1,Uwimbabazi,Kinyarwanda,kinyarwanda,Rwanda,10,female,The name Uwimbabazi comes from,9,19,the merciful one,
+kin-087,test,east_african,1,1,Umuhoza,Kinyarwanda,kinyarwanda,Rwanda,7,unisex,The name Umuhoza comes from,9,16,consoler,
+kin-088,train,east_african,1,1,Cyuzuzo,Kinyarwanda,kinyarwanda,Rwanda,7,unisex,The name Cyuzuzo comes from,9,16,satisfaction,
+kin-089,train,east_african,1,1,Cyubahiro,Kinyarwanda,kinyarwanda,Rwanda,9,unisex,The name Cyubahiro comes from,9,18,honor,
+kin-090,test,east_african,1,1,Dusengimana,Kinyarwanda,kinyarwanda,Rwanda,11,unisex,The name Dusengimana comes from,9,20,we pray to God,
+kin-091,test,east_african,1,1,Twagirimana,Kinyarwanda,kinyarwanda,Rwanda,11,unisex,The name Twagirimana comes from,9,20,,
+kin-092,train,east_african,1,1,Niyitegeka,Kinyarwanda,kinyarwanda,Rwanda,10,unisex,The name Niyitegeka comes from,9,19,,
+kin-093,test,east_african,1,1,Habinshuti,Kinyarwanda,kinyarwanda,Rwanda,10,unisex,The name Habinshuti comes from,9,19,,
+kin-094,train,east_african,1,1,Isimbi,Kinyarwanda,kinyarwanda,Rwanda,6,female,The name Isimbi comes from,9,15,cowrie,
+kin-095,train,east_african,1,1,Umuhire,Kinyarwanda,kinyarwanda,Rwanda,7,unisex,The name Umuhire comes from,9,16,the fortunate one,
+kin-096,test,east_african,1,1,Ikaze,Kinyarwanda,kinyarwanda,Rwanda,5,unisex,The name Ikaze comes from,9,14,welcome,
+kin-097,test,east_african,1,1,Mutanguha,Kinyarwanda,kinyarwanda,Rwanda,9,unisex,The name Mutanguha comes from,9,18,,
+kin-098,train,east_african,1,1,Gahigi,Kinyarwanda,kinyarwanda,Rwanda,6,male,The name Gahigi comes from,9,15,hunter,
+kin-099,test,east_african,1,1,Ndamage,Kinyarwanda,kinyarwanda,Rwanda,7,male,The name Ndamage comes from,9,16,,
+kin-100,train,east_african,1,1,Mukamana,Kinyarwanda,kinyarwanda,Rwanda,8,female,The name Mukamana comes from,9,17,,
+lug-001,train,east_african,1,1,Nalubega,Luganda,luganda,Uganda,8,female,The name Nalubega comes from,9,17,,
+lug-002,test,east_african,1,1,Namatovu,Luganda,luganda,Uganda,8,female,The name Namatovu comes from,9,17,,
+lug-003,train,east_african,1,1,Lubega,Luganda,luganda,Uganda,6,male,The name Lubega comes from,9,15,,
+lug-004,train,east_african,1,1,Matovu,Luganda,luganda,Uganda,6,male,The name Matovu comes from,9,15,,
+lug-005,train,east_african,1,1,Nabukenya,Luganda,luganda,Uganda,9,female,The name Nabukenya comes from,9,18,,
+lug-006,test,east_african,1,1,Bukenya,Luganda,luganda,Uganda,7,male,The name Bukenya comes from,9,16,,
+lug-007,train,east_african,1,1,Nayiga,Luganda,luganda,Uganda,6,female,The name Nayiga comes from,9,15,,
+lug-008,train,east_african,1,1,Nabakooza,Luganda,luganda,Uganda,9,female,The name Nabakooza comes from,9,18,,
+lug-009,test,east_african,1,1,Mukasa,Luganda,luganda,Uganda,6,male,The name Mukasa comes from,9,15,,Clan name and the spirit of Lake Victoria.
+lug-010,train,east_african,1,1,Nakanwagi,Luganda,luganda,Uganda,9,female,The name Nakanwagi comes from,9,18,,
+lug-011,test,east_african,1,1,Nakalema,Luganda,luganda,Uganda,8,female,The name Nakalema comes from,9,17,,
+lug-012,test,east_african,1,1,Nantongo,Luganda,luganda,Uganda,8,female,The name Nantongo comes from,9,17,,Female pair of Ssentongo.
+lug-013,test,east_african,1,1,Namayanja,Luganda,luganda,Uganda,9,female,The name Namayanja comes from,9,18,,
+lug-014,test,east_african,1,1,Kakooza,Luganda,luganda,Uganda,7,male,The name Kakooza comes from,9,16,,
+lug-015,train,east_african,1,1,Nakyanzi,Luganda,luganda,Uganda,8,female,The name Nakyanzi comes from,9,17,,
+lug-016,test,east_african,1,1,Namutebi,Luganda,luganda,Uganda,8,female,The name Namutebi comes from,9,17,,
+lug-017,train,east_african,1,1,Namaganda,Luganda,luganda,Uganda,9,female,The name Namaganda comes from,9,18,,Also used in Busoga.
+lug-018,test,east_african,1,1,Nansubuga,Luganda,luganda,Uganda,9,female,The name Nansubuga comes from,9,18,,
+lug-019,test,east_african,1,1,Katongole,Luganda,luganda,Uganda,9,male,The name Katongole comes from,9,18,,
+lug-020,test,east_african,1,1,Nampijja,Luganda,luganda,Uganda,8,female,The name Nampijja comes from,9,17,,Female pair of Ssempijja.
+lug-021,test,east_african,1,1,Namuddu,Luganda,luganda,Uganda,7,female,The name Namuddu comes from,9,16,,
+lug-022,test,east_african,1,1,Sanyu,Luganda,luganda,Uganda,5,unisex,The name Sanyu comes from,9,14,joy,
+lug-023,train,east_african,1,1,Muwonge,Luganda,luganda,Uganda,7,male,The name Muwonge comes from,9,16,,
+lug-024,test,east_african,1,1,Namuli,Luganda,luganda,Uganda,6,female,The name Namuli comes from,9,15,,
+lug-025,train,east_african,1,1,Ssali,Luganda,luganda,Uganda,5,male,The name Ssali comes from,9,14,,
+lug-026,train,east_african,1,1,Nassali,Luganda,luganda,Uganda,7,female,The name Nassali comes from,9,16,,
+lug-027,test,east_african,1,1,Mulindwa,Luganda,luganda,Uganda,8,male,The name Mulindwa comes from,9,17,,
+lug-028,train,east_african,1,1,Namanda,Luganda,luganda,Uganda,7,female,The name Namanda comes from,9,16,,
+lug-029,train,east_african,1,1,Ssentongo,Luganda,luganda,Uganda,9,male,The name Ssentongo comes from,9,18,,
+lug-030,test,east_african,1,1,Nansamba,Luganda,luganda,Uganda,8,female,The name Nansamba comes from,9,17,,
+lug-031,train,east_african,1,1,Mayanja,Luganda,luganda,Uganda,7,male,The name Mayanja comes from,9,16,,
+lug-032,train,east_african,1,1,Nabukeera,Luganda,luganda,Uganda,9,female,The name Nabukeera comes from,9,18,,
+lug-033,test,east_african,1,1,Ssemanda,Luganda,luganda,Uganda,8,male,The name Ssemanda comes from,9,17,,
+lug-034,train,east_african,1,1,Mugerwa,Luganda,luganda,Uganda,7,male,The name Mugerwa comes from,9,16,,
+lug-035,test,east_african,1,1,Nantale,Luganda,luganda,Uganda,7,female,The name Nantale comes from,9,16,,
+lug-036,test,east_african,1,1,Nakato,Luganda,luganda,Uganda,6,female,The name Nakato comes from,9,15,younger female twin,
+lug-037,train,east_african,1,1,Namubiru,Luganda,luganda,Uganda,8,female,The name Namubiru comes from,9,17,,
+lug-038,test,east_african,1,1,Babirye,Luganda,luganda,Uganda,7,female,The name Babirye comes from,9,16,elder female twin,Also used in Busoga.
+lug-039,train,east_african,1,1,Lukyamuzi,Luganda,luganda,Uganda,9,male,The name Lukyamuzi comes from,9,18,,
+lug-040,test,east_african,1,1,Nsubuga,Luganda,luganda,Uganda,7,male,The name Nsubuga comes from,9,16,,
+lug-041,train,east_african,1,1,Nassolo,Luganda,luganda,Uganda,7,female,The name Nassolo comes from,9,16,,
+lug-042,test,east_african,1,1,Namata,Luganda,luganda,Uganda,6,female,The name Namata comes from,9,15,,
+lug-043,train,east_african,1,1,Nagawa,Luganda,luganda,Uganda,6,female,The name Nagawa comes from,9,15,,
+lug-044,test,east_african,1,1,Wasswa,Luganda,luganda,Uganda,6,male,The name Wasswa comes from,9,15,elder male twin,Lusoga uses Waiswa for the same birth position.
+lug-045,test,east_african,1,1,Ssempijja,Luganda,luganda,Uganda,9,male,The name Ssempijja comes from,9,18,,
+lug-046,train,east_african,1,1,Mutebi,Luganda,luganda,Uganda,6,male,The name Mutebi comes from,9,15,,
+lug-047,test,east_african,1,1,Namukasa,Luganda,luganda,Uganda,8,female,The name Namukasa comes from,9,17,,
+lug-048,train,east_african,1,1,Nalukwago,Luganda,luganda,Uganda,9,female,The name Nalukwago comes from,9,18,,
+lug-049,test,east_african,1,1,Nanyonga,Luganda,luganda,Uganda,8,female,The name Nanyonga comes from,9,17,,
+lug-050,train,east_african,1,1,Lukwago,Luganda,luganda,Uganda,7,male,The name Lukwago comes from,9,16,,
+lug-051,test,east_african,1,1,Nalwadda,Luganda,luganda,Uganda,8,female,The name Nalwadda comes from,9,17,,
+lug-052,train,east_african,1,1,Namugerwa,Luganda,luganda,Uganda,9,female,The name Namugerwa comes from,9,18,,
+lug-053,test,east_african,1,1,Kizza,Luganda,luganda,Uganda,5,male,The name Kizza comes from,9,14,child born after twins,Also spelled Kiiza.
+lug-054,test,east_african,1,1,Kaweesi,Luganda,luganda,Uganda,7,male,The name Kaweesi comes from,9,16,,
+lug-055,train,east_african,1,1,Nakaweesi,Luganda,luganda,Uganda,9,female,The name Nakaweesi comes from,9,18,,
+lug-056,train,east_african,1,1,Nabuuma,Luganda,luganda,Uganda,7,female,The name Nabuuma comes from,9,16,,
+lug-057,test,east_african,1,1,Namugenyi,Luganda,luganda,Uganda,9,female,The name Namugenyi comes from,9,18,,
+lug-058,train,east_african,1,1,Kato,Luganda,luganda,Uganda,4,male,The name Kato comes from,9,13,younger male twin,Lusoga uses Tenywa for the same birth position.
+lug-059,train,east_african,1,1,Ndagire,Luganda,luganda,Uganda,7,female,The name Ndagire comes from,9,16,,
+lug-060,train,east_african,1,1,Nazziwa,Luganda,luganda,Uganda,7,female,The name Nazziwa comes from,9,16,,
+lug-061,test,east_african,1,1,Nakate,Luganda,luganda,Uganda,6,female,The name Nakate comes from,9,15,,
+lug-062,train,east_african,1,1,Nakafeero,Luganda,luganda,Uganda,9,female,The name Nakafeero comes from,9,18,,Also common in western Uganda.
+lug-063,train,east_african,1,1,Nanyonjo,Luganda,luganda,Uganda,8,female,The name Nanyonjo comes from,9,17,,
+lug-064,train,east_african,1,1,Namakula,Luganda,luganda,Uganda,8,female,The name Namakula comes from,9,17,,
+lug-065,train,east_african,1,1,Namulindwa,Luganda,luganda,Uganda,10,female,The name Namulindwa comes from,9,19,,
+lug-066,test,east_african,1,1,Namazzi,Luganda,luganda,Uganda,7,female,The name Namazzi comes from,9,16,of water,
+lug-067,train,east_african,1,1,Nanziri,Luganda,luganda,Uganda,7,female,The name Nanziri comes from,9,16,,
+lug-068,test,east_african,1,1,Nakimbugwe,Luganda,luganda,Uganda,10,female,The name Nakimbugwe comes from,9,19,,
+lug-069,train,east_african,1,1,Namwanje,Luganda,luganda,Uganda,8,female,The name Namwanje comes from,9,17,,
+lug-070,train,east_african,1,1,Kalema,Luganda,luganda,Uganda,6,male,The name Kalema comes from,9,15,,
+lug-071,test,east_african,1,1,Mubiru,Luganda,luganda,Uganda,6,male,The name Mubiru comes from,9,15,,
+lug-072,train,east_african,1,1,Ssenyonga,Luganda,luganda,Uganda,9,male,The name Ssenyonga comes from,9,18,,
+lug-073,train,east_african,1,1,Namirembe,Luganda,luganda,Uganda,9,female,The name Namirembe comes from,9,18,peace,Also the name of a hill in Kampala.
+lug-074,test,east_african,1,1,Nakibuule,Luganda,luganda,Uganda,9,female,The name Nakibuule comes from,9,18,,
+lug-075,test,east_african,1,1,Nandawula,Luganda,luganda,Uganda,9,female,The name Nandawula comes from,9,18,,
+lug-076,test,east_african,1,1,Nsamba,Luganda,luganda,Uganda,6,male,The name Nsamba comes from,9,15,,
+lug-077,train,east_african,1,1,Nakuya,Luganda,luganda,Uganda,6,female,The name Nakuya comes from,9,15,,
+lug-078,train,east_african,1,1,Namagembe,Luganda,luganda,Uganda,9,female,The name Namagembe comes from,9,18,,
+lug-079,test,east_african,1,1,Kasozi,Luganda,luganda,Uganda,6,male,The name Kasozi comes from,9,15,hill,
+lug-080,test,east_african,1,1,Mawanda,Luganda,luganda,Uganda,7,male,The name Mawanda comes from,9,16,,
+lug-081,train,east_african,1,1,Nakintu,Luganda,luganda,Uganda,7,female,The name Nakintu comes from,9,16,,Female name recalling Kintu.
+lug-082,train,east_african,1,1,Kateregga,Luganda,luganda,Uganda,9,male,The name Kateregga comes from,9,18,,
+lug-083,test,east_african,1,1,Namusoke,Luganda,luganda,Uganda,8,female,The name Namusoke comes from,9,17,,
+lug-084,test,east_african,1,1,Sserwadda,Luganda,luganda,Uganda,9,male,The name Sserwadda comes from,9,18,,
+lug-085,test,east_african,1,1,Nassaka,Luganda,luganda,Uganda,7,female,The name Nassaka comes from,9,16,,
+lug-086,train,east_african,1,1,Ssenyondo,Luganda,luganda,Uganda,9,male,The name Ssenyondo comes from,9,18,,
+lug-087,test,east_african,1,1,Kyeyune,Luganda,luganda,Uganda,7,male,The name Kyeyune comes from,9,16,,
+lug-088,test,east_african,1,1,Nalwoga,Luganda,luganda,Uganda,7,female,The name Nalwoga comes from,9,16,,
+lug-089,test,east_african,1,1,Nakabugo,Luganda,luganda,Uganda,8,female,The name Nakabugo comes from,9,17,,
+lug-090,train,east_african,1,1,Nantume,Luganda,luganda,Uganda,7,female,The name Nantume comes from,9,16,,
+lug-091,test,east_african,1,1,Nankya,Luganda,luganda,Uganda,6,female,The name Nankya comes from,9,15,,
+lug-092,test,east_african,1,1,Musoke,Luganda,luganda,Uganda,6,male,The name Musoke comes from,9,15,rainbow,
+lug-093,train,east_african,1,1,Kayemba,Luganda,luganda,Uganda,7,male,The name Kayemba comes from,9,16,,
+lug-094,train,east_african,1,1,Kiwanuka,Luganda,luganda,Uganda,8,male,The name Kiwanuka comes from,9,17,,Clan name associated with lightning.
+lug-095,train,east_african,1,1,Kizito,Luganda,luganda,Uganda,6,male,The name Kizito comes from,9,15,,Given name of one of the Uganda Martyrs.
+lug-096,test,east_african,1,1,Nassuna,Luganda,luganda,Uganda,7,female,The name Nassuna comes from,9,16,,
+lug-097,train,east_african,1,1,Kavuma,Luganda,luganda,Uganda,6,male,The name Kavuma comes from,9,15,,
+lug-098,test,east_african,1,1,Kiggundu,Luganda,luganda,Uganda,8,male,The name Kiggundu comes from,9,17,,
+lug-099,train,east_african,1,1,Nambi,Luganda,luganda,Uganda,5,female,The name Nambi comes from,9,14,,Wife of Kintu in the Buganda founding tradition.
+lug-100,test,east_african,1,1,Kintu,Luganda,luganda,Uganda,5,male,The name Kintu comes from,9,14,,Founding ancestor in the Buganda tradition.
+lus-001,train,east_african,1,1,Nabirye,Lusoga,lusoga,Uganda,7,female,The name Nabirye comes from,9,16,female twin,Common Busoga twin name.
+lus-002,test,east_african,1,1,Naigaga,Lusoga,lusoga,Uganda,7,female,The name Naigaga comes from,9,16,,
+lus-003,test,east_african,1,1,Namukose,Lusoga,lusoga,Uganda,8,female,The name Namukose comes from,9,17,,
+lus-004,test,east_african,1,1,Waiswa,Lusoga,lusoga,Uganda,6,male,The name Waiswa comes from,9,15,elder male twin,Luganda uses Wasswa for the same birth position.
+lus-005,train,east_african,1,1,Kagoya,Lusoga,lusoga,Uganda,6,female,The name Kagoya comes from,9,15,,
+lus-006,train,east_african,1,1,Nangobi,Lusoga,lusoga,Uganda,7,female,The name Nangobi comes from,9,16,woman of the Ngobi line,
+lus-007,train,east_african,1,1,Isiko,Lusoga,lusoga,Uganda,5,male,The name Isiko comes from,9,14,,
+lus-008,test,east_african,1,1,Isabirye,Lusoga,lusoga,Uganda,8,male,The name Isabirye comes from,9,17,father of twins,
+lus-009,train,east_african,1,1,Namulondo,Lusoga,lusoga,Uganda,9,female,The name Namulondo comes from,9,18,,
+lus-010,train,east_african,1,1,Muyinda,Lusoga,lusoga,Uganda,7,male,The name Muyinda comes from,9,16,,
+lus-011,train,east_african,1,1,Nabongho,Lusoga,lusoga,Uganda,8,female,The name Nabongho comes from,9,17,,
+lus-012,train,east_african,1,1,Kiirya,Lusoga,lusoga,Uganda,6,male,The name Kiirya comes from,9,15,,
+lus-013,train,east_african,1,1,Namugosa,Lusoga,lusoga,Uganda,8,female,The name Namugosa comes from,9,17,,
+lus-014,train,east_african,1,1,Kafuko,Lusoga,lusoga,Uganda,6,unisex,The name Kafuko comes from,9,15,,
+lus-015,train,east_african,1,1,Mukose,Lusoga,lusoga,Uganda,6,unisex,The name Mukose comes from,9,15,,
+lus-016,test,east_african,1,1,Mukama,Lusoga,lusoga,Uganda,6,unisex,The name Mukama comes from,9,15,lord,"Also a word for God or a ruler, used across the interlacustrine languages."
+lus-017,test,east_african,1,1,Mudondo,Lusoga,lusoga,Uganda,7,female,The name Mudondo comes from,9,16,,
+lus-018,train,east_african,1,1,Nankwanga,Lusoga,lusoga,Uganda,9,female,The name Nankwanga comes from,9,18,,
+lus-019,test,east_african,1,1,Kawanguzi,Lusoga,lusoga,Uganda,9,male,The name Kawanguzi comes from,9,18,,
+lus-020,train,east_african,1,1,Maganda,Lusoga,lusoga,Uganda,7,unisex,The name Maganda comes from,9,16,,
+lus-021,train,east_african,1,1,Namugabwe,Lusoga,lusoga,Uganda,9,female,The name Namugabwe comes from,9,18,,
+lus-022,test,east_african,1,1,Namusobya,Lusoga,lusoga,Uganda,9,female,The name Namusobya comes from,9,18,,
+lus-023,train,east_african,1,1,Mbeiza,Lusoga,lusoga,Uganda,6,female,The name Mbeiza comes from,9,15,,
+lus-024,train,east_african,1,1,Namumbya,Lusoga,lusoga,Uganda,8,female,The name Namumbya comes from,9,17,,
+lus-025,test,east_african,1,1,Mugoya,Lusoga,lusoga,Uganda,6,male,The name Mugoya comes from,9,15,,
+lus-026,test,east_african,1,1,Kantono,Lusoga,lusoga,Uganda,7,unisex,The name Kantono comes from,9,16,,
+lus-027,test,east_african,1,1,Kawala,Lusoga,lusoga,Uganda,6,female,The name Kawala comes from,9,15,,
+lus-028,test,east_african,1,1,Baluka,Lusoga,lusoga,Uganda,6,unisex,The name Baluka comes from,9,15,,
+lus-029,test,east_african,1,1,Musubika,Lusoga,lusoga,Uganda,8,unisex,The name Musubika comes from,9,17,,
+lus-030,train,east_african,1,1,Namuwaya,Lusoga,lusoga,Uganda,8,female,The name Namuwaya comes from,9,17,,
+lus-031,train,east_african,1,1,Nakiranda,Lusoga,lusoga,Uganda,9,female,The name Nakiranda comes from,9,18,,
+lus-032,test,east_african,1,1,Kibwika,Lusoga,lusoga,Uganda,7,male,The name Kibwika comes from,9,16,,
+lus-033,train,east_african,1,1,Nakirya,Lusoga,lusoga,Uganda,7,female,The name Nakirya comes from,9,16,,
+lus-034,test,east_african,1,1,Nairuba,Lusoga,lusoga,Uganda,7,female,The name Nairuba comes from,9,16,,
+lus-035,test,east_african,1,1,Namutamba,Lusoga,lusoga,Uganda,9,female,The name Namutamba comes from,9,18,,
+lus-036,test,east_african,1,1,Kairu,Lusoga,lusoga,Uganda,5,unisex,The name Kairu comes from,9,14,,
+lus-037,train,east_african,1,1,Kakaire,Lusoga,lusoga,Uganda,7,male,The name Kakaire comes from,9,16,,
+lus-038,train,east_african,1,1,Namususwa,Lusoga,lusoga,Uganda,9,female,The name Namususwa comes from,9,18,,
+lus-039,train,east_african,1,1,Tenywa,Lusoga,lusoga,Uganda,6,male,The name Tenywa comes from,9,15,younger male twin,Luganda uses Kato for the same birth position.
+lus-040,train,east_african,1,1,Ngobi,Lusoga,lusoga,Uganda,5,male,The name Ngobi comes from,9,14,,"Royal clan name of Busoga, also a personal name."
+lus-041,train,east_african,1,1,Byogero,Lusoga,lusoga,Uganda,7,unisex,The name Byogero comes from,9,16,,
+lus-042,train,east_african,1,1,Buyinza,Lusoga,lusoga,Uganda,7,male,The name Buyinza comes from,9,16,,
+lus-043,test,east_african,1,1,Nakaziba,Lusoga,lusoga,Uganda,8,female,The name Nakaziba comes from,9,17,,
+lus-044,test,east_african,1,1,Kigenyi,Lusoga,lusoga,Uganda,7,unisex,The name Kigenyi comes from,9,16,,
+lus-045,train,east_african,1,1,Muwanika,Lusoga,lusoga,Uganda,8,male,The name Muwanika comes from,9,17,,
+lus-046,test,east_african,1,1,Kauma,Lusoga,lusoga,Uganda,5,unisex,The name Kauma comes from,9,14,,
+lus-047,test,east_african,1,1,Mugala,Lusoga,lusoga,Uganda,6,unisex,The name Mugala comes from,9,15,,
+lus-048,test,east_african,1,1,Namulinda,Lusoga,lusoga,Uganda,9,female,The name Namulinda comes from,9,18,,
+lus-049,test,east_african,1,1,Kirunda,Lusoga,lusoga,Uganda,7,male,The name Kirunda comes from,9,16,,
+lus-050,test,east_african,1,1,Namugaya,Lusoga,lusoga,Uganda,8,female,The name Namugaya comes from,9,17,,
+lus-051,train,east_african,1,1,Namusubo,Lusoga,lusoga,Uganda,8,female,The name Namusubo comes from,9,17,,
+lus-052,test,east_african,1,1,Waako,Lusoga,lusoga,Uganda,5,male,The name Waako comes from,9,14,,
+lus-053,train,east_african,1,1,Magoba,Lusoga,lusoga,Uganda,6,unisex,The name Magoba comes from,9,15,,
+lus-054,test,east_african,1,1,Mwandha,Lusoga,lusoga,Uganda,7,unisex,The name Mwandha comes from,9,16,,
+lus-055,test,east_african,1,1,Naigembe,Lusoga,lusoga,Uganda,8,female,The name Naigembe comes from,9,17,,
+lus-056,test,east_african,1,1,Kateme,Lusoga,lusoga,Uganda,6,unisex,The name Kateme comes from,9,15,,
+lus-057,train,east_african,1,1,Namugwere,Lusoga,lusoga,Uganda,9,female,The name Namugwere comes from,9,18,,
+lus-058,train,east_african,1,1,Nabulumba,Lusoga,lusoga,Uganda,9,female,The name Nabulumba comes from,9,18,,
+lus-059,test,east_african,1,1,Mulondo,Lusoga,lusoga,Uganda,7,male,The name Mulondo comes from,9,16,,
+lus-060,test,east_african,1,1,Kaudha,Lusoga,lusoga,Uganda,6,female,The name Kaudha comes from,9,15,,
+lus-061,test,east_african,1,1,Nakagolo,Lusoga,lusoga,Uganda,8,female,The name Nakagolo comes from,9,17,,
+lus-062,train,east_african,1,1,Balikowa,Lusoga,lusoga,Uganda,8,unisex,The name Balikowa comes from,9,17,,
+lus-063,test,east_african,1,1,Kasadha,Lusoga,lusoga,Uganda,7,male,The name Kasadha comes from,9,16,,
+lus-064,train,east_african,1,1,Kyakuwaire,Lusoga,lusoga,Uganda,10,unisex,The name Kyakuwaire comes from,9,19,,
+lus-065,test,east_african,1,1,Kirabira,Lusoga,lusoga,Uganda,8,male,The name Kirabira comes from,9,17,,
+lus-066,train,east_african,1,1,Byobona,Lusoga,lusoga,Uganda,7,unisex,The name Byobona comes from,9,16,,
+lus-067,test,east_african,1,1,Menya,Lusoga,lusoga,Uganda,5,male,The name Menya comes from,9,14,,Also the hereditary title Menha of Bugweri.
+lus-068,train,east_african,1,1,Biribawa,Lusoga,lusoga,Uganda,8,unisex,The name Biribawa comes from,9,17,,
+lus-069,train,east_african,1,1,Tibiwa,Lusoga,lusoga,Uganda,6,unisex,The name Tibiwa comes from,9,15,,
+lus-070,test,east_african,1,1,Babita,Lusoga,lusoga,Uganda,6,unisex,The name Babita comes from,9,15,,
+lus-071,train,east_african,1,1,Nampina,Lusoga,lusoga,Uganda,7,female,The name Nampina comes from,9,16,,
+lus-072,train,east_african,1,1,Namukuve,Lusoga,lusoga,Uganda,8,female,The name Namukuve comes from,9,17,,
+lus-073,train,east_african,1,1,Basalirwa,Lusoga,lusoga,Uganda,9,male,The name Basalirwa comes from,9,18,,
+lus-074,test,east_african,1,1,Tabingwa,Lusoga,lusoga,Uganda,8,male,The name Tabingwa comes from,9,17,,"Hereditary title of Luuka, also a personal name."
+lus-075,test,east_african,1,1,Baligeya,Lusoga,lusoga,Uganda,8,male,The name Baligeya comes from,9,17,,
+lus-076,train,east_african,1,1,Naikoba,Lusoga,lusoga,Uganda,7,female,The name Naikoba comes from,9,16,,
+lus-077,train,east_african,1,1,Waibi,Lusoga,lusoga,Uganda,5,male,The name Waibi comes from,9,14,,
+lus-078,train,east_african,1,1,Naisanga,Lusoga,lusoga,Uganda,8,female,The name Naisanga comes from,9,17,,
+lus-079,train,east_african,1,1,Magoola,Lusoga,lusoga,Uganda,7,unisex,The name Magoola comes from,9,16,,
+lus-080,test,east_african,1,1,Kawudha,Lusoga,lusoga,Uganda,7,female,The name Kawudha comes from,9,16,,
+lus-081,test,east_african,1,1,Mwondha,Lusoga,lusoga,Uganda,7,male,The name Mwondha comes from,9,16,,
+lus-082,test,east_african,1,1,Wambuzi,Lusoga,lusoga,Uganda,7,male,The name Wambuzi comes from,9,16,,Also associated with the Zibondo line of Bulamogi.
+lus-083,test,east_african,1,1,Dhikusoka,Lusoga,lusoga,Uganda,9,unisex,The name Dhikusoka comes from,9,18,,The dh spelling is characteristic of Lusoga.
+lus-084,train,east_african,1,1,Gabula,Lusoga,lusoga,Uganda,6,male,The name Gabula comes from,9,15,,"Hereditary title of Bugabula, also a personal name."
+lus-085,test,east_african,1,1,Nadiope,Lusoga,lusoga,Uganda,7,male,The name Nadiope comes from,9,16,,Royal name of the Bugabula line.
+lus-086,train,east_african,1,1,Kadhumbula,Lusoga,lusoga,Uganda,10,male,The name Kadhumbula comes from,9,19,,Royal name of the Bugabula line.
+lus-087,test,east_african,1,1,Muloki,Lusoga,lusoga,Uganda,6,male,The name Muloki comes from,9,15,,Royal name of the Zibondo line.
+lus-088,train,east_african,1,1,Wako,Lusoga,lusoga,Uganda,4,male,The name Wako comes from,9,13,,Royal name of the Zibondo line.
+lus-089,train,east_african,1,1,Zibondo,Lusoga,lusoga,Uganda,7,male,The name Zibondo comes from,9,16,,"Hereditary title of Bulamogi, also a personal name."
+lus-090,train,east_african,1,1,Wakooli,Lusoga,lusoga,Uganda,7,male,The name Wakooli comes from,9,16,,"Hereditary title of Bukooli, also a personal name."
+lus-091,test,east_african,1,1,Kisiki,Lusoga,lusoga,Uganda,6,male,The name Kisiki comes from,9,15,,"Hereditary title of Busiki, also a personal name."
+lus-092,train,east_african,1,1,Nkono,Lusoga,lusoga,Uganda,5,male,The name Nkono comes from,9,14,,"Hereditary title of Bukono, also a personal name."
+lus-093,train,east_african,1,1,Ntembe,Lusoga,lusoga,Uganda,6,male,The name Ntembe comes from,9,15,,"Hereditary title of Butembe, also a personal name."
+lus-094,test,east_african,1,1,Luba,Lusoga,lusoga,Uganda,4,male,The name Luba comes from,9,13,,"Hereditary title of Bunya, also a personal name."
+lus-095,test,east_african,1,1,Nanyumba,Lusoga,lusoga,Uganda,8,unisex,The name Nanyumba comes from,9,17,,"Hereditary title of Bunhole, also spelled Nanhumba."
+lus-096,train,east_african,1,1,Nabwana,Lusoga,lusoga,Uganda,7,unisex,The name Nabwana comes from,9,16,,Name of the Luuka royal line.
+lus-097,test,east_african,1,1,Nkuutu,Lusoga,lusoga,Uganda,6,male,The name Nkuutu comes from,9,15,,Name associated with the Menha of Bugweri.
+lus-098,test,east_african,1,1,Waguma,Lusoga,lusoga,Uganda,6,male,The name Waguma comes from,9,15,,Name associated with the Ntembe of Butembe.
+lus-099,test,east_african,1,1,Izimba,Lusoga,lusoga,Uganda,6,male,The name Izimba comes from,9,15,,Name associated with the Ngobi of Kigulu.
+lus-100,test,east_african,1,1,Gologolo,Lusoga,lusoga,Uganda,8,male,The name Gologolo comes from,9,17,,Name associated with the Ngobi of Kigulu.
+rar-001,train,control_rare,0,0,Ivo,Control (rare),control_rare,,3,unspecified,The name Ivo comes from,9,12,,Length-matched Latin-script control.
+rar-002,train,control_rare,0,0,Enid,Control (rare),control_rare,,4,unspecified,The name Enid comes from,9,13,,Length-matched Latin-script control.
+rar-003,test,control_rare,0,0,Edna,Control (rare),control_rare,,4,unspecified,The name Edna comes from,9,13,,Length-matched Latin-script control.
+rar-004,train,control_rare,0,0,Opal,Control (rare),control_rare,,4,unspecified,The name Opal comes from,9,13,,Length-matched Latin-script control.
+rar-005,test,control_rare,0,0,Eula,Control (rare),control_rare,,4,unspecified,The name Eula comes from,9,13,,Length-matched Latin-script control.
+rar-006,train,control_rare,0,0,Otis,Control (rare),control_rare,,4,unspecified,The name Otis comes from,9,13,,Length-matched Latin-script control.
+rar-007,train,control_rare,0,0,Enos,Control (rare),control_rare,,4,unspecified,The name Enos comes from,9,13,,Length-matched Latin-script control.
+rar-008,test,control_rare,0,0,Eben,Control (rare),control_rare,,4,unspecified,The name Eben comes from,9,13,,Length-matched Latin-script control.
+rar-009,train,control_rare,0,0,Etta,Control (rare),control_rare,,4,unspecified,The name Etta comes from,9,13,,Length-matched Latin-script control.
+rar-010,test,control_rare,0,0,Inez,Control (rare),control_rare,,4,unspecified,The name Inez comes from,9,13,,Length-matched Latin-script control.
+rar-011,train,control_rare,0,0,Agnes,Control (rare),control_rare,,5,unspecified,The name Agnes comes from,9,14,,Length-matched Latin-script control.
+rar-012,train,control_rare,0,0,Clyde,Control (rare),control_rare,,5,unspecified,The name Clyde comes from,9,14,,Length-matched Latin-script control.
+rar-013,test,control_rare,0,0,Elsie,Control (rare),control_rare,,5,unspecified,The name Elsie comes from,9,14,,Length-matched Latin-script control.
+rar-014,train,control_rare,0,0,Ethel,Control (rare),control_rare,,5,unspecified,The name Ethel comes from,9,14,,Length-matched Latin-script control.
+rar-015,test,control_rare,0,0,Hilda,Control (rare),control_rare,,5,unspecified,The name Hilda comes from,9,14,,Length-matched Latin-script control.
+rar-016,test,control_rare,0,0,Mabel,Control (rare),control_rare,,5,unspecified,The name Mabel comes from,9,14,,Length-matched Latin-script control.
+rar-017,train,control_rare,0,0,Maude,Control (rare),control_rare,,5,unspecified,The name Maude comes from,9,14,,Length-matched Latin-script control.
+rar-018,train,control_rare,0,0,Myron,Control (rare),control_rare,,5,unspecified,The name Myron comes from,9,14,,Length-matched Latin-script control.
+rar-019,train,control_rare,0,0,Velma,Control (rare),control_rare,,5,unspecified,The name Velma comes from,9,14,,Length-matched Latin-script control.
+rar-020,test,control_rare,0,0,Wilma,Control (rare),control_rare,,5,unspecified,The name Wilma comes from,9,14,,Length-matched Latin-script control.
+rar-021,train,control_rare,0,0,Zelda,Control (rare),control_rare,,5,unspecified,The name Zelda comes from,9,14,,Length-matched Latin-script control.
+rar-022,test,control_rare,0,0,Homer,Control (rare),control_rare,,5,unspecified,The name Homer comes from,9,14,,Length-matched Latin-script control.
+rar-023,test,control_rare,0,0,Elmer,Control (rare),control_rare,,5,unspecified,The name Elmer comes from,9,14,,Length-matched Latin-script control.
+rar-024,train,control_rare,0,0,Waldo,Control (rare),control_rare,,5,unspecified,The name Waldo comes from,9,14,,Length-matched Latin-script control.
+rar-025,test,control_rare,0,0,Enoch,Control (rare),control_rare,,5,unspecified,The name Enoch comes from,9,14,,Length-matched Latin-script control.
+rar-026,test,control_rare,0,0,Rufus,Control (rare),control_rare,,5,unspecified,The name Rufus comes from,9,14,,Length-matched Latin-script control.
+rar-027,train,control_rare,0,0,Abner,Control (rare),control_rare,,5,unspecified,The name Abner comes from,9,14,,Length-matched Latin-script control.
+rar-028,test,control_rare,0,0,Selma,Control (rare),control_rare,,5,unspecified,The name Selma comes from,9,14,,Length-matched Latin-script control.
+rar-029,test,control_rare,0,0,Theda,Control (rare),control_rare,,5,unspecified,The name Theda comes from,9,14,,Length-matched Latin-script control.
+rar-030,test,control_rare,0,0,Leona,Control (rare),control_rare,,5,unspecified,The name Leona comes from,9,14,,Length-matched Latin-script control.
+rar-031,test,control_rare,0,0,Helga,Control (rare),control_rare,,5,unspecified,The name Helga comes from,9,14,,Length-matched Latin-script control.
+rar-032,test,control_rare,0,0,Bruno,Control (rare),control_rare,,5,unspecified,The name Bruno comes from,9,14,,Length-matched Latin-script control.
+rar-033,train,control_rare,0,0,Cyril,Control (rare),control_rare,,5,unspecified,The name Cyril comes from,9,14,,Length-matched Latin-script control.
+rar-034,train,control_rare,0,0,Cosmo,Control (rare),control_rare,,5,unspecified,The name Cosmo comes from,9,14,,Length-matched Latin-script control.
+rar-035,test,control_rare,0,0,Basil,Control (rare),control_rare,,5,unspecified,The name Basil comes from,9,14,,Length-matched Latin-script control.
+rar-036,train,control_rare,0,0,Ansel,Control (rare),control_rare,,5,unspecified,The name Ansel comes from,9,14,,Length-matched Latin-script control.
+rar-037,train,control_rare,0,0,Gilda,Control (rare),control_rare,,5,unspecified,The name Gilda comes from,9,14,,Length-matched Latin-script control.
+rar-038,train,control_rare,0,0,Hedda,Control (rare),control_rare,,5,unspecified,The name Hedda comes from,9,14,,Length-matched Latin-script control.
+rar-039,test,control_rare,0,0,Willa,Control (rare),control_rare,,5,unspecified,The name Willa comes from,9,14,,Length-matched Latin-script control.
+rar-040,test,control_rare,0,0,Agatha,Control (rare),control_rare,,6,unspecified,The name Agatha comes from,9,15,,Length-matched Latin-script control.
+rar-041,test,control_rare,0,0,Bertha,Control (rare),control_rare,,6,unspecified,The name Bertha comes from,9,15,,Length-matched Latin-script control.
+rar-042,train,control_rare,0,0,Gladys,Control (rare),control_rare,,6,unspecified,The name Gladys comes from,9,15,,Length-matched Latin-script control.
+rar-043,test,control_rare,0,0,Muriel,Control (rare),control_rare,,6,unspecified,The name Muriel comes from,9,15,,Length-matched Latin-script control.
+rar-044,train,control_rare,0,0,Myrtle,Control (rare),control_rare,,6,unspecified,The name Myrtle comes from,9,15,,Length-matched Latin-script control.
+rar-045,test,control_rare,0,0,Beulah,Control (rare),control_rare,,6,unspecified,The name Beulah comes from,9,15,,Length-matched Latin-script control.
+rar-046,test,control_rare,0,0,Wilbur,Control (rare),control_rare,,6,unspecified,The name Wilbur comes from,9,15,,Length-matched Latin-script control.
+rar-047,test,control_rare,0,0,Eunice,Control (rare),control_rare,,6,unspecified,The name Eunice comes from,9,15,,Length-matched Latin-script control.
+rar-048,train,control_rare,0,0,Dorcas,Control (rare),control_rare,,6,unspecified,The name Dorcas comes from,9,15,,Length-matched Latin-script control.
+rar-049,train,control_rare,0,0,Eudora,Control (rare),control_rare,,6,unspecified,The name Eudora comes from,9,15,,Length-matched Latin-script control.
+rar-050,train,control_rare,0,0,Hester,Control (rare),control_rare,,6,unspecified,The name Hester comes from,9,15,,Length-matched Latin-script control.
+rar-051,train,control_rare,0,0,Isolde,Control (rare),control_rare,,6,unspecified,The name Isolde comes from,9,15,,Length-matched Latin-script control.
+rar-052,test,control_rare,0,0,Gussie,Control (rare),control_rare,,6,unspecified,The name Gussie comes from,9,15,,Length-matched Latin-script control.
+rar-053,train,control_rare,0,0,Hedwig,Control (rare),control_rare,,6,unspecified,The name Hedwig comes from,9,15,,Length-matched Latin-script control.
+rar-054,test,control_rare,0,0,Ludwig,Control (rare),control_rare,,6,unspecified,The name Ludwig comes from,9,15,,Length-matched Latin-script control.
+rar-055,test,control_rare,0,0,Astrid,Control (rare),control_rare,,6,unspecified,The name Astrid comes from,9,15,,Length-matched Latin-script control.
+rar-056,train,control_rare,0,0,Sigrid,Control (rare),control_rare,,6,unspecified,The name Sigrid comes from,9,15,,Length-matched Latin-script control.
+rar-057,train,control_rare,0,0,Birgit,Control (rare),control_rare,,6,unspecified,The name Birgit comes from,9,15,,Length-matched Latin-script control.
+rar-058,train,control_rare,0,0,Nellie,Control (rare),control_rare,,6,unspecified,The name Nellie comes from,9,15,,Length-matched Latin-script control.
+rar-059,test,control_rare,0,0,Hattie,Control (rare),control_rare,,6,unspecified,The name Hattie comes from,9,15,,Length-matched Latin-script control.
+rar-060,test,control_rare,0,0,Lottie,Control (rare),control_rare,,6,unspecified,The name Lottie comes from,9,15,,Length-matched Latin-script control.
+rar-061,test,control_rare,0,0,Goldie,Control (rare),control_rare,,6,unspecified,The name Goldie comes from,9,15,,Length-matched Latin-script control.
+rar-062,test,control_rare,0,0,Birdie,Control (rare),control_rare,,6,unspecified,The name Birdie comes from,9,15,,Length-matched Latin-script control.
+rar-063,train,control_rare,0,0,Ossian,Control (rare),control_rare,,6,unspecified,The name Ossian comes from,9,15,,Length-matched Latin-script control.
+rar-064,test,control_rare,0,0,Roisin,Control (rare),control_rare,,6,unspecified,The name Roisin comes from,9,15,,Length-matched Latin-script control.
+rar-065,train,control_rare,0,0,Ciaran,Control (rare),control_rare,,6,unspecified,The name Ciaran comes from,9,15,,Length-matched Latin-script control.
+rar-066,train,control_rare,0,0,Lorcan,Control (rare),control_rare,,6,unspecified,The name Lorcan comes from,9,15,,Length-matched Latin-script control.
+rar-067,train,control_rare,0,0,Grania,Control (rare),control_rare,,6,unspecified,The name Grania comes from,9,15,,Length-matched Latin-script control.
+rar-068,test,control_rare,0,0,Sorcha,Control (rare),control_rare,,6,unspecified,The name Sorcha comes from,9,15,,Length-matched Latin-script control.
+rar-069,test,control_rare,0,0,Eithne,Control (rare),control_rare,,6,unspecified,The name Eithne comes from,9,15,,Length-matched Latin-script control.
+rar-070,train,control_rare,0,0,Sinead,Control (rare),control_rare,,6,unspecified,The name Sinead comes from,9,15,,Length-matched Latin-script control.
+rar-071,train,control_rare,0,0,Adelia,Control (rare),control_rare,,6,unspecified,The name Adelia comes from,9,15,,Length-matched Latin-script control.
+rar-072,test,control_rare,0,0,Albina,Control (rare),control_rare,,6,unspecified,The name Albina comes from,9,15,,Length-matched Latin-script control.
+rar-073,test,control_rare,0,0,Alvina,Control (rare),control_rare,,6,unspecified,The name Alvina comes from,9,15,,Length-matched Latin-script control.
+rar-074,test,control_rare,0,0,Amabel,Control (rare),control_rare,,6,unspecified,The name Amabel comes from,9,15,,Length-matched Latin-script control.
+rar-075,train,control_rare,0,0,Anders,Control (rare),control_rare,,6,unspecified,The name Anders comes from,9,15,,Length-matched Latin-script control.
+rar-076,test,control_rare,0,0,Ansgar,Control (rare),control_rare,,6,unspecified,The name Ansgar comes from,9,15,,Length-matched Latin-script control.
+rar-077,test,control_rare,0,0,Armand,Control (rare),control_rare,,6,unspecified,The name Armand comes from,9,15,,Length-matched Latin-script control.
+rar-078,train,control_rare,0,0,Cosima,Control (rare),control_rare,,6,unspecified,The name Cosima comes from,9,15,,Length-matched Latin-script control.
+rar-079,train,control_rare,0,0,Dagmar,Control (rare),control_rare,,6,unspecified,The name Dagmar comes from,9,15,,Length-matched Latin-script control.
+rar-080,test,control_rare,0,0,Danilo,Control (rare),control_rare,,6,unspecified,The name Danilo comes from,9,15,,Length-matched Latin-script control.
+rar-081,train,control_rare,0,0,Delmar,Control (rare),control_rare,,6,unspecified,The name Delmar comes from,9,15,,Length-matched Latin-script control.
+rar-082,train,control_rare,0,0,Dermot,Control (rare),control_rare,,6,unspecified,The name Dermot comes from,9,15,,Length-matched Latin-script control.
+rar-083,test,control_rare,0,0,Detlef,Control (rare),control_rare,,6,unspecified,The name Detlef comes from,9,15,,Length-matched Latin-script control.
+rar-084,train,control_rare,0,0,Dieter,Control (rare),control_rare,,6,unspecified,The name Dieter comes from,9,15,,Length-matched Latin-script control.
+rar-085,train,control_rare,0,0,Ingram,Control (rare),control_rare,,6,unspecified,The name Ingram comes from,9,15,,Length-matched Latin-script control.
+rar-086,train,control_rare,0,0,Dionne,Control (rare),control_rare,,6,unspecified,The name Dionne comes from,9,15,,Length-matched Latin-script control.
+rar-087,test,control_rare,0,0,Eamonn,Control (rare),control_rare,,6,unspecified,The name Eamonn comes from,9,15,,Length-matched Latin-script control.
+rar-088,train,control_rare,0,0,Editha,Control (rare),control_rare,,6,unspecified,The name Editha comes from,9,15,,Length-matched Latin-script control.
+rar-089,test,control_rare,0,0,Edvard,Control (rare),control_rare,,6,unspecified,The name Edvard comes from,9,15,,Length-matched Latin-script control.
+rar-090,train,control_rare,0,0,Edwina,Control (rare),control_rare,,6,unspecified,The name Edwina comes from,9,15,,Length-matched Latin-script control.
+rar-091,test,control_rare,0,0,Elvira,Control (rare),control_rare,,6,unspecified,The name Elvira comes from,9,15,,Length-matched Latin-script control.
+rar-092,test,control_rare,0,0,Elmira,Control (rare),control_rare,,6,unspecified,The name Elmira comes from,9,15,,Length-matched Latin-script control.
+rar-093,train,control_rare,0,0,Elodie,Control (rare),control_rare,,6,unspecified,The name Elodie comes from,9,15,,Length-matched Latin-script control.
+rar-094,test,control_rare,0,0,Elowen,Control (rare),control_rare,,6,unspecified,The name Elowen comes from,9,15,,Length-matched Latin-script control.
+rar-095,train,control_rare,0,0,Fergus,Control (rare),control_rare,,6,unspecified,The name Fergus comes from,9,15,,Length-matched Latin-script control.
+rar-096,test,control_rare,0,0,Festus,Control (rare),control_rare,,6,unspecified,The name Festus comes from,9,15,,Length-matched Latin-script control.
+rar-097,train,control_rare,0,0,Fintan,Control (rare),control_rare,,6,unspecified,The name Fintan comes from,9,15,,Length-matched Latin-script control.
+rar-098,test,control_rare,0,0,Flavia,Control (rare),control_rare,,6,unspecified,The name Flavia comes from,9,15,,Length-matched Latin-script control.
+rar-099,train,control_rare,0,0,Fulvia,Control (rare),control_rare,,6,unspecified,The name Fulvia comes from,9,15,,Length-matched Latin-script control.
+rar-100,train,control_rare,0,0,Gareth,Control (rare),control_rare,,6,unspecified,The name Gareth comes from,9,15,,Length-matched Latin-script control.
+rar-101,test,control_rare,0,0,Garnet,Control (rare),control_rare,,6,unspecified,The name Garnet comes from,9,15,,Length-matched Latin-script control.
+rar-102,test,control_rare,0,0,Gudrun,Control (rare),control_rare,,6,unspecified,The name Gudrun comes from,9,15,,Length-matched Latin-script control.
+rar-103,train,control_rare,0,0,Gertie,Control (rare),control_rare,,6,unspecified,The name Gertie comes from,9,15,,Length-matched Latin-script control.
+rar-104,train,control_rare,0,0,Gisele,Control (rare),control_rare,,6,unspecified,The name Gisele comes from,9,15,,Length-matched Latin-script control.
+rar-105,train,control_rare,0,0,Godiva,Control (rare),control_rare,,6,unspecified,The name Godiva comes from,9,15,,Length-matched Latin-script control.
+rar-106,test,control_rare,0,0,Godwin,Control (rare),control_rare,,6,unspecified,The name Godwin comes from,9,15,,Length-matched Latin-script control.
+rar-107,test,control_rare,0,0,Gregor,Control (rare),control_rare,,6,unspecified,The name Gregor comes from,9,15,,Length-matched Latin-script control.
+rar-108,train,control_rare,0,0,Gretta,Control (rare),control_rare,,6,unspecified,The name Gretta comes from,9,15,,Length-matched Latin-script control.
+rar-109,train,control_rare,0,0,Adelina,Control (rare),control_rare,,7,unspecified,The name Adelina comes from,9,16,,Length-matched Latin-script control.
+rar-110,train,control_rare,0,0,Alfhild,Control (rare),control_rare,,7,unspecified,The name Alfhild comes from,9,16,,Length-matched Latin-script control.
+rar-111,train,control_rare,0,0,Alfonzo,Control (rare),control_rare,,7,unspecified,The name Alfonzo comes from,9,16,,Length-matched Latin-script control.
+rar-112,train,control_rare,0,0,Aldhelm,Control (rare),control_rare,,7,unspecified,The name Aldhelm comes from,9,16,,Length-matched Latin-script control.
+rar-113,test,control_rare,0,0,Alfreda,Control (rare),control_rare,,7,unspecified,The name Alfreda comes from,9,16,,Length-matched Latin-script control.
+rar-114,train,control_rare,0,0,Ariadne,Control (rare),control_rare,,7,unspecified,The name Ariadne comes from,9,16,,Length-matched Latin-script control.
+rar-115,train,control_rare,0,0,Asbjorn,Control (rare),control_rare,,7,unspecified,The name Asbjorn comes from,9,16,,Length-matched Latin-script control.
+rar-116,train,control_rare,0,0,Aurelia,Control (rare),control_rare,,7,unspecified,The name Aurelia comes from,9,16,,Length-matched Latin-script control.
+rar-117,train,control_rare,0,0,Baldwin,Control (rare),control_rare,,7,unspecified,The name Baldwin comes from,9,16,,Length-matched Latin-script control.
+rar-118,test,control_rare,0,0,Barnaby,Control (rare),control_rare,,7,unspecified,The name Barnaby comes from,9,16,,Length-matched Latin-script control.
+rar-119,train,control_rare,0,0,Beatrix,Control (rare),control_rare,,7,unspecified,The name Beatrix comes from,9,16,,Length-matched Latin-script control.
+rar-120,test,control_rare,0,0,Bertram,Control (rare),control_rare,,7,unspecified,The name Bertram comes from,9,16,,Length-matched Latin-script control.
+rar-121,train,control_rare,0,0,Blanche,Control (rare),control_rare,,7,unspecified,The name Blanche comes from,9,16,,Length-matched Latin-script control.
+rar-122,test,control_rare,0,0,Branwen,Control (rare),control_rare,,7,unspecified,The name Branwen comes from,9,16,,Length-matched Latin-script control.
+rar-123,test,control_rare,0,0,Brigham,Control (rare),control_rare,,7,unspecified,The name Brigham comes from,9,16,,Length-matched Latin-script control.
+rar-124,test,control_rare,0,0,Bronwen,Control (rare),control_rare,,7,unspecified,The name Bronwen comes from,9,16,,Length-matched Latin-script control.
+rar-125,train,control_rare,0,0,Caedmon,Control (rare),control_rare,,7,unspecified,The name Caedmon comes from,9,16,,Length-matched Latin-script control.
+rar-126,train,control_rare,0,0,Calista,Control (rare),control_rare,,7,unspecified,The name Calista comes from,9,16,,Length-matched Latin-script control.
+rar-127,test,control_rare,0,0,Caradoc,Control (rare),control_rare,,7,unspecified,The name Caradoc comes from,9,16,,Length-matched Latin-script control.
+rar-128,train,control_rare,0,0,Casimir,Control (rare),control_rare,,7,unspecified,The name Casimir comes from,9,16,,Length-matched Latin-script control.
+rar-129,train,control_rare,0,0,Cassian,Control (rare),control_rare,,7,unspecified,The name Cassian comes from,9,16,,Length-matched Latin-script control.
+rar-130,train,control_rare,0,0,Columba,Control (rare),control_rare,,7,unspecified,The name Columba comes from,9,16,,Length-matched Latin-script control.
+rar-131,train,control_rare,0,0,Crispin,Control (rare),control_rare,,7,unspecified,The name Crispin comes from,9,16,,Length-matched Latin-script control.
+rar-132,train,control_rare,0,0,Cyprian,Control (rare),control_rare,,7,unspecified,The name Cyprian comes from,9,16,,Length-matched Latin-script control.
+rar-133,train,control_rare,0,0,Deirdre,Control (rare),control_rare,,7,unspecified,The name Deirdre comes from,9,16,,Length-matched Latin-script control.
+rar-134,test,control_rare,0,0,Dunstan,Control (rare),control_rare,,7,unspecified,The name Dunstan comes from,9,16,,Length-matched Latin-script control.
+rar-135,train,control_rare,0,0,Eadmund,Control (rare),control_rare,,7,unspecified,The name Eadmund comes from,9,16,,Length-matched Latin-script control.
+rar-136,train,control_rare,0,0,Einhard,Control (rare),control_rare,,7,unspecified,The name Einhard comes from,9,16,,Length-matched Latin-script control.
+rar-137,train,control_rare,0,0,Eleazar,Control (rare),control_rare,,7,unspecified,The name Eleazar comes from,9,16,,Length-matched Latin-script control.
+rar-138,test,control_rare,0,0,Elfreda,Control (rare),control_rare,,7,unspecified,The name Elfreda comes from,9,16,,Length-matched Latin-script control.
+rar-139,test,control_rare,0,0,Elspeth,Control (rare),control_rare,,7,unspecified,The name Elspeth comes from,9,16,,Length-matched Latin-script control.
+rar-140,train,control_rare,0,0,Emeline,Control (rare),control_rare,,7,unspecified,The name Emeline comes from,9,16,,Length-matched Latin-script control.
+rar-141,train,control_rare,0,0,Ephraim,Control (rare),control_rare,,7,unspecified,The name Ephraim comes from,9,16,,Length-matched Latin-script control.
+rar-142,test,control_rare,0,0,Eulalia,Control (rare),control_rare,,7,unspecified,The name Eulalia comes from,9,16,,Length-matched Latin-script control.
+rar-143,test,control_rare,0,0,Eulalie,Control (rare),control_rare,,7,unspecified,The name Eulalie comes from,9,16,,Length-matched Latin-script control.
+rar-144,test,control_rare,0,0,Eustace,Control (rare),control_rare,,7,unspecified,The name Eustace comes from,9,16,,Length-matched Latin-script control.
+rar-145,test,control_rare,0,0,Everard,Control (rare),control_rare,,7,unspecified,The name Everard comes from,9,16,,Length-matched Latin-script control.
+rar-146,test,control_rare,0,0,Fanchon,Control (rare),control_rare,,7,unspecified,The name Fanchon comes from,9,16,,Length-matched Latin-script control.
+rar-147,train,control_rare,0,0,Fenella,Control (rare),control_rare,,7,unspecified,The name Fenella comes from,9,16,,Length-matched Latin-script control.
+rar-148,test,control_rare,0,0,Florian,Control (rare),control_rare,,7,unspecified,The name Florian comes from,9,16,,Length-matched Latin-script control.
+rar-149,test,control_rare,0,0,Galahad,Control (rare),control_rare,,7,unspecified,The name Galahad comes from,9,16,,Length-matched Latin-script control.
+rar-150,test,control_rare,0,0,Geraint,Control (rare),control_rare,,7,unspecified,The name Geraint comes from,9,16,,Length-matched Latin-script control.
+rar-151,test,control_rare,0,0,Germain,Control (rare),control_rare,,7,unspecified,The name Germain comes from,9,16,,Length-matched Latin-script control.
+rar-152,test,control_rare,0,0,Gervase,Control (rare),control_rare,,7,unspecified,The name Gervase comes from,9,16,,Length-matched Latin-script control.
+rar-153,test,control_rare,0,0,Godfrey,Control (rare),control_rare,,7,unspecified,The name Godfrey comes from,9,16,,Length-matched Latin-script control.
+rar-154,test,control_rare,0,0,Gofraid,Control (rare),control_rare,,7,unspecified,The name Gofraid comes from,9,16,,Length-matched Latin-script control.
+rar-155,test,control_rare,0,0,Gunhild,Control (rare),control_rare,,7,unspecified,The name Gunhild comes from,9,16,,Length-matched Latin-script control.
+rar-156,train,control_rare,0,0,Gunther,Control (rare),control_rare,,7,unspecified,The name Gunther comes from,9,16,,Length-matched Latin-script control.
+rar-157,train,control_rare,0,0,Gwydion,Control (rare),control_rare,,7,unspecified,The name Gwydion comes from,9,16,,Length-matched Latin-script control.
+rar-158,test,control_rare,0,0,Hadrian,Control (rare),control_rare,,7,unspecified,The name Hadrian comes from,9,16,,Length-matched Latin-script control.
+rar-159,test,control_rare,0,0,Hermine,Control (rare),control_rare,,7,unspecified,The name Hermine comes from,9,16,,Length-matched Latin-script control.
+rar-160,train,control_rare,0,0,Honoria,Control (rare),control_rare,,7,unspecified,The name Honoria comes from,9,16,,Length-matched Latin-script control.
+rar-161,test,control_rare,0,0,Horatio,Control (rare),control_rare,,7,unspecified,The name Horatio comes from,9,16,,Length-matched Latin-script control.
+rar-162,test,control_rare,0,0,Humbert,Control (rare),control_rare,,7,unspecified,The name Humbert comes from,9,16,,Length-matched Latin-script control.
+rar-163,train,control_rare,0,0,Ingemar,Control (rare),control_rare,,7,unspecified,The name Ingemar comes from,9,16,,Length-matched Latin-script control.
+rar-164,test,control_rare,0,0,Irmgard,Control (rare),control_rare,,7,unspecified,The name Irmgard comes from,9,16,,Length-matched Latin-script control.
+rar-165,train,control_rare,0,0,Isabeau,Control (rare),control_rare,,7,unspecified,The name Isabeau comes from,9,16,,Length-matched Latin-script control.
+rar-166,train,control_rare,0,0,Isadora,Control (rare),control_rare,,7,unspecified,The name Isadora comes from,9,16,,Length-matched Latin-script control.
+rar-167,test,control_rare,0,0,Isidore,Control (rare),control_rare,,7,unspecified,The name Isidore comes from,9,16,,Length-matched Latin-script control.
+rar-168,train,control_rare,0,0,Jadwiga,Control (rare),control_rare,,7,unspecified,The name Jadwiga comes from,9,16,,Length-matched Latin-script control.
+rar-169,train,control_rare,0,0,Jocasta,Control (rare),control_rare,,7,unspecified,The name Jocasta comes from,9,16,,Length-matched Latin-script control.
+rar-170,test,control_rare,0,0,Justina,Control (rare),control_rare,,7,unspecified,The name Justina comes from,9,16,,Length-matched Latin-script control.
+rar-171,test,control_rare,0,0,Karsten,Control (rare),control_rare,,7,unspecified,The name Karsten comes from,9,16,,Length-matched Latin-script control.
+rar-172,test,control_rare,0,0,Kjartan,Control (rare),control_rare,,7,unspecified,The name Kjartan comes from,9,16,,Length-matched Latin-script control.
+rar-173,test,control_rare,0,0,Leander,Control (rare),control_rare,,7,unspecified,The name Leander comes from,9,16,,Length-matched Latin-script control.
+rar-174,test,control_rare,0,0,Leonora,Control (rare),control_rare,,7,unspecified,The name Leonora comes from,9,16,,Length-matched Latin-script control.
+rar-175,train,control_rare,0,0,Leopold,Control (rare),control_rare,,7,unspecified,The name Leopold comes from,9,16,,Length-matched Latin-script control.
+rar-176,train,control_rare,0,0,Lucetta,Control (rare),control_rare,,7,unspecified,The name Lucetta comes from,9,16,,Length-matched Latin-script control.
+rar-177,train,control_rare,0,0,Ludmila,Control (rare),control_rare,,7,unspecified,The name Ludmila comes from,9,16,,Length-matched Latin-script control.
+rar-178,train,control_rare,0,0,Mafalda,Control (rare),control_rare,,7,unspecified,The name Mafalda comes from,9,16,,Length-matched Latin-script control.
+rar-179,test,control_rare,0,0,Malvina,Control (rare),control_rare,,7,unspecified,The name Malvina comes from,9,16,,Length-matched Latin-script control.
+rar-180,test,control_rare,0,0,Manfred,Control (rare),control_rare,,7,unspecified,The name Manfred comes from,9,16,,Length-matched Latin-script control.
+rar-181,test,control_rare,0,0,Marcela,Control (rare),control_rare,,7,unspecified,The name Marcela comes from,9,16,,Length-matched Latin-script control.
+rar-182,train,control_rare,0,0,Margery,Control (rare),control_rare,,7,unspecified,The name Margery comes from,9,16,,Length-matched Latin-script control.
+rar-183,test,control_rare,0,0,Adelheid,Control (rare),control_rare,,8,unspecified,The name Adelheid comes from,9,17,,Length-matched Latin-script control.
+rar-184,test,control_rare,0,0,Adolphus,Control (rare),control_rare,,8,unspecified,The name Adolphus comes from,9,17,,Length-matched Latin-script control.
+rar-185,train,control_rare,0,0,Aloysius,Control (rare),control_rare,,8,unspecified,The name Aloysius comes from,9,17,,Length-matched Latin-script control.
+rar-186,train,control_rare,0,0,Birgitta,Control (rare),control_rare,,8,unspecified,The name Birgitta comes from,9,17,,Length-matched Latin-script control.
+rar-187,train,control_rare,0,0,Brynhild,Control (rare),control_rare,,8,unspecified,The name Brynhild comes from,9,17,,Length-matched Latin-script control.
+rar-188,train,control_rare,0,0,Callista,Control (rare),control_rare,,8,unspecified,The name Callista comes from,9,17,,Length-matched Latin-script control.
+rar-189,test,control_rare,0,0,Camillus,Control (rare),control_rare,,8,unspecified,The name Camillus comes from,9,17,,Length-matched Latin-script control.
+rar-190,test,control_rare,0,0,Catriona,Control (rare),control_rare,,8,unspecified,The name Catriona comes from,9,17,,Length-matched Latin-script control.
+rar-191,train,control_rare,0,0,Clotilde,Control (rare),control_rare,,8,unspecified,The name Clotilde comes from,9,17,,Length-matched Latin-script control.
+rar-192,test,control_rare,0,0,Cuthbert,Control (rare),control_rare,,8,unspecified,The name Cuthbert comes from,9,17,,Length-matched Latin-script control.
+rar-193,test,control_rare,0,0,Dagobert,Control (rare),control_rare,,8,unspecified,The name Dagobert comes from,9,17,,Length-matched Latin-script control.
+rar-194,train,control_rare,0,0,Delphine,Control (rare),control_rare,,8,unspecified,The name Delphine comes from,9,17,,Length-matched Latin-script control.
+rar-195,train,control_rare,0,0,Diederik,Control (rare),control_rare,,8,unspecified,The name Diederik comes from,9,17,,Length-matched Latin-script control.
+rar-196,test,control_rare,0,0,Dietrich,Control (rare),control_rare,,8,unspecified,The name Dietrich comes from,9,17,,Length-matched Latin-script control.
+rar-197,test,control_rare,0,0,Dominica,Control (rare),control_rare,,8,unspecified,The name Dominica comes from,9,17,,Length-matched Latin-script control.
+rar-198,train,control_rare,0,0,Dorothea,Control (rare),control_rare,,8,unspecified,The name Dorothea comes from,9,17,,Length-matched Latin-script control.
+rar-199,test,control_rare,0,0,Drusilla,Control (rare),control_rare,,8,unspecified,The name Drusilla comes from,9,17,,Length-matched Latin-script control.
+rar-200,test,control_rare,0,0,Ekkehard,Control (rare),control_rare,,8,unspecified,The name Ekkehard comes from,9,17,,Length-matched Latin-script control.
+rar-201,train,control_rare,0,0,Elfriede,Control (rare),control_rare,,8,unspecified,The name Elfriede comes from,9,17,,Length-matched Latin-script control.
+rar-202,train,control_rare,0,0,Ethelred,Control (rare),control_rare,,8,unspecified,The name Ethelred comes from,9,17,,Length-matched Latin-script control.
+rar-203,train,control_rare,0,0,Genoveva,Control (rare),control_rare,,8,unspecified,The name Genoveva comes from,9,17,,Length-matched Latin-script control.
+rar-204,train,control_rare,0,0,Gertrude,Control (rare),control_rare,,8,unspecified,The name Gertrude comes from,9,17,,Length-matched Latin-script control.
+rar-205,test,control_rare,0,0,Hereward,Control (rare),control_rare,,8,unspecified,The name Hereward comes from,9,17,,Length-matched Latin-script control.
+rar-206,test,control_rare,0,0,Ingeborg,Control (rare),control_rare,,8,unspecified,The name Ingeborg comes from,9,17,,Length-matched Latin-script control.
+rar-207,train,control_rare,0,0,Iolanthe,Control (rare),control_rare,,8,unspecified,The name Iolanthe comes from,9,17,,Length-matched Latin-script control.
+rar-208,train,control_rare,0,0,Iorwerth,Control (rare),control_rare,,8,unspecified,The name Iorwerth comes from,9,17,,Length-matched Latin-script control.
+rar-209,train,control_rare,0,0,Joscelin,Control (rare),control_rare,,8,unspecified,The name Joscelin comes from,9,17,,Length-matched Latin-script control.
+rar-210,train,control_rare,0,0,Leocadia,Control (rare),control_rare,,8,unspecified,The name Leocadia comes from,9,17,,Length-matched Latin-script control.
+rar-211,train,control_rare,0,0,Leverett,Control (rare),control_rare,,8,unspecified,The name Leverett comes from,9,17,,Length-matched Latin-script control.
+rar-212,test,control_rare,0,0,Lucretia,Control (rare),control_rare,,8,unspecified,The name Lucretia comes from,9,17,,Length-matched Latin-script control.
+rar-213,train,control_rare,0,0,Ludmilla,Control (rare),control_rare,,8,unspecified,The name Ludmilla comes from,9,17,,Length-matched Latin-script control.
+rar-214,test,control_rare,0,0,Lycurgus,Control (rare),control_rare,,8,unspecified,The name Lycurgus comes from,9,17,,Length-matched Latin-script control.
+rar-215,test,control_rare,0,0,Melchior,Control (rare),control_rare,,8,unspecified,The name Melchior comes from,9,17,,Length-matched Latin-script control.
+rar-216,test,control_rare,0,0,Mordecai,Control (rare),control_rare,,8,unspecified,The name Mordecai comes from,9,17,,Length-matched Latin-script control.
+rar-217,train,control_rare,0,0,Morwenna,Control (rare),control_rare,,8,unspecified,The name Morwenna comes from,9,17,,Length-matched Latin-script control.
+rar-218,test,control_rare,0,0,Nadezhda,Control (rare),control_rare,,8,unspecified,The name Nadezhda comes from,9,17,,Length-matched Latin-script control.
+rar-219,train,control_rare,0,0,Pelagius,Control (rare),control_rare,,8,unspecified,The name Pelagius comes from,9,17,,Length-matched Latin-script control.
+rar-220,test,control_rare,0,0,Philemon,Control (rare),control_rare,,8,unspecified,The name Philemon comes from,9,17,,Length-matched Latin-script control.
+rar-221,train,control_rare,0,0,Placidus,Control (rare),control_rare,,8,unspecified,The name Placidus comes from,9,17,,Length-matched Latin-script control.
+rar-222,train,control_rare,0,0,Polycarp,Control (rare),control_rare,,8,unspecified,The name Polycarp comes from,9,17,,Length-matched Latin-script control.
+rar-223,test,control_rare,0,0,Quirinus,Control (rare),control_rare,,8,unspecified,The name Quirinus comes from,9,17,,Length-matched Latin-script control.
+rar-224,test,control_rare,0,0,Ragnhild,Control (rare),control_rare,,8,unspecified,The name Ragnhild comes from,9,17,,Length-matched Latin-script control.
+rar-225,train,control_rare,0,0,Reinhard,Control (rare),control_rare,,8,unspecified,The name Reinhard comes from,9,17,,Length-matched Latin-script control.
+rar-226,train,control_rare,0,0,Reinhold,Control (rare),control_rare,,8,unspecified,The name Reinhold comes from,9,17,,Length-matched Latin-script control.
+rar-227,test,control_rare,0,0,Rosamund,Control (rare),control_rare,,8,unspecified,The name Rosamund comes from,9,17,,Length-matched Latin-script control.
+rar-228,test,control_rare,0,0,Roswitha,Control (rare),control_rare,,8,unspecified,The name Roswitha comes from,9,17,,Length-matched Latin-script control.
+rar-229,test,control_rare,0,0,Somerled,Control (rare),control_rare,,8,unspecified,The name Somerled comes from,9,17,,Length-matched Latin-script control.
+rar-230,test,control_rare,0,0,Ambrosius,Control (rare),control_rare,,9,unspecified,The name Ambrosius comes from,9,18,,Length-matched Latin-script control.
+rar-231,train,control_rare,0,0,Archibald,Control (rare),control_rare,,9,unspecified,The name Archibald comes from,9,18,,Length-matched Latin-script control.
+rar-232,test,control_rare,0,0,Athelstan,Control (rare),control_rare,,9,unspecified,The name Athelstan comes from,9,18,,Length-matched Latin-script control.
+rar-233,train,control_rare,0,0,Balthasar,Control (rare),control_rare,,9,unspecified,The name Balthasar comes from,9,18,,Length-matched Latin-script control.
+rar-234,train,control_rare,0,0,Brunhilde,Control (rare),control_rare,,9,unspecified,The name Brunhilde comes from,9,18,,Length-matched Latin-script control.
+rar-235,train,control_rare,0,0,Desdemona,Control (rare),control_rare,,9,unspecified,The name Desdemona comes from,9,18,,Length-matched Latin-script control.
+rar-236,train,control_rare,0,0,Eglantine,Control (rare),control_rare,,9,unspecified,The name Eglantine comes from,9,18,,Length-matched Latin-script control.
+rar-237,test,control_rare,0,0,Engelbert,Control (rare),control_rare,,9,unspecified,The name Engelbert comes from,9,18,,Length-matched Latin-script control.
+rar-238,test,control_rare,0,0,Ermengard,Control (rare),control_rare,,9,unspecified,The name Ermengard comes from,9,18,,Length-matched Latin-script control.
+rar-239,test,control_rare,0,0,Esmeralda,Control (rare),control_rare,,9,unspecified,The name Esmeralda comes from,9,18,,Length-matched Latin-script control.
+rar-240,train,control_rare,0,0,Fortunata,Control (rare),control_rare,,9,unspecified,The name Fortunata comes from,9,18,,Length-matched Latin-script control.
+rar-241,train,control_rare,0,0,Gormlaith,Control (rare),control_rare,,9,unspecified,The name Gormlaith comes from,9,18,,Length-matched Latin-script control.
+rar-242,test,control_rare,0,0,Gwenllian,Control (rare),control_rare,,9,unspecified,The name Gwenllian comes from,9,18,,Length-matched Latin-script control.
+rar-243,test,control_rare,0,0,Hildegard,Control (rare),control_rare,,9,unspecified,The name Hildegard comes from,9,18,,Length-matched Latin-script control.
+rar-244,test,control_rare,0,0,Hippolyta,Control (rare),control_rare,,9,unspecified,The name Hippolyta comes from,9,18,,Length-matched Latin-script control.
+rar-245,train,control_rare,0,0,Irmingard,Control (rare),control_rare,,9,unspecified,The name Irmingard comes from,9,18,,Length-matched Latin-script control.
+rar-246,test,control_rare,0,0,Jacquetta,Control (rare),control_rare,,9,unspecified,The name Jacquetta comes from,9,18,,Length-matched Latin-script control.
+rar-247,test,control_rare,0,0,Kunigunde,Control (rare),control_rare,,9,unspecified,The name Kunigunde comes from,9,18,,Length-matched Latin-script control.
+rar-248,test,control_rare,0,0,Launcelot,Control (rare),control_rare,,9,unspecified,The name Launcelot comes from,9,18,,Length-matched Latin-script control.
+rar-249,train,control_rare,0,0,Liselotte,Control (rare),control_rare,,9,unspecified,The name Liselotte comes from,9,18,,Length-matched Latin-script control.
+rar-250,test,control_rare,0,0,Llewellyn,Control (rare),control_rare,,9,unspecified,The name Llewellyn comes from,9,18,,Length-matched Latin-script control.
+rar-251,test,control_rare,0,0,Marcellus,Control (rare),control_rare,,9,unspecified,The name Marcellus comes from,9,18,,Length-matched Latin-script control.
+rar-252,test,control_rare,0,0,Melisende,Control (rare),control_rare,,9,unspecified,The name Melisende comes from,9,18,,Length-matched Latin-script control.
+rar-253,test,control_rare,0,0,Nicodemus,Control (rare),control_rare,,9,unspecified,The name Nicodemus comes from,9,18,,Length-matched Latin-script control.
+rar-254,test,control_rare,0,0,Pharamond,Control (rare),control_rare,,9,unspecified,The name Pharamond comes from,9,18,,Length-matched Latin-script control.
+rar-255,train,control_rare,0,0,Seraphina,Control (rare),control_rare,,9,unspecified,The name Seraphina comes from,9,18,,Length-matched Latin-script control.
+rar-256,train,control_rare,0,0,Siegfried,Control (rare),control_rare,,9,unspecified,The name Siegfried comes from,9,18,,Length-matched Latin-script control.
+rar-257,train,control_rare,0,0,Sigismund,Control (rare),control_rare,,9,unspecified,The name Sigismund comes from,9,18,,Length-matched Latin-script control.
+rar-258,test,control_rare,0,0,Sophronia,Control (rare),control_rare,,9,unspecified,The name Sophronia comes from,9,18,,Length-matched Latin-script control.
+rar-259,train,control_rare,0,0,Stanislav,Control (rare),control_rare,,9,unspecified,The name Stanislav comes from,9,18,,Length-matched Latin-script control.
+rar-260,train,control_rare,0,0,Theodoric,Control (rare),control_rare,,9,unspecified,The name Theodoric comes from,9,18,,Length-matched Latin-script control.
+rar-261,train,control_rare,0,0,Theodosia,Control (rare),control_rare,,9,unspecified,The name Theodosia comes from,9,18,,Length-matched Latin-script control.
+rar-262,train,control_rare,0,0,Vladislav,Control (rare),control_rare,,9,unspecified,The name Vladislav comes from,9,18,,Length-matched Latin-script control.
+rar-263,test,control_rare,0,0,Willibald,Control (rare),control_rare,,9,unspecified,The name Willibald comes from,9,18,,Length-matched Latin-script control.
+rar-264,test,control_rare,0,0,Adelgunde,Control (rare),control_rare,,9,unspecified,The name Adelgunde comes from,9,18,,Length-matched Latin-script control.
+rar-265,test,control_rare,0,0,Walpurgis,Control (rare),control_rare,,9,unspecified,The name Walpurgis comes from,9,18,,Length-matched Latin-script control.
+rar-266,train,control_rare,0,0,Richildis,Control (rare),control_rare,,9,unspecified,The name Richildis comes from,9,18,,Length-matched Latin-script control.
+rar-267,test,control_rare,0,0,Berthilda,Control (rare),control_rare,,9,unspecified,The name Berthilda comes from,9,18,,Length-matched Latin-script control.
+rar-268,train,control_rare,0,0,Clotildis,Control (rare),control_rare,,9,unspecified,The name Clotildis comes from,9,18,,Length-matched Latin-script control.
+rar-269,train,control_rare,0,0,Aethelred,Control (rare),control_rare,,9,unspecified,The name Aethelred comes from,9,18,,Length-matched Latin-script control.
+rar-270,train,control_rare,0,0,Frideswid,Control (rare),control_rare,,9,unspecified,The name Frideswid comes from,9,18,,Length-matched Latin-script control.
+rar-271,test,control_rare,0,0,Ragnhildr,Control (rare),control_rare,,9,unspecified,The name Ragnhildr comes from,9,18,,Length-matched Latin-script control.
+rar-272,train,control_rare,0,0,Thorstein,Control (rare),control_rare,,9,unspecified,The name Thorstein comes from,9,18,,Length-matched Latin-script control.
+rar-273,train,control_rare,0,0,Petronella,Control (rare),control_rare,,10,unspecified,The name Petronella comes from,9,19,,Length-matched Latin-script control.
+rar-274,test,control_rare,0,0,Evangelina,Control (rare),control_rare,,10,unspecified,The name Evangelina comes from,9,19,,Length-matched Latin-script control.
+rar-275,test,control_rare,0,0,Etheldreda,Control (rare),control_rare,,10,unspecified,The name Etheldreda comes from,9,19,,Length-matched Latin-script control.
+rar-276,train,control_rare,0,0,Frideswide,Control (rare),control_rare,,10,unspecified,The name Frideswide comes from,9,19,,Length-matched Latin-script control.
+rar-277,test,control_rare,0,0,Hildebrand,Control (rare),control_rare,,10,unspecified,The name Hildebrand comes from,9,19,,Length-matched Latin-script control.
+rar-278,train,control_rare,0,0,Willibrord,Control (rare),control_rare,,10,unspecified,The name Willibrord comes from,9,19,,Length-matched Latin-script control.
+rar-279,test,control_rare,0,0,Theodosius,Control (rare),control_rare,,10,unspecified,The name Theodosius comes from,9,19,,Length-matched Latin-script control.
+rar-280,train,control_rare,0,0,Zerubbabel,Control (rare),control_rare,,10,unspecified,The name Zerubbabel comes from,9,19,,Length-matched Latin-script control.
+rar-281,train,control_rare,0,0,Aethelstan,Control (rare),control_rare,,10,unspecified,The name Aethelstan comes from,9,19,,Length-matched Latin-script control.
+rar-282,train,control_rare,0,0,Irmintrude,Control (rare),control_rare,,10,unspecified,The name Irmintrude comes from,9,19,,Length-matched Latin-script control.
+rar-283,train,control_rare,0,0,Ermentrude,Control (rare),control_rare,,10,unspecified,The name Ermentrude comes from,9,19,,Length-matched Latin-script control.
+rar-284,test,control_rare,0,0,Hrotsvitha,Control (rare),control_rare,,10,unspecified,The name Hrotsvitha comes from,9,19,,Length-matched Latin-script control.
+rar-285,train,control_rare,0,0,Wenceslaus,Control (rare),control_rare,,10,unspecified,The name Wenceslaus comes from,9,19,,Length-matched Latin-script control.
+rar-286,test,control_rare,0,0,Chrysostom,Control (rare),control_rare,,10,unspecified,The name Chrysostom comes from,9,19,,Length-matched Latin-script control.
+rar-287,test,control_rare,0,0,Ethelberta,Control (rare),control_rare,,10,unspecified,The name Ethelberta comes from,9,19,,Length-matched Latin-script control.
+rar-288,train,control_rare,0,0,Radegundis,Control (rare),control_rare,,10,unspecified,The name Radegundis comes from,9,19,,Length-matched Latin-script control.
+rar-289,test,control_rare,0,0,Sophronius,Control (rare),control_rare,,10,unspecified,The name Sophronius comes from,9,19,,Length-matched Latin-script control.
+rar-290,test,control_rare,0,0,Theoderich,Control (rare),control_rare,,10,unspecified,The name Theoderich comes from,9,19,,Length-matched Latin-script control.
+rar-291,train,control_rare,0,0,Wilhelmine,Control (rare),control_rare,,10,unspecified,The name Wilhelmine comes from,9,19,,Length-matched Latin-script control.
+rar-292,test,control_rare,0,0,Scholastica,Control (rare),control_rare,,11,unspecified,The name Scholastica comes from,9,20,,Length-matched Latin-script control.
+rar-293,train,control_rare,0,0,Melchizedek,Control (rare),control_rare,,11,unspecified,The name Melchizedek comes from,9,20,,Length-matched Latin-script control.
+rar-294,test,control_rare,0,0,Baldassarre,Control (rare),control_rare,,11,unspecified,The name Baldassarre comes from,9,20,,Length-matched Latin-script control.
+rar-295,train,control_rare,0,0,Guglielmina,Control (rare),control_rare,,11,unspecified,The name Guglielmina comes from,9,20,,Length-matched Latin-script control.
+rar-296,train,control_rare,0,0,Christophor,Control (rare),control_rare,,11,unspecified,The name Christophor comes from,9,20,,Length-matched Latin-script control.
+rar-297,train,control_rare,0,0,Maximiliana,Control (rare),control_rare,,11,unspecified,The name Maximiliana comes from,9,20,,Length-matched Latin-script control.
+rar-298,test,control_rare,0,0,Alexandrine,Control (rare),control_rare,,11,unspecified,The name Alexandrine comes from,9,20,,Length-matched Latin-script control.
+rar-299,test,control_rare,0,0,Chrysostomos,Control (rare),control_rare,,12,unspecified,The name Chrysostomos comes from,9,21,,Length-matched Latin-script control.
+rar-300,train,control_rare,0,0,Mephibosheth,Control (rare),control_rare,,12,unspecified,The name Mephibosheth comes from,9,21,,Length-matched Latin-script control.
+rar-301,test,control_rare,0,0,Theophylactus,Control (rare),control_rare,,13,unspecified,The name Theophylactus comes from,9,22,,Length-matched Latin-script control.
+run-001,train,east_african,1,1,Asiimwe,Runyankore,runyankore,Uganda,7,unisex,The name Asiimwe comes from,9,16,we give thanks,
+run-002,test,east_african,1,1,Natukunda,Runyankore,runyankore,Uganda,9,female,The name Natukunda comes from,9,18,she loves us,"As a surname, borne by any gender."
+run-003,train,east_african,1,1,Arinaitwe,Runyankore,runyankore,Uganda,9,unisex,The name Arinaitwe comes from,9,18,he has given to us,
+run-004,train,east_african,1,1,Atuhaire,Runyankore,runyankore,Uganda,8,unisex,The name Atuhaire comes from,9,17,he has given to us,Also spelled Atuhairwe.
+run-005,train,east_african,1,1,Mbabazi,Runyankore,runyankore,Uganda,7,unisex,The name Mbabazi comes from,9,16,mercy,
+run-006,test,east_african,1,1,Katushabe,Runyankore,runyankore,Uganda,9,unisex,The name Katushabe comes from,9,18,,
+run-007,test,east_african,1,1,Kyomugisha,Runyankore,runyankore,Uganda,10,female,The name Kyomugisha comes from,9,19,of a blessing,
+run-008,train,east_african,1,1,Ninsiima,Runyankore,runyankore,Uganda,8,unisex,The name Ninsiima comes from,9,17,I give thanks,
+run-009,test,east_african,1,1,Tumusiime,Runyankore,runyankore,Uganda,9,unisex,The name Tumusiime comes from,9,18,let us give thanks,
+run-010,train,east_african,1,1,Ahimbisibwe,Runyankore,runyankore,Uganda,11,unisex,The name Ahimbisibwe comes from,9,20,let him be praised,
+run-011,train,east_african,1,0,Mugisha,Runyankore,runyankore,Uganda,7,unisex,The name Mugisha comes from,9,16,blessing,Also a common Kinyarwanda name.
+run-012,test,east_african,1,1,Nuwagaba,Runyankore,runyankore,Uganda,8,unisex,The name Nuwagaba comes from,9,17,he has given me,
+run-013,test,east_african,1,1,Agaba,Runyankore,runyankore,Uganda,5,unisex,The name Agaba comes from,9,14,he gives,
+run-014,test,east_african,1,1,Ainembabazi,Runyankore,runyankore,Uganda,11,female,The name Ainembabazi comes from,9,20,she has mercy,
+run-015,train,east_african,1,1,Kansiime,Runyankore,runyankore,Uganda,8,unisex,The name Kansiime comes from,9,17,I give thanks,
+run-016,test,east_african,1,1,Namara,Runyankore,runyankore,Uganda,6,female,The name Namara comes from,9,15,,
+run-017,test,east_african,1,1,Nayebare,Runyankore,runyankore,Uganda,8,female,The name Nayebare comes from,9,17,,
+run-018,test,east_african,1,1,Kiconco,Runyankore,runyankore,Uganda,7,unisex,The name Kiconco comes from,9,16,,Shared with Rukiga.
+run-019,test,east_african,1,1,Byaruhanga,Runyankore,runyankore,Uganda,10,unisex,The name Byaruhanga comes from,9,19,of God,Ruhanga is God in Runyankore.
+run-020,test,east_african,1,1,Katusiime,Runyankore,runyankore,Uganda,9,unisex,The name Katusiime comes from,9,18,of thanks,
+run-021,test,east_african,1,1,Nuwamanya,Runyankore,runyankore,Uganda,9,unisex,The name Nuwamanya comes from,9,18,he knows me,
+run-022,test,east_african,1,1,Kobusingye,Runyankore,runyankore,Uganda,10,female,The name Kobusingye comes from,9,19,of grace,
+run-023,train,east_african,1,1,Tumwebaze,Runyankore,runyankore,Uganda,9,unisex,The name Tumwebaze comes from,9,18,let us thank,
+run-024,train,east_african,1,1,Kyomuhangi,Runyankore,runyankore,Uganda,10,female,The name Kyomuhangi comes from,9,19,of the Creator,
+run-025,test,east_african,1,1,Mwesigye,Runyankore,runyankore,Uganda,8,unisex,The name Mwesigye comes from,9,17,the trusted one,Runyankore form. Luganda uses Mwesigwa.
+run-026,test,east_african,1,1,Namanya,Runyankore,runyankore,Uganda,7,female,The name Namanya comes from,9,16,,
+run-027,test,east_african,1,1,Muhwezi,Runyankore,runyankore,Uganda,7,unisex,The name Muhwezi comes from,9,16,,
+run-028,train,east_african,1,1,Busingye,Runyankore,runyankore,Uganda,8,unisex,The name Busingye comes from,9,17,of grace,
+run-029,train,east_african,1,1,Naturinda,Runyankore,runyankore,Uganda,9,female,The name Naturinda comes from,9,18,,
+run-030,train,east_african,1,1,Ayebazibwe,Runyankore,runyankore,Uganda,10,unisex,The name Ayebazibwe comes from,9,19,let him be thanked,
+run-031,test,east_african,1,1,Tumuhimbise,Runyankore,runyankore,Uganda,11,unisex,The name Tumuhimbise comes from,9,20,let us praise him,
+run-032,test,east_african,1,1,Musinguzi,Runyankore,runyankore,Uganda,9,unisex,The name Musinguzi comes from,9,18,the shepherd,
+run-033,test,east_african,1,1,Twesigye,Runyankore,runyankore,Uganda,8,unisex,The name Twesigye comes from,9,17,,
+run-034,test,east_african,1,1,Tumwesigye,Runyankore,runyankore,Uganda,10,unisex,The name Tumwesigye comes from,9,19,let us trust,
+run-035,train,east_african,1,1,Byamukama,Runyankore,runyankore,Uganda,9,unisex,The name Byamukama comes from,9,18,of the Lord,
+run-036,train,east_african,1,1,Muhumuza,Runyankore,runyankore,Uganda,8,unisex,The name Muhumuza comes from,9,17,the one who makes whole,
+run-037,test,east_african,1,1,Kyomukama,Runyankore,runyankore,Uganda,9,female,The name Kyomukama comes from,9,18,of the Lord,
+run-038,train,east_african,1,1,Tumuhairwe,Runyankore,runyankore,Uganda,10,unisex,The name Tumuhairwe comes from,9,19,let us be given,
+run-039,train,east_african,1,1,Twinamatsiko,Runyankore,runyankore,Uganda,12,unisex,The name Twinamatsiko comes from,9,21,we have good fortune,Also spelled Twinamasiko.
+run-040,test,east_african,1,1,Kyarisiima,Runyankore,runyankore,Uganda,10,female,The name Kyarisiima comes from,9,19,,
+run-041,train,east_african,1,1,Tusiime,Runyankore,runyankore,Uganda,7,unisex,The name Tusiime comes from,9,16,let us thank,
+run-042,test,east_african,1,1,Kyarimpa,Runyankore,runyankore,Uganda,8,female,The name Kyarimpa comes from,9,17,,
+run-043,train,east_african,1,1,Kyogabirwe,Runyankore,runyankore,Uganda,10,female,The name Kyogabirwe comes from,9,19,,
+run-044,train,east_african,1,1,Tumushabe,Runyankore,runyankore,Uganda,9,unisex,The name Tumushabe comes from,9,18,let us pray,
+run-045,test,east_african,1,1,Nasasira,Runyankore,runyankore,Uganda,8,female,The name Nasasira comes from,9,17,,
+run-046,train,east_african,1,1,Gumisiriza,Runyankore,runyankore,Uganda,10,unisex,The name Gumisiriza comes from,9,19,endure,
+run-047,test,east_african,1,1,Tumwine,Runyankore,runyankore,Uganda,7,unisex,The name Tumwine comes from,9,16,let us have,
+run-048,test,east_african,1,1,Mujuni,Runyankore,runyankore,Uganda,6,unisex,The name Mujuni comes from,9,15,savior,
+run-049,test,east_african,1,1,Tugume,Runyankore,runyankore,Uganda,6,unisex,The name Tugume comes from,9,15,let us be steadfast,
+run-050,train,east_african,1,1,Nyakato,Runyankore,runyankore,Uganda,7,female,The name Nyakato comes from,9,16,younger female twin,Western form of the twin name Nakato.
+run-051,train,east_african,1,1,Kanyesigye,Runyankore,runyankore,Uganda,10,unisex,The name Kanyesigye comes from,9,19,,
+run-052,train,east_african,1,1,Kamugisha,Runyankore,runyankore,Uganda,9,unisex,The name Kamugisha comes from,9,18,of a blessing,
+run-053,train,east_african,1,1,Komugisha,Runyankore,runyankore,Uganda,9,female,The name Komugisha comes from,9,18,of a blessing,
+run-054,train,east_african,1,1,Kyoshabire,Runyankore,runyankore,Uganda,10,female,The name Kyoshabire comes from,9,19,,
+run-055,train,east_african,1,1,Twinomugisha,Runyankore,runyankore,Uganda,12,unisex,The name Twinomugisha comes from,9,21,we have a blessing,
+run-056,train,east_african,1,1,Kyohairwe,Runyankore,runyankore,Uganda,9,female,The name Kyohairwe comes from,9,18,,
+run-057,test,east_african,1,1,Kyomuhendo,Runyankore,runyankore,Uganda,10,female,The name Kyomuhendo comes from,9,19,of great worth,
+run-058,train,east_african,1,1,Kebirungi,Runyankore,runyankore,Uganda,9,female,The name Kebirungi comes from,9,18,the beautiful one,
+run-059,test,east_african,1,1,Tusingwire,Runyankore,runyankore,Uganda,10,unisex,The name Tusingwire comes from,9,19,,
+run-060,train,east_african,1,1,Twikirize,Runyankore,runyankore,Uganda,9,unisex,The name Twikirize comes from,9,18,,
+run-061,train,east_african,1,1,Nabaasa,Runyankore,runyankore,Uganda,7,female,The name Nabaasa comes from,9,16,,
+run-062,train,east_african,1,1,Mucunguzi,Runyankore,runyankore,Uganda,9,unisex,The name Mucunguzi comes from,9,18,savior,
+run-063,train,east_african,1,1,Kamukama,Runyankore,runyankore,Uganda,8,unisex,The name Kamukama comes from,9,17,of the Lord,
+run-064,train,east_african,1,1,Nuwagira,Runyankore,runyankore,Uganda,8,unisex,The name Nuwagira comes from,9,17,,
+run-065,train,east_african,1,1,Tushabe,Runyankore,runyankore,Uganda,7,unisex,The name Tushabe comes from,9,16,let us pray,
+run-066,train,east_african,1,1,Mwebaze,Runyankore,runyankore,Uganda,7,unisex,The name Mwebaze comes from,9,16,thank him,
+run-067,test,east_african,1,1,Nimusiima,Runyankore,runyankore,Uganda,9,unisex,The name Nimusiima comes from,9,18,I thank him,
+run-068,test,east_african,1,1,Turyahebwa,Runyankore,runyankore,Uganda,10,unisex,The name Turyahebwa comes from,9,19,,
+run-069,train,east_african,1,1,Twinomujuni,Runyankore,runyankore,Uganda,11,unisex,The name Twinomujuni comes from,9,20,we have a savior,
+run-070,test,east_african,1,1,Beinomugisha,Runyankore,runyankore,Uganda,12,unisex,The name Beinomugisha comes from,9,21,they have a blessing,
+run-071,test,east_african,1,1,Mugume,Runyankore,runyankore,Uganda,6,unisex,The name Mugume comes from,9,15,,
+run-072,train,east_african,1,1,Kyarikunda,Runyankore,runyankore,Uganda,10,female,The name Kyarikunda comes from,9,19,she loves,
+run-073,test,east_african,1,1,Nyangoma,Runyankore,runyankore,Uganda,8,female,The name Nyangoma comes from,9,17,,
+run-074,test,east_african,1,1,Kemirembe,Runyankore,runyankore,Uganda,9,female,The name Kemirembe comes from,9,18,of peace,
+run-075,test,east_african,1,1,Natuhwera,Runyankore,runyankore,Uganda,9,female,The name Natuhwera comes from,9,18,,
+run-076,test,east_african,1,1,Nahwera,Runyankore,runyankore,Uganda,7,female,The name Nahwera comes from,9,16,,
+run-077,train,east_african,1,1,Musiimenta,Runyankore,runyankore,Uganda,10,unisex,The name Musiimenta comes from,9,19,,
+run-078,train,east_african,1,1,Nankunda,Runyankore,runyankore,Uganda,8,female,The name Nankunda comes from,9,17,she loves me,
+run-079,train,east_african,1,1,Ainomugisha,Runyankore,runyankore,Uganda,11,female,The name Ainomugisha comes from,9,20,she has a blessing,
+run-080,test,east_african,1,1,Kembabazi,Runyankore,runyankore,Uganda,9,female,The name Kembabazi comes from,9,18,of mercy,
+run-081,train,east_african,1,1,Atukwatse,Runyankore,runyankore,Uganda,9,unisex,The name Atukwatse comes from,9,18,,
+run-082,test,east_african,1,1,Tushemereirwe,Runyankore,runyankore,Uganda,13,unisex,The name Tushemereirwe comes from,9,22,we are happy,Also spelled Tushemerirwe.
+run-083,test,east_african,1,1,Twongirwe,Runyankore,runyankore,Uganda,9,unisex,The name Twongirwe comes from,9,18,we have been given more,
+run-084,train,east_african,1,1,Nuwahereza,Runyankore,runyankore,Uganda,10,unisex,The name Nuwahereza comes from,9,19,he has forgiven me,
+run-085,test,east_african,1,1,Ayebare,Runyankore,runyankore,Uganda,7,unisex,The name Ayebare comes from,9,16,may he be,
+run-086,train,east_african,1,1,Nyamwiza,Runyankore,runyankore,Uganda,8,female,The name Nyamwiza comes from,9,17,,
+run-087,test,east_african,1,1,Kirabo,Runyankore,runyankore,Uganda,6,unisex,The name Kirabo comes from,9,15,gift,
+run-088,train,east_african,1,1,Matsiko,Runyankore,runyankore,Uganda,7,unisex,The name Matsiko comes from,9,16,hope,
+run-089,test,east_african,1,1,Mubangizi,Runyankore,runyankore,Uganda,9,unisex,The name Mubangizi comes from,9,18,,
+run-090,train,east_african,1,1,Nabasa,Runyankore,runyankore,Uganda,6,female,The name Nabasa comes from,9,15,,
+run-091,train,east_african,1,1,Musiime,Runyankore,runyankore,Uganda,7,unisex,The name Musiime comes from,9,16,,
+run-092,test,east_african,1,1,Komuhangi,Runyankore,runyankore,Uganda,9,female,The name Komuhangi comes from,9,18,of the Creator,
+run-093,train,east_african,1,1,Kemigisha,Runyankore,runyankore,Uganda,9,female,The name Kemigisha comes from,9,18,of a blessing,
+run-094,test,east_african,1,1,Byarugaba,Runyankore,runyankore,Uganda,9,unisex,The name Byarugaba comes from,9,18,of the Giver,Rugaba is a name of the Creator.
+run-095,train,east_african,1,0,Rukundo,Runyankore,runyankore,Uganda,7,unisex,The name Rukundo comes from,9,16,love,Also a common Kinyarwanda name.
+run-096,test,east_african,1,1,Atukunda,Runyankore,runyankore,Uganda,8,unisex,The name Atukunda comes from,9,17,he loves us,
+run-097,test,east_african,1,1,Ainebyoona,Runyankore,runyankore,Uganda,10,female,The name Ainebyoona comes from,9,19,she lacks nothing,
+run-098,train,east_african,1,1,Ampaire,Runyankore,runyankore,Uganda,7,female,The name Ampaire comes from,9,16,,
+run-099,train,east_african,1,1,Tukamushaba,Runyankore,runyankore,Uganda,11,unisex,The name Tukamushaba comes from,9,20,let us pray to him,
+run-100,test,east_african,1,1,Nuwasasira,Runyankore,runyankore,Uganda,10,unisex,The name Nuwasasira comes from,9,19,,
+swa-001,train,east_african,1,1,Abdallah,Swahili,swahili,Kenya|Tanzania,8,male,The name Abdallah comes from,9,17,servant of God,Swahili form of Abd Allah.
+swa-002,train,east_african,1,1,Adamu,Swahili,swahili,Kenya|Tanzania,5,male,The name Adamu comes from,9,14,Adam,Swahili form of Adam.
+swa-003,test,east_african,1,1,Aisha,Swahili,swahili,Kenya|Tanzania,5,female,The name Aisha comes from,9,14,alive,Arabic name long established in Swahili.
+swa-004,train,east_african,1,1,Amina,Swahili,swahili,Kenya|Tanzania,5,female,The name Amina comes from,9,14,safe,Swahili form of the name of the Prophet's mother.
+swa-005,test,east_african,1,1,Asha,Swahili,swahili,Kenya|Tanzania,4,female,The name Asha comes from,9,13,life,"From Swahili ishi, to live."
+swa-006,test,east_african,1,1,Ashura,Swahili,swahili,Kenya|Tanzania,6,female,The name Ashura comes from,9,15,,From the Islamic day Ashura.
+swa-007,train,east_african,1,1,Bahati,Swahili,swahili,Kenya|Tanzania,6,unisex,The name Bahati comes from,9,15,luck,
+swa-008,test,east_african,1,1,Bakari,Swahili,swahili,Kenya|Tanzania,6,male,The name Bakari comes from,9,15,,Swahili name linked with the name Abu Bakr.
+swa-009,test,east_african,1,1,Baraka,Swahili,swahili,Kenya|Tanzania,6,male,The name Baraka comes from,9,15,blessing,Also given to girls.
+swa-010,test,east_african,1,1,Chausiku,Swahili,swahili,Kenya|Tanzania,8,female,The name Chausiku comes from,9,17,born at night,
+swa-011,train,east_african,1,1,Daudi,Swahili,swahili,Kenya|Tanzania,5,male,The name Daudi comes from,9,14,David,Swahili form of David.
+swa-012,test,east_african,1,1,Eshe,Swahili,swahili,Kenya|Tanzania,4,female,The name Eshe comes from,9,13,life,Variant of Asha.
+swa-013,train,east_african,1,1,Fadhili,Swahili,swahili,Kenya|Tanzania,7,male,The name Fadhili comes from,9,16,kindness,
+swa-014,test,east_african,1,1,Faraji,Swahili,swahili,Kenya|Tanzania,6,male,The name Faraji comes from,9,15,consolation,
+swa-015,test,east_african,1,1,Furaha,Swahili,swahili,Kenya|Tanzania,6,female,The name Furaha comes from,9,15,joy,
+swa-016,test,east_african,1,1,Hadija,Swahili,swahili,Kenya|Tanzania,6,female,The name Hadija comes from,9,15,,Swahili form of Khadija.
+swa-017,test,east_african,1,1,Halima,Swahili,swahili,Kenya|Tanzania,6,female,The name Halima comes from,9,15,gentle,
+swa-018,test,east_african,1,1,Hamisi,Swahili,swahili,Kenya|Tanzania,6,male,The name Hamisi comes from,9,15,Thursday,A child born on Thursday.
+swa-019,test,east_african,1,1,Hawa,Swahili,swahili,Kenya|Tanzania,4,female,The name Hawa comes from,9,13,Eve,Swahili form of Hawwa.
+swa-020,test,east_african,1,1,Hidaya,Swahili,swahili,Kenya|Tanzania,6,female,The name Hidaya comes from,9,15,gift,
+swa-021,test,east_african,1,1,Ibrahim,Swahili,swahili,Kenya|Tanzania,7,male,The name Ibrahim comes from,9,16,Abraham,Swahili form of Abraham.
+swa-022,test,east_african,1,1,Imamu,Swahili,swahili,Kenya|Tanzania,5,male,The name Imamu comes from,9,14,spiritual leader,
+swa-023,test,east_african,1,1,Imani,Swahili,swahili,Kenya|Tanzania,5,unisex,The name Imani comes from,9,14,faith,
+swa-024,train,east_african,1,1,Juma,Swahili,swahili,Kenya|Tanzania,4,male,The name Juma comes from,9,13,Friday,A child born on Friday.
+swa-025,train,east_african,1,1,Jumanne,Swahili,swahili,Kenya|Tanzania,7,male,The name Jumanne comes from,9,16,Tuesday,A child born on Tuesday.
+swa-026,train,east_african,1,1,Malaika,Swahili,swahili,Kenya|Tanzania,7,female,The name Malaika comes from,9,16,angel,
+swa-027,test,east_african,1,1,Mariamu,Swahili,swahili,Kenya|Tanzania,7,female,The name Mariamu comes from,9,16,Mary,Swahili form of Maryam.
+swa-028,train,east_african,1,1,Marijani,Swahili,swahili,Kenya|Tanzania,8,male,The name Marijani comes from,9,17,coral,
+swa-029,train,east_african,1,1,Mohamed,Swahili,swahili,Kenya|Tanzania,7,male,The name Mohamed comes from,9,16,praised,Usual Swahili form of Muhammad.
+swa-030,train,east_african,1,1,Mosi,Swahili,swahili,Kenya|Tanzania,4,unisex,The name Mosi comes from,9,13,first,First child.
+swa-031,test,east_african,1,1,Mwajuma,Swahili,swahili,Kenya|Tanzania,7,female,The name Mwajuma comes from,9,16,child born on Friday,Short form of Mwanajuma.
+swa-032,train,east_african,1,1,Mwanahamisi,Swahili,swahili,Kenya|Tanzania,11,female,The name Mwanahamisi comes from,9,20,child born on Thursday,
+swa-033,train,east_african,1,1,Mwanahawa,Swahili,swahili,Kenya|Tanzania,9,female,The name Mwanahawa comes from,9,18,child of Hawa,
+swa-034,train,east_african,1,1,Mwanaidi,Swahili,swahili,Kenya|Tanzania,8,female,The name Mwanaidi comes from,9,17,child born at the festival,
+swa-035,train,east_african,1,1,Mwanaisha,Swahili,swahili,Kenya|Tanzania,9,female,The name Mwanaisha comes from,9,18,child of Aisha,
+swa-036,test,east_african,1,1,Mwanajuma,Swahili,swahili,Kenya|Tanzania,9,female,The name Mwanajuma comes from,9,18,child born on Friday,
+swa-037,train,east_african,1,1,Neema,Swahili,swahili,Kenya|Tanzania,5,female,The name Neema comes from,9,14,grace,
+swa-038,train,east_african,1,1,Nia,Swahili,swahili,Kenya|Tanzania,3,female,The name Nia comes from,9,12,purpose,
+swa-039,train,east_african,1,1,Nuhu,Swahili,swahili,Kenya|Tanzania,4,male,The name Nuhu comes from,9,13,Noah,Swahili form of Noah.
+swa-040,train,east_african,1,1,Nuru,Swahili,swahili,Kenya|Tanzania,4,female,The name Nuru comes from,9,13,light,
+swa-041,train,east_african,1,1,Omari,Swahili,swahili,Kenya|Tanzania,5,male,The name Omari comes from,9,14,,Swahili form of Umar.
+swa-042,train,east_african,1,1,Pendo,Swahili,swahili,Kenya|Tanzania,5,female,The name Pendo comes from,9,14,love,Variant of Upendo.
+swa-043,train,east_african,1,1,Pili,Swahili,swahili,Kenya|Tanzania,4,female,The name Pili comes from,9,13,second,Second child.
+swa-044,test,east_african,1,1,Rajabu,Swahili,swahili,Kenya|Tanzania,6,male,The name Rajabu comes from,9,15,,Swahili form of Rajab.
+swa-045,train,east_african,1,1,Ramadhani,Swahili,swahili,Kenya|Tanzania,9,male,The name Ramadhani comes from,9,18,,Swahili form of Ramadan.
+swa-046,train,east_african,1,1,Rehema,Swahili,swahili,Kenya|Tanzania,6,female,The name Rehema comes from,9,15,mercy,
+swa-047,test,east_african,1,1,Sauda,Swahili,swahili,Kenya|Tanzania,5,female,The name Sauda comes from,9,14,,
+swa-048,train,east_african,1,1,Sefu,Swahili,swahili,Kenya|Tanzania,4,male,The name Sefu comes from,9,13,,
+swa-049,test,east_african,1,1,Shabani,Swahili,swahili,Kenya|Tanzania,7,male,The name Shabani comes from,9,16,,Swahili form of Shaban.
+swa-050,test,east_african,1,1,Simba,Swahili,swahili,Kenya|Tanzania,5,male,The name Simba comes from,9,14,lion,
+swa-051,train,east_african,1,1,Subira,Swahili,swahili,Kenya|Tanzania,6,female,The name Subira comes from,9,15,patience,
+swa-052,train,east_african,1,1,Tatu,Swahili,swahili,Kenya|Tanzania,4,female,The name Tatu comes from,9,13,third,Third child.
+swa-053,train,east_african,1,1,Tumaini,Swahili,swahili,Kenya|Tanzania,7,unisex,The name Tumaini comes from,9,16,hope,
+swa-054,test,east_african,1,1,Uhuru,Swahili,swahili,Kenya|Tanzania,5,male,The name Uhuru comes from,9,14,freedom,
+swa-055,train,east_african,1,1,Upendo,Swahili,swahili,Kenya|Tanzania,6,female,The name Upendo comes from,9,15,love,
+swa-056,test,east_african,1,1,Yohana,Swahili,swahili,Kenya|Tanzania,6,male,The name Yohana comes from,9,15,John,Swahili form of John.
+swa-057,test,east_african,1,1,Zainabu,Swahili,swahili,Kenya|Tanzania,7,female,The name Zainabu comes from,9,16,,Swahili form of Zaynab.
+swa-058,test,east_african,1,1,Zawadi,Swahili,swahili,Kenya|Tanzania,6,unisex,The name Zawadi comes from,9,15,gift,
+swa-059,train,east_african,1,1,Zuberi,Swahili,swahili,Kenya|Tanzania,6,male,The name Zuberi comes from,9,15,,Swahili form of Zubayr.
+swa-060,test,east_african,1,1,Zuhura,Swahili,swahili,Kenya|Tanzania,6,female,The name Zuhura comes from,9,15,Venus,
+swa-061,test,east_african,1,1,Zuri,Swahili,swahili,Kenya|Tanzania,4,female,The name Zuri comes from,9,13,beautiful,
+swa-062,train,east_african,1,1,Amani,Swahili,swahili,Kenya|Tanzania,5,unisex,The name Amani comes from,9,14,peace,
+swa-063,test,east_african,1,1,Aziza,Swahili,swahili,Kenya|Tanzania,5,female,The name Aziza comes from,9,14,precious,
+swa-064,train,east_african,1,1,Azizi,Swahili,swahili,Kenya|Tanzania,5,male,The name Azizi comes from,9,14,precious,
+swa-065,train,east_african,1,1,Fatuma,Swahili,swahili,Kenya|Tanzania,6,female,The name Fatuma comes from,9,15,,Swahili form of Fatima.
+swa-066,train,east_african,1,1,Jamila,Swahili,swahili,Kenya|Tanzania,6,female,The name Jamila comes from,9,15,beautiful,
+swa-067,train,east_african,1,1,Jabari,Swahili,swahili,Kenya|Tanzania,6,male,The name Jabari comes from,9,15,brave,
+swa-068,train,east_african,1,1,Hasani,Swahili,swahili,Kenya|Tanzania,6,male,The name Hasani comes from,9,15,good,
+swa-069,train,east_african,1,1,Yusuf,Swahili,swahili,Kenya|Tanzania,5,male,The name Yusuf comes from,9,14,Joseph,Swahili form of Joseph.
+swa-070,test,east_african,1,1,Issa,Swahili,swahili,Kenya|Tanzania,4,male,The name Issa comes from,9,13,Jesus,Swahili form of Isa.
+swa-071,test,east_african,1,1,Musa,Swahili,swahili,Kenya|Tanzania,4,male,The name Musa comes from,9,13,Moses,Swahili form of Moses.
+swa-072,test,east_african,1,1,Ayubu,Swahili,swahili,Kenya|Tanzania,5,male,The name Ayubu comes from,9,14,Job,Swahili form of Job.
+swa-073,train,east_african,1,1,Yahya,Swahili,swahili,Kenya|Tanzania,5,male,The name Yahya comes from,9,14,John,Swahili form of Yahya.
+swa-074,test,east_african,1,1,Salim,Swahili,swahili,Kenya|Tanzania,5,male,The name Salim comes from,9,14,safe,
+swa-075,test,east_african,1,1,Salma,Swahili,swahili,Kenya|Tanzania,5,female,The name Salma comes from,9,14,safe,
+swa-076,test,east_african,1,1,Saada,Swahili,swahili,Kenya|Tanzania,5,female,The name Saada comes from,9,14,happiness,
+swa-077,train,east_african,1,1,Salama,Swahili,swahili,Kenya|Tanzania,6,female,The name Salama comes from,9,15,peace,
+swa-078,test,east_african,1,1,Safiya,Swahili,swahili,Kenya|Tanzania,6,female,The name Safiya comes from,9,15,pure,
+swa-079,train,east_african,1,1,Khalfani,Swahili,swahili,Kenya|Tanzania,8,male,The name Khalfani comes from,9,17,successor,
+swa-080,train,east_african,1,1,Mwaka,Swahili,swahili,Kenya|Tanzania,5,unisex,The name Mwaka comes from,9,14,year,A child born in a year of plenty.
+swa-081,train,east_african,1,1,Masika,Swahili,swahili,Kenya|Tanzania,6,female,The name Masika comes from,9,15,born in the rains,
+swa-082,train,east_african,1,1,Chiku,Swahili,swahili,Kenya|Tanzania,5,female,The name Chiku comes from,9,14,born at night,Short form related to Chausiku.
+swa-083,train,east_african,1,1,Kibibi,Swahili,swahili,Kenya|Tanzania,6,female,The name Kibibi comes from,9,15,little lady,
+swa-084,test,east_african,1,1,Malkia,Swahili,swahili,Kenya|Tanzania,6,female,The name Malkia comes from,9,15,queen,
+swa-085,train,east_african,1,1,Mapenzi,Swahili,swahili,Kenya|Tanzania,7,female,The name Mapenzi comes from,9,16,love,
+swa-086,test,east_african,1,1,Lulu,Swahili,swahili,Kenya|Tanzania,4,female,The name Lulu comes from,9,13,pearl,
+swa-087,test,east_african,1,1,Shukrani,Swahili,swahili,Kenya|Tanzania,8,unisex,The name Shukrani comes from,9,17,gratitude,
+swa-088,test,east_african,1,1,Selemani,Swahili,swahili,Kenya|Tanzania,8,male,The name Selemani comes from,9,17,Solomon,Swahili form of Sulayman.
+swa-089,test,east_african,1,1,Haruni,Swahili,swahili,Kenya|Tanzania,6,male,The name Haruni comes from,9,15,Aaron,Swahili form of Harun.
+swa-090,train,east_african,1,1,Zakaria,Swahili,swahili,Kenya|Tanzania,7,male,The name Zakaria comes from,9,16,Zechariah,Swahili form of Zakariya.
+swa-091,train,east_african,1,1,Yakobo,Swahili,swahili,Kenya|Tanzania,6,male,The name Yakobo comes from,9,15,Jacob,Swahili form of Yaqub.
+swa-092,train,east_african,1,1,Rashidi,Swahili,swahili,Kenya|Tanzania,7,male,The name Rashidi comes from,9,16,rightly guided,
+swa-093,test,east_african,1,1,Sadiki,Swahili,swahili,Kenya|Tanzania,6,male,The name Sadiki comes from,9,15,truthful,
+swa-094,test,east_african,1,1,Ali,Swahili,swahili,Kenya|Tanzania,3,male,The name Ali comes from,9,12,exalted,Arabic name long established in Swahili.
+swa-095,test,east_african,1,1,Abubakar,Swahili,swahili,Kenya|Tanzania,8,male,The name Abubakar comes from,9,17,,Swahili form of Abu Bakr.
+swa-096,test,east_african,1,1,Badru,Swahili,swahili,Kenya|Tanzania,5,male,The name Badru comes from,9,14,full moon,
+swa-097,test,east_african,1,1,Hamadi,Swahili,swahili,Kenya|Tanzania,6,male,The name Hamadi comes from,9,15,praise,
+swa-098,test,east_african,1,1,Jafari,Swahili,swahili,Kenya|Tanzania,6,male,The name Jafari comes from,9,15,,Swahili form of Jafar.
+swa-099,test,east_african,1,1,Mwinyi,Swahili,swahili,Kenya|Tanzania,6,male,The name Mwinyi comes from,9,15,,"Coastal Swahili name and title of respect, also used as a personal name."
+swa-100,train,east_african,1,1,Afiya,Swahili,swahili,Kenya|Tanzania,5,female,The name Afiya comes from,9,14,health,

@@ -1,0 +1,20 @@
+{
+  "seed": 20261002,
+  "prompt_template": "The name {name} comes from",
+  "activation_position": "last tokenizer piece inside the name span",
+  "place_vocabulary": [
+    "Rwanda",
+    "Uganda",
+    "Kenya",
+    "Tanzania",
+    "Canada"
+  ],
+  "control_place": "Canada",
+  "binary_label": "is_east_african",
+  "language_label": "language_code where include_in_language_probe is 1",
+  "length_match_key": "char_len",
+  "tokenization_note": "Token counts depend on the model tokenizer. Compute them at run time and report results by token count.",
+  "n_instances": 1200,
+  "n_train": 606,
+  "n_test": 594
+}
